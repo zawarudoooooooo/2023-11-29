@@ -1,0 +1,50 @@
+**水庫排序**
+
+(北部 north)
+1.石門水庫
+2.西勢水庫
+3.新山水庫
+4.翡翠水庫
+5.寶山水庫
+6.寶山第二水庫
+
+(中部 middle)
+1.永和山水庫
+2.大埔水庫
+3.明德水庫
+4.鯉魚潭水庫
+5.德基水庫
+6.霧社水庫
+7.日月潭水庫
+8.頭社水庫
+9.湖山水庫
+
+(南部 south)
+1.蘭潭水庫
+2.白河水庫
+3.曾文水庫
+4.烏山頭水庫
+5.南化水庫
+6.阿公店水庫
+7.牡丹水庫
+
+**視覺化分頁**
+
+1.本日累積雨量 Inflow Total (水庫統計資料 API)
+例 :  北區第一個水庫本日累積雨量 = IFTNO (Inflow Total North One)
+
+
+2.昨日累積降雨量 Basin Rain Fall (水庫每日營運狀況 API)
+例 :  北區第一個水庫昨日累積降雨量 = BRFNO (Basin Rain Fall North One)
+
+
+3.有效蓄水量 Effective Storage (水庫即時資料 API)
+例 :  北區第一個水庫有效蓄水量 = ESNO (Effective Storage North One)
+
+
+4.有效庫容量 Effective Capacity
+例 :  北區第一個水庫有效庫容量 = ECNO (Effective Capacity North One)
+
+
+SVG 圖比例 PercentageOfStorage (水庫即時資料 API)
+
