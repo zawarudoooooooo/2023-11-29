@@ -731,6 +731,69 @@
         gap: 3vmin;
         flex-wrap: wrap;
 
+        .quan {
+        position: relative;
+        width: 18vmin;
+        height: 18vmin;
+        border-radius: 50%;
+        border: 3px solid aliceblue;
+        box-shadow: 0 0 0 3px gray;
+        }
+
+        .shui {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(23, 106, 201);
+        border-radius: 50%;
+        overflow: hidden;
+        }   
+
+        .shui::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 150%;
+        height: 150%;
+        border-radius: 40%;
+        background-color: aliceblue;
+        animation: shi 5s linear infinite;
+        }
+
+        @keyframes shi {
+        0% {
+        transform: translate(-50%, -65%) rotate(0deg);
+        }
+        100% {
+        transform: translate(-50%, -65%) rotate(360deg);
+        }
+        }
+
+        .shui::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 150%;
+        height: 150%;
+        border-radius: 42%;
+        background-color: rgb(240, 228, 228, 0.2);
+        animation: xu 7s linear infinite;
+        }
+
+        @keyframes xu {
+        0% {
+        transform: translate(-50%, -60%) rotate(0deg);
+        }
+        100% {
+        transform: translate(-50%, -60%) rotate(360deg);
+        }
+        }
+        }
+
 //永和山水庫
         .middleOne{
             width: 20vw;
@@ -750,6 +813,7 @@
                 }
             }
         }
+
 //大埔水庫
         .middleTwo{
             width: 20vw;
@@ -911,7 +975,6 @@
                 }
             }
         }
-    }
 
 //南部區域
     .south{
@@ -922,6 +985,69 @@
         display: flex;
         gap: 3vmin;
         flex-wrap: wrap;
+
+        
+        .quan {
+        position: relative;
+        width: 18vmin;
+        height: 18vmin;
+        border-radius: 50%;
+        border: 3px solid aliceblue;
+        box-shadow: 0 0 0 3px gray;
+        }
+
+        .shui {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(23, 106, 201);
+        border-radius: 50%;
+        overflow: hidden;
+        }   
+
+        .shui::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 150%;
+        height: 150%;
+        border-radius: 40%;
+        background-color: aliceblue;
+        animation: shi 5s linear infinite;
+        }
+
+        @keyframes shi {
+        0% {
+        transform: translate(-50%, -65%) rotate(0deg);
+        }
+        100% {
+        transform: translate(-50%, -65%) rotate(360deg);
+        }
+        }
+
+        .shui::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 150%;
+        height: 150%;
+        border-radius: 42%;
+        background-color: rgb(240, 228, 228, 0.2);
+        animation: xu 7s linear infinite;
+        }
+
+        @keyframes xu {
+        0% {
+        transform: translate(-50%, -60%) rotate(0deg);
+        }
+        100% {
+        transform: translate(-50%, -60%) rotate(360deg);
+        }
+        }
 
 //蘭潭水庫
         .southOne{
