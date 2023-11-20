@@ -46,5 +46,8 @@
 例 :  北區第一個水庫有效庫容量 = ECNO (Effective Capacity North One)
 
 
-SVG 圖比例 PercentageOfStorage (水庫即時資料 API)
+SVG 圖比例  蓄水比 PercentageOfStorage (水庫即時資料 API)
 
+**水庫資訊**
+
+水位 Water Height (水庫即時資料 API)

@@ -1,10 +1,5 @@
 <script>
-    export default{
-        data(){
-            return{
-            }
-        }
-    }
+
 </script>
 
 <template>
@@ -31,6 +26,12 @@
                 <p id="ESNO">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECNO">有效庫容量</p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSNO"></p>
+                    </div>
+                </div>
             </div>
 
             <!-- 西勢水庫 -->
@@ -46,6 +47,12 @@
                 <p id="ESNT"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECNT"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSNT"></p>
+                    </div>
+                </div>
             </div>
 
             <!-- 新山水庫 -->
@@ -61,6 +68,12 @@
                 <p id="ESNTH"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECNTH"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSNTH"></p>
+                    </div>
+                </div>
             </div>
 
             <!-- 翡翠水庫 -->
@@ -76,6 +89,12 @@
                 <p id="ESNF"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECNF"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSNF"></p>
+                    </div>
+                </div>
             </div>
 
             <!-- 寶山水庫 -->
@@ -91,6 +110,12 @@
                 <p id="ESNFI"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECNFI"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSNFI"></p>
+                    </div>
+                </div>
             </div>
 
             <!-- 寶山第二水庫 -->
@@ -106,8 +131,13 @@
                 <p id="ESNS"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECNS"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSNS"></p>
+                    </div>
+                </div>
             </div>
-
         </div>
 <!-- 中區 -->
     <label for="">中區</label>
@@ -125,6 +155,13 @@
                 <p id="ESMO"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECMO"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSMO"></p>
+                    </div>
+                </div>
+                
             </div>
 
             <!-- 大埔水庫 -->
@@ -140,6 +177,12 @@
                 <p id="ESMT"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECMT"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSMW"></p>
+                    </div>
+                </div> 
             </div>
 
             <!-- 明德水庫 -->
@@ -155,6 +198,12 @@
                 <p id="ESMTH"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECMTH"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSMT"></p>
+                    </div>
+                </div> 
             </div>
 
             <!-- 鯉魚潭水庫 -->
@@ -170,6 +219,12 @@
                 <p id="ESMF"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECMF"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSMF"></p>
+                    </div>
+                </div> 
             </div>
 
             <!-- 德基水庫 -->
@@ -185,6 +240,12 @@
                 <p id="ESMFI"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECMFI"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSMFI"></p>
+                    </div>
+                </div> 
             </div>
 
             <!-- 霧社水庫 -->
@@ -200,6 +261,12 @@
                 <p id="ESMS"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECMS"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSMS"></p>
+                    </div>
+                </div> 
             </div>
 
             <!-- 日月潭水庫 -->
@@ -215,6 +282,12 @@
                 <p id="ESMSE"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECMSE"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSMSE"></p>
+                    </div>
+                </div> 
             </div>
 
             <!-- 頭社水庫 -->
@@ -230,6 +303,12 @@
                 <p id="ESME"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECME"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSME"></p>
+                    </div>
+                </div> 
             </div>
 
             <!-- 湖山水庫 -->
@@ -245,6 +324,12 @@
                 <p id="ESMN"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECMN"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSMN"></p>
+                    </div>
+                </div> 
             </div>
         </div>
 <!-- 南區-->
@@ -263,6 +348,12 @@
                 <p id="ESSO"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECSO"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSSO"></p>
+                    </div>
+                </div>
             </div>
 
         <!-- 白河水庫 -->
@@ -278,6 +369,12 @@
                 <p id="ESST"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECST"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSST"></p>
+                    </div>
+                </div>
             </div>
 
         <!-- 曾文水庫 -->
@@ -293,6 +390,12 @@
                 <p id="ESSTH"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECTH"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSSTH"></p>
+                    </div>
+                </div>
             </div>
 
         <!-- 烏山頭水庫 -->
@@ -308,6 +411,12 @@
                 <p id="ESSF"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECSF"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSSF"></p>
+                    </div>
+                </div>
             </div>
 
         <!-- 南化水庫 -->
@@ -323,6 +432,12 @@
                 <p id="ESSFI"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECSFI"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSSFI"></p>
+                    </div>
+                </div>
             </div>
 
         <!-- 阿公店水庫 -->
@@ -338,6 +453,12 @@
                 <p id="ESSS"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECSS"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSSS"></p>
+                    </div>
+                </div>
             </div>
 
         <!-- 牡丹水庫 -->
@@ -353,6 +474,12 @@
                 <p id="ESSSE"></p>
             <!-- 有效庫容量，Effective Capacity -->
                 <p id="ECSSE"></p>
+            <!-- 蓄水比，Percentage Of Storage -->
+                <div class="quan">
+                    <div class="shui">
+                        <p id="POSSE"></p>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -412,6 +539,68 @@
         display: flex;
         gap: 3vmin;
         flex-wrap: wrap;
+
+        .quan {
+        position: relative;
+        width: 18vmin;
+        height: 18vmin;
+        border-radius: 50%;
+        border: 3px solid aliceblue;
+        box-shadow: 0 0 0 3px gray;
+        }
+
+        .shui {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(23, 106, 201);
+        border-radius: 50%;
+        overflow: hidden;
+        }   
+
+        .shui::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 150%;
+        height: 150%;
+        border-radius: 40%;
+        background-color: aliceblue;
+        animation: shi 5s linear infinite;
+        }
+
+        @keyframes shi {
+        0% {
+        transform: translate(-50%, -65%) rotate(0deg);
+        }
+        100% {
+        transform: translate(-50%, -65%) rotate(360deg);
+        }
+        }
+
+        .shui::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 150%;
+        height: 150%;
+        border-radius: 42%;
+        background-color: rgb(240, 228, 228, 0.2);
+        animation: xu 7s linear infinite;
+        }
+
+        @keyframes xu {
+        0% {
+        transform: translate(-50%, -60%) rotate(0deg);
+        }
+        100% {
+        transform: translate(-50%, -60%) rotate(360deg);
+        }
+        }
 
 //石門水庫
         .northOne{
@@ -734,7 +923,7 @@
         gap: 3vmin;
         flex-wrap: wrap;
 
-//蘭南水庫
+//蘭潭水庫
         .southOne{
             width: 20vw;
             height: 50vh;
