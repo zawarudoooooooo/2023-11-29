@@ -16,7 +16,7 @@
             <!-- 石門水庫 -->
             <div class="northOne">
                 <div class="nameOne">
-                    <h2>石門水庫</h2>
+                    <h2 id="10201">石門水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTNO">本日累積雨量</p>
@@ -37,16 +37,16 @@
             <!-- 西勢水庫 -->
             <div class="northTwo">
                 <div class="nameTwo">
-                    <h2>西勢水庫</h2>
+                    <h2 id="10203">西勢水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTNT"></p>
+                <p id="IFTNT">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFNT"></p>
+                <p id="BRFNT">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESNT"></p>
+                <p id="ESNT">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECNT"></p>
+                <p id="ECNT">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -58,16 +58,16 @@
             <!-- 新山水庫 -->
             <div class="northThree">
                 <div class="nameThree">
-                    <h2>新山水庫</h2>
+                    <h2 id="10204">新山水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTNTH"></p>
+                <p id="IFTNTH">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFNTH"></p>
+                <p id="BRFNTH">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESNTH"></p>
+                <p id="ESNTH">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECNTH"></p>
+                <p id="ECNTH">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -79,16 +79,16 @@
             <!-- 翡翠水庫 -->
             <div class="northFour">
                 <div class="nameFour">
-                    <h2>翡翠水庫</h2>
+                    <h2 id="10205">翡翠水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTNF"></p>
+                <p id="IFTNF">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFNF"></p>
+                <p id="BRFNF">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESNF"></p>
+                <p id="ESNF">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECNF"></p>
+                <p id="ECNF">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -100,16 +100,16 @@
             <!-- 寶山水庫 -->
                 <div class="northFive">
                 <div class="nameFive">
-                    <h2>寶山水庫</h2>
+                    <h2 id="10401">寶山水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTNFI"></p>
+                <p id="IFTNFI">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFNFI"></p>
+                <p id="BRFNFI">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESNFI"></p>
+                <p id="ESNFI">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECNFI"></p>
+                <p id="ECNFI">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -121,16 +121,16 @@
             <!-- 寶山第二水庫 -->
             <div class="northSix">
                 <div class="nameSix">
-                    <h2>寶山第二水庫</h2>
+                    <h2 id="10405">寶山第二水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTNS"></p>
+                <p id="IFTNS">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFNS"></p>
+                <p id="BRFNS">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESNS"></p>
+                <p id="ESNS">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECNS"></p>
+                <p id="ECNS">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -145,16 +145,16 @@
             <!-- 永和山水庫 -->
             <div class="middleOne">
                 <div class="nameOneM">
-                    <h2>永和山水庫</h2>
+                    <h2 id="10501">永和山水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTMO"></p>
+                <p id="IFTMO">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFMO"></p>
+                <p id="BRFMO">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESMO"></p>
+                <p id="ESMO">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECMO"></p>
+                <p id="ECMO">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -167,16 +167,16 @@
             <!-- 大埔水庫 -->
             <div class="middleTwo">
                 <div class="nameTwoM">
-                    <h2>大埔水庫</h2>
+                    <h2 id="10503">大埔水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTMT"></p>
+                <p id="IFTMT">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFMT"></p>
+                <p id="BRFMT">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESMT"></p>
+                <p id="ESMT">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECMT"></p>
+                <p id="ECMT">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -188,16 +188,16 @@
             <!-- 明德水庫 -->
             <div class="middleThree">
                 <div class="nameThreeM">
-                    <h2>明德水庫</h2>
+                    <h2 id="10601">明德水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTMTH"></p>
+                <p id="IFTMTH">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFMTH"></p>
+                <p id="BRFMTH">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESMTH"></p>
+                <p id="ESMTH">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECMTH"></p>
+                <p id="ECMTH">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -209,16 +209,16 @@
             <!-- 鯉魚潭水庫 -->
             <div class="middleFour">
                 <div class="nameFourM">
-                    <h2>鯉魚潭水庫</h2>
+                    <h2 id="20101">鯉魚潭水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTMF"></p>
+                <p id="IFTMF">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFMF"></p>
+                <p id="BRFMF">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESMF"></p>
+                <p id="ESMF">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECMF"></p>
+                <p id="ECMF">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -230,16 +230,16 @@
             <!-- 德基水庫 -->
             <div class="middleFive">
                 <div class="nameFiveM">
-                    <h2>德基水庫</h2>
+                    <h2 id="10201">德基水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTMFI"></p>
+                <p id="IFTMFI">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFMFI"></p>
+                <p id="BRFMFI">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESMFI"></p>
+                <p id="ESMFI">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECMFI"></p>
+                <p id="ECMFI">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -251,16 +251,16 @@
             <!-- 霧社水庫 -->
             <div class="middleSix">
                 <div class="nameSixM">
-                    <h2>霧社水庫</h2>
+                    <h2 id="20501">霧社水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTMS"></p>
+                <p id="IFTMS">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFMS"></p>
+                <p id="BRFMS">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESMS"></p>
+                <p id="ESMS">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECMS"></p>
+                <p id="ECMS">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -272,16 +272,16 @@
             <!-- 日月潭水庫 -->
             <div class="middleSeven">
                 <div class="nameSevenM">
-                    <h2>日月潭水庫</h2>
+                    <h2 id="20502">日月潭水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTMSE"></p>
+                <p id="IFTMSE">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFMSE"></p>
+                <p id="BRFMSE">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESMSE"></p>
+                <p id="ESMSE">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECMSE"></p>
+                <p id="ECMSE">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -293,16 +293,16 @@
             <!-- 頭社水庫 -->
             <div class="middleEight">
                 <div class="nameEightM">
-                    <h2>頭社水庫</h2>
+                    <h2 id="20504">頭社水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTME"></p>
+                <p id="IFTME">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFME"></p>
+                <p id="BRFME">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESME"></p>
+                <p id="ESME">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECME"></p>
+                <p id="ECME">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -314,16 +314,16 @@
             <!-- 湖山水庫 -->
             <div class="middleNine">
                 <div class="nameNineM">
-                    <h2>湖山水庫</h2>
+                    <h2 id="20509">湖山水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTMN"></p>
+                <p id="IFTMN">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFMN"></p>
+                <p id="BRFMN">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESMN"></p>
+                <p id="ESMN">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECMN"></p>
+                <p id="ECMN">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -338,16 +338,16 @@
         <!-- 蘭潭水庫 -->
         <div class="southOne">
                 <div class="nameOneS">
-                    <h2>蘭潭水庫</h2>
+                    <h2 id="30302">蘭潭水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTSO"></p>
+                <p id="IFTSO">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFSO"></p>
+                <p id="BRFSO">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESSO"></p>
+                <p id="ESSO">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECSO"></p>
+                <p id="ECSO">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -359,16 +359,16 @@
         <!-- 白河水庫 -->
         <div class="southTwo">
                 <div class="nameTwoS">
-                    <h2>白河水庫</h2>
+                    <h2 id="30401">白河水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTST"></p>
+                <p id="IFTST">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFST"></p>
+                <p id="BRFST">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESST"></p>
+                <p id="ESST">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECST"></p>
+                <p id="ECST">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -380,16 +380,16 @@
         <!-- 曾文水庫 -->
         <div class="southThree">
                 <div class="nameThreeS">
-                    <h2>曾文水庫</h2>
+                    <h2 id="30502">曾文水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTSTH"></p>
+                <p id="IFTSTH">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFSTH"></p>
+                <p id="BRFSTH">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESSTH"></p>
+                <p id="ESSTH">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECTH"></p>
+                <p id="ECTH">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -401,16 +401,16 @@
         <!-- 烏山頭水庫 -->
         <div class="southFour">
                 <div class="nameFourS">
-                    <h2>烏山頭水庫</h2>
+                    <h2 id="30501">烏山頭水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTSF"></p>
+                <p id="IFTSF">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFSF"></p>
+                <p id="BRFSF">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESSF"></p>
+                <p id="ESSF">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECSF"></p>
+                <p id="ECSF">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -422,16 +422,16 @@
         <!-- 南化水庫 -->
         <div class="southFive">
                 <div class="nameFiveS">
-                    <h2>南化水庫</h2>
+                    <h2 id="30503">南化水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTSFI"></p>
+                <p id="IFTSFI">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFSFI"></p>
+                <p id="BRFSFI">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESSFI"></p>
+                <p id="ESSFI">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECSFI"></p>
+                <p id="ECSFI">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -443,16 +443,16 @@
         <!-- 阿公店水庫 -->
         <div class="southSix">
                 <div class="nameSixS">
-                    <h2>阿公店水庫</h2>
+                    <h2 id="30802">阿公店水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTSS"></p>
+                <p id="IFTSS">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFSS"></p>
+                <p id="BRFSS">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESSS"></p>
+                <p id="ESSS">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECSS"></p>
+                <p id="ECSS">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
@@ -464,16 +464,16 @@
         <!-- 牡丹水庫 -->
         <div class="southSeven">
                 <div class="nameSevenS">
-                    <h2>牡丹水庫</h2>
+                    <h2 id="31201">牡丹水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTSSE"></p>
+                <p id="IFTSSE">本日累積雨量</p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
-                <p id="BRFSSE"></p>
+                <p id="BRFSSE">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
-                <p id="ESSSE"></p>
+                <p id="ESSSE">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECSSE"></p>
+                <p id="ECSSE">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
