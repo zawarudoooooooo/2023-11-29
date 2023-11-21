@@ -1,25 +1,226 @@
 <script>
 export default{
-    mounted(){
-            const N1 = document.getElementById('10201')
-            
+    mounted(){   
+                    // 北部
+const IFTNO = document.getElementById("IFTNO")
+const BRFNO = document.getElementById("BRFNO")
+const ESNO = document.getElementById("ESNO")
+const ECNO = document.getElementById("ECNO")
+
+const IFTNT = document.getElementById("IFTNT")
+const BRFNT = document.getElementById("BRFNT")
+const ESNT = document.getElementById("ESNT")
+const ECNT = document.getElementById("ECNT")
+
+const IFTNTH = document.getElementById("IFTNTH")
+const BRFNTH = document.getElementById("BRFTH")
+const ESNTH = document.getElementById("ESNTH")
+const ECNTH = document.getElementById("ECNTH")
+
+const IFTNF = document.getElementById("IFTNF")
+const BRFNF = document.getElementById("BRFNF")
+const ESNF = document.getElementById("ESNF")
+const ECNF = document.getElementById("ECNF")
+
+const IFTNFI = document.getElementById("IFTNFI")
+const BRFNFI = document.getElementById("BRFNFI")
+const ESNFI = document.getElementById("ESNFI")
+const ECNFI = document.getElementById("ECNFI")
+
+const IFTNS = document.getElementById("IFTNS")
+const BRFNS = document.getElementById("BRFNS")
+const ESNS = document.getElementById("ESNS")
+const ECNS = document.getElementById("ECNS")
+
+// 中部
+
+const IFTMO = document.getElementById("IFTMO")
+const BRFMO = document.getElementById("BRFMO")
+const ESMO = document.getElementById("ESMO")
+const ECMO = document.getElementById("ECMO")
+
+const IFTMT = document.getElementById("IFTMT")
+const BRFMT = document.getElementById("BRFMT")
+const ESMT = document.getElementById("ESMT")
+const ECMT = document.getElementById("ECMT")
+
+const IFTMTH = document.getElementById("IFTMTH")
+const BRFMTH = document.getElementById("BRFMTH")
+const ESMTH = document.getElementById("ESMTH")
+const ECMTH = document.getElementById("ECMTH")
+
+const IFTMF = document.getElementById("IFTMF")
+const BRFMF = document.getElementById("BRFMF")
+const ESMF = document.getElementById("ESMF")
+const ECMF = document.getElementById("ECMF")
+
+const IFTMFI = document.getElementById("IFTMFI")
+const BRFMFI = document.getElementById("BRFMFI")
+const ESMFI = document.getElementById("ESMFI")
+const ECMFI = document.getElementById("ECMFI")
+
+const IFTMS = document.getElementById("IFTMS")
+const BRFMS = document.getElementById("BRFMS")
+const ESMS = document.getElementById("ESMS")
+const ECMS = document.getElementById("ECMS")
+
+const IFTMSE = document.getElementById("IFTMSE")
+const BRFMSE = document.getElementById("BRFMSE")
+const ESMSE = document.getElementById("ESMSE")
+const ECMSE = document.getElementById("ECMSE")
+
+const IFTME = document.getElementById("IFTME")
+const BRFME = document.getElementById("BRFME")
+const ESME = document.getElementById("ESME")
+const ECME = document.getElementById("ECME")
+
+const IFTMN = document.getElementById("IFTMN")
+const BRFMN = document.getElementById("BRFMN")
+const ESMN = document.getElementById("ESMN")
+const ECMN = document.getElementById("ECMN")
+
+// 南部
+
+const IFTSO = document.getElementById("IFTSO")
+const BRFSO = document.getElementById("BRFSO")
+const ESSO = document.getElementById("ESSO")
+const ECSO = document.getElementById("ECSO")
+
+const IFTST = document.getElementById("IFTST")
+const BRFST = document.getElementById("BRFST")
+const ESST = document.getElementById("ESST")
+const ECST = document.getElementById("ECST")
+
+const IFTSTH = document.getElementById("IFTSTH")
+const BRFSTH = document.getElementById("BRFSTH")
+const ESSTH = document.getElementById("ESSTH")
+const ECSTH = document.getElementById("ECSTH")
+
+const IFTSF = document.getElementById("IFTSF")
+const BRFSF = document.getElementById("BRFSF")
+const ESSF = document.getElementById("ESSF")
+const ECSF = document.getElementById("ECSF")
+
+const IFTSFI = document.getElementById("IFTSFI")
+const BRFSFI = document.getElementById("BRFSFI")
+const ESSFI = document.getElementById("ESSFI")
+const ECSFI = document.getElementById("ECSFI")
+
+const IFTSS = document.getElementById("IFTSS")
+const BRFSS = document.getElementById("BRFSS")
+const ESSS = document.getElementById("ESSS")
+const ECSS = document.getElementById("ECSS")
+
+const IFTSSE = document.getElementById("IFTSSE")
+const BRFSSE = document.getElementById("BRFSSE")
+const ESSSE = document.getElementById("ESSSE")
+const ECSSE = document.getElementById("ECSSE")
+
+// 北部
+
+const N1 = document.getElementById("10201")
+const N2 = document.getElementById("10203")
+const N3 = document.getElementById("10204")
+const N4 = document.getElementById("10205")
+const N5 = document.getElementById("10401")
+const N6 = document.getElementById("10405")
+
+// 中部
+
+const M1 = document.getElementById("10501")
+const M2 = document.getElementById("10503")
+const M3 = document.getElementById("10601")
+const M4 = document.getElementById("20101")
+const M5 = document.getElementById("20201")
+const M6 = document.getElementById("20501")
+const M7 = document.getElementById("20502")
+const M8 = document.getElementById("20504")
+const M9 = document.getElementById("20509")
+
+// 南部
+
+const S1 = document.getElementById("30302")
+const S2 = document.getElementById("30401")
+const S3 = document.getElementById("30502")
+const S4 = document.getElementById("30501")
+const S5 = document.getElementById("30503")
+const S6 = document.getElementById("30802")
+const S7 = document.getElementById("31201")
+
             fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14D5C6DF71/Data?size=1000&page=100")
             .then(response=>response.json())
             .then(data=>{
-                let arr = []
-                arr = data
-                console.log(data.responseData[0].ReservoirIdentifier);
-                let  selectArr = arr.map(function(item){
-                    if(item.responseData[0].ReservoirIdentifier == ){
-                        return item 
-                    }
-                })
-                
-                // let selectElement = [10201,10203,10204,10205,10401,10405,10501,10503,10601,20101,
-                // 20201,20501,20502,20504,20509,30302,30401,30502,30501,30503,30802,31201],
-                // selectArr = [testArr[data][responseData] in arr if testArr in selectElement]
-                // IFTNO.innerText = "本日總進水量:" + data.responseData[0].Inflow
-                // ECNO.innerText = "本日總進水量:" + data.responseData[0].Capacity
+                console.log(data.responseData[0].Capacity);
+
+                    //北部
+                    IFTNO.innerText = "本日總進水量:" + data.responseData[0].Inflow
+                    ECNO.innerText = "有效庫容量:" + data.responseData[0].Capacity
+                    
+                    IFTNT.innerText = "本日總進水量:" + data.responseData[1].Inflow
+                    ECNT.innerText = "有效庫容量:" + data.responseData[1].Capacity
+
+                    IFTNTH.innerText = "本日總進水量:" + data.responseData[2].Inflow
+                    ECNO.innerText = "有效庫容量:" + data.responseData[2].Capacity
+
+                    IFTNF.innerText = "本日總進水量:" + data.responseData[3].Inflow
+                    ECNF.innerText = "有效庫容量:" + data.responseData[3].Capacity
+
+                    IFTNFI.innerText = "本日總進水量:" + data.responseData[8].Inflow
+                    ECNFI.innerText = "有效庫容量:" + data.responseData[8].Capacity
+
+                    IFTNS.innerText = "本日總進水量:" + data.responseData[10].Inflow
+                    ECNS.innerText = "有效庫容量:" + data.responseData[10].Capacity
+
+                    //中部
+
+                    IFTMO.innerText = "本日總進水量:" + data.responseData[11].Inflow
+                    ECMO.innerText = "有效庫容量:" + data.responseData[11].Capacity
+
+                    IFTMT.innerText = "本日總進水量:" + data.responseData[12].Inflow
+                    ECMT.innerText = "有效庫容量:" + data.responseData[12].Capacity
+
+                    IFTMTH.innerText = "本日總進水量:" + data.responseData[13].Inflow
+                    ECMTH.innerText = "有效庫容量:" + data.responseData[13].Capacity
+
+                    IFTMF.innerText = "本日總進水量:" + data.responseData[15].Inflow
+                    ECMF.innerText = "有效庫容量:" + data.responseData[15].Capacity
+
+                    IFTMFI.innerText = "本日總進水量:" + data.responseData[16].Inflow
+                    ECMFI.innerText = "有效庫容量:" + data.responseData[16].Capacity
+
+                    IFTMS.innerText = "本日總進水量:" + data.responseData[19].Inflow
+                    ECMS.innerText = "有效庫容量:" + data.responseData[19].Capacity
+
+                    IFTMSE.innerText = "本日總進水量:" + data.responseData[20].Inflow
+                    ECMSE.innerText = "有效庫容量:" + data.responseData[20].Capacity
+
+                    IFTMN.innerText = "本日總進水量:" + data.responseData[24].Inflow
+                    ECMN.innerText = "有效庫容量:" + data.responseData[24].Capacity
+
+                    //南部
+                    
+                    IFTSO.innerText = "本日總進水量:" + data.rsesponseData[26].Inflow
+                    ECSO.innerText = "有效庫容量:" + data.responseData[26].Capacity
+
+                    IFTST.innerText = "本日總進水量:" + data.responseData[28].Inflow
+                    ECST.innerText = "有效庫容量:" + data.responseData[28].Capacity
+
+                    IFTSF.innerText = "本日總進水量:" + data.responseData[30].Inflow
+                    ECSF.innerText = "有效庫容量:" + data.responseData[30].Capacity
+                    
+                    IFTSTH.innerText = "本日總進水量:" + data.responseData[31].Inflow
+                    ECSTH.innerText = "有效庫容量:" + data.responseData[31].Capacity
+
+                    IFTSFI.innerText = "本日總進水量:" + data.responseData[32].Inflow
+                    ECSFI.innerText = "有效庫容量:" + data.responseData[32].Capacity
+
+                    IFTSS.innerText = "本日總進水量:" + data.responseData[37].Inflow
+                    ECSS.innerText = "有效庫容量:" + data.responseData[37].Capacity
+
+                    IFTSSE.innerText = "本日總進水量:" + data.responseData[41].Inflow
+                    ECSSE.innerText = "有效庫容量:" + data.responseData[41].Capacity
+
+
 })
     }
 }
@@ -28,19 +229,28 @@ export default{
 
 <template>
 <!-- 搜尋欄 -->
-    <div class="search">
+    <div class="search" id="search">
         <input type="text" placeholder="開始搜尋">
         <button type="button">搜尋</button>
+
+        <select class="form-control" onchange="location.href = this.options[this.selectedIndex].value">
+    <option selected="" value="#search">----請選擇地區----</option>
+    <option value="#north">北區</option>
+    <option value="#middle">中區</option>
+    <option value="#south">南區</option>
+
+  </select>
     </div>
     <div class="content">
+        
 
 <!-- 北區 -->
     <label for="">北區</label>
-        <div class="north">
+        <div class="north" id="north">
             <!-- 石門水庫 -->
             <div class="northOne">
                 <div class="nameOne">
-                    <h2 id="10201">石門水庫</h2>
+                    <h2 id="10201" value="石門水庫">石門水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTNO"></p>
@@ -61,7 +271,7 @@ export default{
             <!-- 西勢水庫 -->
             <div class="northTwo">
                 <div class="nameTwo">
-                    <h2 id="10203">西勢水庫</h2>
+                    <h2 id="10203" value="西勢水庫">西勢水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTNT">本日累積雨量</p>
@@ -82,7 +292,7 @@ export default{
             <!-- 新山水庫 -->
             <div class="northThree">
                 <div class="nameThree">
-                    <h2 id="10204">新山水庫</h2>
+                    <h2 id="10204" value="新山水庫">新山水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTNTH">本日累積雨量</p>
@@ -103,7 +313,7 @@ export default{
             <!-- 翡翠水庫 -->
             <div class="northFour">
                 <div class="nameFour">
-                    <h2 id="10205">翡翠水庫</h2>
+                    <h2 id="10205" value="翡翠水庫">翡翠水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTNF">本日累積雨量</p>
@@ -124,7 +334,7 @@ export default{
             <!-- 寶山水庫 -->
                 <div class="northFive">
                 <div class="nameFive">
-                    <h2 id="10401">寶山水庫</h2>
+                    <h2 id="10401" value="寶山水庫">寶山水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTNFI">本日累積雨量</p>
@@ -145,7 +355,7 @@ export default{
             <!-- 寶山第二水庫 -->
             <div class="northSix">
                 <div class="nameSix">
-                    <h2 id="10405">寶山第二水庫</h2>
+                    <h2 id="10405" value="寶山第二水庫">寶山第二水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTNS">本日累積雨量</p>
@@ -165,11 +375,11 @@ export default{
         </div>
 <!-- 中區 -->
     <label for="">中區</label>
-        <div class="middle">
+        <div class="middle" id="middle">
             <!-- 永和山水庫 -->
             <div class="middleOne">
                 <div class="nameOneM">
-                    <h2 id="10501">永和山水庫</h2>
+                    <h2 id="10501" value="永和山水庫">永和山水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTMO">本日累積雨量</p>
@@ -191,7 +401,7 @@ export default{
             <!-- 大埔水庫 -->
             <div class="middleTwo">
                 <div class="nameTwoM">
-                    <h2 id="10503">大埔水庫</h2>
+                    <h2 id="10503" value="大埔水庫">大埔水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTMT">本日累積雨量</p>
@@ -212,7 +422,7 @@ export default{
             <!-- 明德水庫 -->
             <div class="middleThree">
                 <div class="nameThreeM">
-                    <h2 id="10601">明德水庫</h2>
+                    <h2 id="10601" value="明德水庫">明德水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTMTH">本日累積雨量</p>
@@ -233,7 +443,7 @@ export default{
             <!-- 鯉魚潭水庫 -->
             <div class="middleFour">
                 <div class="nameFourM">
-                    <h2 id="20101">鯉魚潭水庫</h2>
+                    <h2 id="20101" value="鯉魚潭水庫">鯉魚潭水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTMF">本日累積雨量</p>
@@ -254,7 +464,7 @@ export default{
             <!-- 德基水庫 -->
             <div class="middleFive">
                 <div class="nameFiveM">
-                    <h2 id="20201">德基水庫</h2>
+                    <h2 id="20201" value="德基水庫">德基水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTMFI">本日累積雨量</p>
@@ -275,7 +485,7 @@ export default{
             <!-- 霧社水庫 -->
             <div class="middleSix">
                 <div class="nameSixM">
-                    <h2 id="20501">霧社水庫</h2>
+                    <h2 id="20501" value="霧社水庫">霧社水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTMS">本日累積雨量</p>
@@ -296,7 +506,7 @@ export default{
             <!-- 日月潭水庫 -->
             <div class="middleSeven">
                 <div class="nameSevenM">
-                    <h2 id="20502">日月潭水庫</h2>
+                    <h2 id="20502" value="日月潭水庫">日月潭水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTMSE">本日累積雨量</p>
@@ -317,7 +527,7 @@ export default{
             <!-- 頭社水庫 -->
             <div class="middleEight">
                 <div class="nameEightM">
-                    <h2 id="20504">頭社水庫</h2>
+                    <h2 id="20504" value="頭社水庫">頭社水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTME">本日累積雨量</p>
@@ -338,7 +548,7 @@ export default{
             <!-- 湖山水庫 -->
             <div class="middleNine">
                 <div class="nameNineM">
-                    <h2 id="20509">湖山水庫</h2>
+                    <h2 id="20509" value="湖山水庫">湖山水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTMN">本日累積雨量</p>
@@ -358,11 +568,11 @@ export default{
         </div>
 <!-- 南區-->
     <label for="">南區</label>
-        <div class="south">
+        <div class="south" id="south">
         <!-- 蘭潭水庫 -->
         <div class="southOne">
                 <div class="nameOneS">
-                    <h2 id="30302">蘭潭水庫</h2>
+                    <h2 id="30302" value="蘭潭水庫">蘭潭水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTSO">本日累積雨量</p>
@@ -383,7 +593,7 @@ export default{
         <!-- 白河水庫 -->
         <div class="southTwo">
                 <div class="nameTwoS">
-                    <h2 id="30401">白河水庫</h2>
+                    <h2 id="30401" value="白河水庫">白河水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTST">本日累積雨量</p>
@@ -404,7 +614,7 @@ export default{
         <!-- 曾文水庫 -->
         <div class="southThree">
                 <div class="nameThreeS">
-                    <h2 id="30502">曾文水庫</h2>
+                    <h2 id="30502" value="曾文水庫">曾文水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTSTH">本日累積雨量</p>
@@ -425,7 +635,7 @@ export default{
         <!-- 烏山頭水庫 -->
         <div class="southFour">
                 <div class="nameFourS">
-                    <h2 id="30501">烏山頭水庫</h2>
+                    <h2 id="30501" value="烏山頭水庫">烏山頭水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTSF">本日累積雨量</p>
@@ -446,7 +656,7 @@ export default{
         <!-- 南化水庫 -->
         <div class="southFive">
                 <div class="nameFiveS">
-                    <h2 id="30503">南化水庫</h2>
+                    <h2 id="30503" value="南化水庫">南化水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTSFI">本日累積雨量</p>
@@ -467,7 +677,7 @@ export default{
         <!-- 阿公店水庫 -->
         <div class="southSix">
                 <div class="nameSixS">
-                    <h2 id="30802">阿公店水庫</h2>
+                    <h2 id="30802" value="阿公店水庫">阿公店水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTSS">本日累積雨量</p>
@@ -488,7 +698,7 @@ export default{
         <!-- 牡丹水庫 -->
         <div class="southSeven">
                 <div class="nameSevenS">
-                    <h2 id="31201">牡丹水庫</h2>
+                    <h2 id="31201" value="牡丹水庫">牡丹水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTSSE">本日累積雨量</p>
@@ -544,7 +754,7 @@ export default{
             }
     }
 //北中南水庫
-.content{
+    .content{
     width: 100vw;
     height: 100vh;
 
@@ -1212,7 +1422,7 @@ export default{
             }
         }
     }
-}
+    }
 
 
 
