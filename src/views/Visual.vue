@@ -1,4 +1,28 @@
 <script>
+export default{
+    mounted(){
+            const N1 = document.getElementById('10201')
+            
+            fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14D5C6DF71/Data?size=1000&page=100")
+            .then(response=>response.json())
+            .then(data=>{
+                let arr = []
+                arr = data
+                console.log(data.responseData[0].ReservoirIdentifier);
+                let  selectArr = arr.map(function(item){
+                    if(item.responseData[0].ReservoirIdentifier == ){
+                        return item 
+                    }
+                })
+                
+                // let selectElement = [10201,10203,10204,10205,10401,10405,10501,10503,10601,20101,
+                // 20201,20501,20502,20504,20509,30302,30401,30502,30501,30503,30802,31201],
+                // selectArr = [testArr[data][responseData] in arr if testArr in selectElement]
+                // IFTNO.innerText = "本日總進水量:" + data.responseData[0].Inflow
+                // ECNO.innerText = "本日總進水量:" + data.responseData[0].Capacity
+})
+    }
+}
 
 </script>
 
@@ -19,7 +43,7 @@
                     <h2 id="10201">石門水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
-                <p id="IFTNO">本日累積雨量</p>
+                <p id="IFTNO"></p>
             <!-- 昨日累積降雨量，Basin Rain Fall -->
                 <p id="BRFNO">昨日累積降雨量</p>
             <!-- 有效蓄水量，Effective Storage -->
@@ -230,7 +254,7 @@
             <!-- 德基水庫 -->
             <div class="middleFive">
                 <div class="nameFiveM">
-                    <h2 id="10201">德基水庫</h2>
+                    <h2 id="20201">德基水庫</h2>
                 </div>
             <!-- 本日累積雨量，Inflow Total -->
                 <p id="IFTMFI">本日累積雨量</p>
