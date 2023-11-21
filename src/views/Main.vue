@@ -4,7 +4,7 @@
 export default{
   data(){
     return{
-      classReservoir:"reservoirOfS"
+      classReservoir:"reservoirOfS",
     }
     
   },
@@ -13,7 +13,55 @@ export default{
     goVisual(){
       let go=this
       go.$router.push('/Visual')
-    }
+    },
+    svgUpData(){
+      let obj1 = {};
+let obj2 = {};
+//水庫即時資料
+fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
+  .then((response) => response.json())
+  .then((data) => {
+    // console.log(data);
+    obj1 = data;
+  });
+
+//水庫每日營運狀況
+fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14D5C6DF71/Data?size=1000&page=100")
+  .then((response) => response.json())
+  .then((data) => {
+    // console.log(data);
+    obj2 = data;
+    const content = document.getElementById("content");
+      const reservoirOfS = document.querySelectorAll(".reservoirOfS");
+      
+      // console.dir(reservoirOfS);
+    const rname = document.getElementById("rname");
+    const Percentage = document.getElementById("Percentage");
+    const PercentageTiele = document.getElementById("PercentageTiele");
+    const btn = document.getElementById("btn");
+
+
+        reservoirOfS.forEach((reservoir) => {
+            reservoir.addEventListener("mouseover", function () {
+                obj2.responseData.forEach((item1) => {
+                    if (reservoir.getAttribute("value") == item1.ReservoirName) {
+                rname.innerText = item1.ReservoirName;
+                // console.log(item1.ReservoirIdentifier);
+                obj1.forEach((item2) => {
+                    if (item1.ReservoirIdentifier == item2.StationNo) {
+                      PercentageTiele.innerText="蓄水儲存比例："
+                        Percentage.innerText = Math.floor(item2.PercentageOfStorage) + "% ";
+                    }
+                });
+                btn.innerHTML =' <a href="./Visual"  style="text-decoration:none;color:white;background-color: #5CD2E6;margin-top: 10px;padding: 5px;border-radius: 10px;border: 1px solid black;"> 點我查看詳細</a>';
+            }
+            });
+        });
+    });
+
+  });
+    },
+    
   }
 }
 </script>
@@ -21,7 +69,7 @@ export default{
 <template>
 <div class="svgArea">
     <!-- 全台水庫SVG -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 545 975">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 545 975" @mousemove="svgUpData()" >
         <g fill="#fff" stroke="#39c" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
         <path id="高雄市" d="m269.8 536.3 1.9 5.8-3 5-5.6 2.4-1.4 3.2 1 4 5.6 3.6 6.3 5.2 2.8 7.6.3 2.5-15.6 3.8-6.4 4.1-4 3.9-7.8 5.1-.9 5.7 2.3 6-2.7 4.9-7.4 4-.8 6.9 2.1 9.9-3 13.2-.1 11.2-4.3 5.9-8.5 7.2-2.3 9.8 1.3 8.1 3 4.6 6.2 6.4 1.2 4.9-3.9.5-5.2-.9-4.3.2-8.5 6.7-5.9-5.5-7.6-8.9-7.2 1.8-6.6 5.9-13.1-6.6-9.4 4.5-6.4 7.1-8 2.8-17.8-1.1-1.7 4.9-1.3 7.2-2.6 7.9.5 7-.1 9.5-5.7 21.2-.1 7.1 2.7 7.5.4 8.2-8.1 20.5-2.6-1.1-1.6.1-1.8.7h-2.2l-13-10.2-12.1-17.1 12.7 15.4-1.5-7.4-3.8-7.2-5.3-6-9-8.4-3.5-4.2-1.6-4.8 2.2-4.6 1.1-4.1-1.5-5.8-2.7-5.6-4.9-7.7-4.6-10.2-1-4.5.1-3 1.5-3.6.3-2.4-.5-1.2-2.7-2.3-.5-2.3-2.9-4.9-.7-2-2.1-13.6 6.1-3.7.2.5 3.9 8.6 4.8 2.5 15.7 2.2 8.2-.9 8.4 1 4.2-1.5 3.5-2.6 6.5-2.6 6.3-4.4 2.4-5.5 3-5.2 5.3-7.1 6.1-6.4 6.5-5.4 7.4-7.2 6.5-8.4 10-17 10.4-15.1 2.3-6.6-1-6.7-1.4-4.5.1-5 3.6-3.5 6.9.7 5.8-.6 12.3-7.3 4.5-5.4 7.9-6.1 7.7-4.3 4.2-5 3.6-6.8 8.5-6.8 18.5-9.4 4.3 1 5.8 2.2 4.2 5.9.7 2z"/>
         <path id="屏東縣" d="m99.4 845 2 2.9-.3 1-2.7 1.8-5 4.3-.9-3.3 1.4-2.7 2.8-3.6h2zm126.7-143.3 3.5 6.6.7 4.9 5.4 1.3 5.5 3.6-2.8 13.8-.1 5.2-2 5-9.8 4.1-4.8 2.7-7.6 1.6-5.4 4.5-2.4 6.6-3.7 6.6-3 7.5-.8 14.7 1.2 6.5 2 6.1 1.1 7.1v5.4l2.6 5 4.6 5.6-2.5 3.8-5.3 3.2-2.1 3.9-.5 4.5 2.7 3.9 3.4 1.7 3.1 4.4-.1 5.7.6 6.1 3.2 5.9 4.6 4.9 10.2 4.7 4.5-.3.9 51.6-1.6 7.3-2.5 6-3.4 2.5-4 3.7.1 8.3 1.5 9.2-.4 5.9-4.5-6.8-6.8-5.2-7.8-3.5-8-1.9-.3 6.6-2.3 2.3-3.4-.8-3.7-3.1-.2-2.4 1.3-7-5.5-9.2-.5-2.4.1-2.1.4-3.2v-10.8l.5-3.1 2.5-3.6.5-3-19.9-51.6-1.6-2.9-5.5-6.8-4.4-9.9-2-2.8-8.2-6.5-5.4-3-.9-3.7-.7-1.3-4.4-2.9-10-4.8-4.5-3.1-4.8-4.2-2.6-1.6 8.1-20.5-.4-8.2-2.7-7.5.1-7.1 5.7-21.2.1-9.5-.5-7 2.6-7.9 1.3-7.2 1.7-4.9 17.8 1.1 8-2.8 6.4-7.1 9.4-4.5 13.1 6.6 6.6-5.9 7.2-1.8 7.6 8.9 5.9 5.5 8.5-6.7 4.3-.2 5.2.9z"/>
