@@ -4,15 +4,24 @@
 
 <template>
 <!-- 搜尋欄 -->
-    <div class="search">
+    <div class="search" id="search">
         <input type="text" placeholder="開始搜尋">
         <button type="button">搜尋</button>
+
+        <select class="form-control" onchange="location.href = this.options[this.selectedIndex].value">
+    <option selected="" value="#search">----請選擇地區----</option>
+    <option value="#north">北區</option>
+    <option value="#middle">中區</option>
+    <option value="#south">南區</option>
+
+  </select>
     </div>
     <div class="content">
+        
 
 <!-- 北區 -->
     <label for="">北區</label>
-        <div class="north">
+        <div class="north" id="north">
             <!-- 石門水庫 -->
             <div class="northOne">
                 <div class="nameOne">
@@ -141,7 +150,7 @@
         </div>
 <!-- 中區 -->
     <label for="">中區</label>
-        <div class="middle">
+        <div class="middle" id="middle">
             <!-- 永和山水庫 -->
             <div class="middleOne">
                 <div class="nameOneM">
@@ -334,7 +343,7 @@
         </div>
 <!-- 南區-->
     <label for="">南區</label>
-        <div class="south">
+        <div class="south" id="south">
         <!-- 蘭潭水庫 -->
         <div class="southOne">
                 <div class="nameOneS">
@@ -520,7 +529,7 @@
             }
     }
 //北中南水庫
-.content{
+    .content{
     width: 100vw;
     height: 100vh;
 
@@ -1188,7 +1197,7 @@
             }
         }
     }
-}
+    }
 
 
 

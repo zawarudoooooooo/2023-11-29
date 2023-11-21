@@ -28,6 +28,8 @@
 6.阿公店水庫 30802
 7.牡丹水庫 31201
 
+------------------------------------------------------
+
 **視覺化分頁**
 
 1.本日累積雨量 Inflow Total (水庫統計資料 API)
@@ -42,12 +44,35 @@
 例 :  北區第一個水庫有效蓄水量 = ESNO (Effective Storage North One)
 
 
-4.有效庫容量 Effective Capacity
+4.有效庫容量 Effective Capacity (水庫統計資料 API)
 例 :  北區第一個水庫有效庫容量 = ECNO (Effective Capacity North One)
 
 
-SVG 圖比例  蓄水比 PercentageOfStorage (水庫即時資料 API)
+5.蓄水比 Percentage Of Storage (水庫即時資料 API)
+例 :  北區第一個水庫蓄水比 = POSNO (Percentage Of Storage North One)
 
+------------------------------------------------------
 **水庫資訊**
 
-水位 Water Height (水庫即時資料 API)
+(水庫即時資料 API)
+
+水位(公尺) Water Height 
+
+水庫編號 Station No
+
+水情時間 Time
+
+進流量 Inflow
+
+------------------------------------------------------
+(水庫統計資料 API)
+
+出水量(萬里方公尺) OutFlow Total 
+
+呆水位標高(公尺)(底床高) Dead Water Height
+
+集水區本日降雨量(mm) Accumulated Rain fall
+
+滿水位標高(公尺) Full Water Height
+
+------------------------------------------------------
