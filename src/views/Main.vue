@@ -1,5 +1,21 @@
 <script>
 
+fetch("./50C8256D-30C5-4B8D-9B84-2E14D5C6DF71.json")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    obj2 = data;
+  });
+
+
+export default{
+  data(){
+    return{
+      classReservoir:"reservoirOfS"
+    }
+    
+  }
+}
 </script>
 
 <template>
@@ -34,38 +50,38 @@
         </g>
         <path stroke="rgba(0,0,0,0.4)" fill="none" stroke-width="1" d="m0 260 l 100 0 l150 -260 m-110 191 l-30 -130 l-100 0 m100 0 l0 -100"/>
         <g fill="#F33" stroke="#fff" stroke-width="2" id="reservoirs">
-            <circle cx="429" cy="110" r="18.089842747137148" id="翡翠水庫" fill="rgba(12.560088523270906,159.87564268788842,242.00466088433853)" class="reservoirOfS" value="翡翠水庫"/>
-            <circle cx="343" cy="138" r="15.020693284606589" id="石門水庫" fill="rgba(3.8198264056189544,159.96217993657802,251.04780337240416)" class="reservoirOfS" value="石門水庫"/>
-            <circle cx="281" cy="163" r="8.315364047667975" id="寶山第二水庫" fill="rgba(15.731928265939672,159.8442383340006,238.72290590306244)" class="reservoirOfS" value="寶山第二水庫"/>
-            <circle cx="446" cy="47" r="6.427602611192743" id="新山水庫" fill="rgba(0,160,255)" class="reservoirOfS" value="新山水庫"/>
-            <circle cx="266" cy="176" r="5.770735146367147" id="大埔水庫" fill="rgba(135.52755236837137,158.6581430458577,114.77594829213061)" class="reservoirOfS" value="大埔水庫"/>
-            <circle cx="277" cy="156.6" r="5.721479341804703" id="寶山水庫" fill="rgba(17.34018529241456,159.8283149971048,237.05891719745225)" class="reservoirOfS" value="寶山水庫"/>
-            <circle cx="460" cy="61" r="4.483882229302048" id="西勢水庫" fill="rgba(0,160,255)" class="reservoirOfS" value="西勢水庫"/>
-            <circle cx="313" cy="295" r="14.565753542885338" id="德基水庫" fill="rgba(0,160,255)" class="reservoirOfS" value="德基水庫"/>
-            <circle cx="246" cy="413" r="12.753389875901028" id="日月潭水庫" fill="rgba(0,160,255)" class="reservoirOfS" value="日月潭水庫"/>
-            <circle cx="213" cy="274" r="12.269094811046905" id="鯉魚潭水庫" fill="rgba(10.537689070576278,159.89566644484577,244.09714348638394)" class="reservoirOfS" value="鯉魚潭水庫"/>
-            <circle cx="165" cy="462" r="9.47091827260855" id="湖山水庫" fill="rgba(0,160,255)" class="reservoirOfS" value="湖山水庫"/>
-            <circle cx="305" cy="365" r="8.667969668753468" id="霧社水庫" fill="rgba(34.55941615750177,159.65782756279702,219.24298031228778)" class="reservoirOfS" value="霧社水庫"/>
-            <circle cx="248" cy="187" r="8.208634404447107" id="永和山水庫" fill="rgba(0,160,255)" class="reservoirOfS" value="永和山水庫"/>
-            <circle cx="234" cy="201" r="6.708566292514685" id="明德水庫" fill="rgba(84.75156471802812,159.1608755968512,167.3114998709511)" class="reservoirOfS" value="明德水庫"/>
-            <circle cx="206" cy="292" r="4.9371049463498595" id="石岡壩" fill="rgba(227.89468364665453,90.57610673135234,23.52536891045078)" class="reservoirOfS" value="石岡壩"/>
-            <circle cx="155" cy="584" r="21.317990098885286" id="曾文水庫" fill="rgba(0,160,255)" class="reservoirOfS" value="曾文水庫"/>
-            <circle cx="144" cy="635" r="11.276858025404474" id="南化水庫" fill="rgba(0,160,255)" class="reservoirOfS" value="南化水庫"/>
-            <circle cx="101" cy="600" r="10.846089023029323" id="烏山頭水庫" fill="rgba(16.178986472411424,159.83981201512464,238.26035558052482)" class="reservoirOfS" value="烏山頭水庫"/>
-            <circle cx="203" cy="900" r="7.960843852472429" id="牡丹水庫" fill="rgba(26.511300031682367,159.73751188087442,227.56999155137817)" class="reservoirOfS" value="牡丹水庫"/>
-            <circle cx="139" cy="530" r="7.830946860262335" id="仁義潭水庫" fill="rgba(0,160,255)" class="reservoirOfS" value="仁義潭水庫"/>
-            <circle cx="97" cy="715" r="6.998826200346005" id="阿公店水庫" fill="rgba(0,160,255)" class="reservoirOfS" value="阿公店水庫"/>
-            <circle cx="130" cy="561" r="6.865320081875257" id="白河水庫" fill="rgba(206.79387387387388,145.51783783783785,41.83927927927928)" class="reservoirOfS" value="白河水庫"/>
-            <circle cx="129" cy="527" r="6.335473799857855" id="蘭潭水庫" fill="rgba(0,160,255)" class="reservoirOfS" value="蘭潭水庫"/>
-            <circle cx="104" cy="796" r="6.058321255424562" id="鳳山水庫" fill="rgba(206.21927374301677,147.01396648044692,42.33798882681564)" class="reservoirOfS" value="鳳山水庫"/>
-            <circle cx="95" cy="758" r="5.240275785327054" id="澄清湖水庫" fill="rgba(56.28097472785328,159.4427626264569,196.76869446474586)" class="reservoirOfS" value="澄清湖水庫"/>
-            <circle cx="130" cy="645" r="4.759982871186609" id="鏡面水庫" fill="rgba(23.12104292592977,159.7710787829116,231.07773281426077)" class="reservoirOfS" value="鏡面水庫"/>
-            <circle cx="70" cy="138" r="4.784464540552736" id="成功水庫" fill="rgba(235.8996153846154,69.73307692307692,16.577692307692306)" class="reservoirOfS" value="成功水庫"/>
-            <circle cx="63" cy="143" r="4.61394061351492" id="興仁水庫" fill="rgba(234.3657770800628,73.72684458398744,17.90894819466248)" class="reservoirOfS" value="興仁水庫"/>
-            <circle cx="75" cy="29" r="4.936125718558541" id="太湖水庫" fill="rgba(0,160,255)" class="reservoirOfS" value="太湖水庫"/>
-            <circle cx="82" cy="23" r="4.536259232551796" id="田埔水庫" fill="rgba(0,160,255)" class="reservoirOfS" value="田埔水庫"/>
-            <circle cx="72" cy="17" r="4.507342536856651" id="金沙水庫" fill="rgba(44.231034482758616,159.56206896551726,209.23620689655175)" class="reservoirOfS" value="金沙水庫"/>
-            <circle cx="145" cy="37" r="4.49631780236734" id="后沃水庫" fill="rgba(218.23228441028107,115.73480662983424,31.911602209944746)" class="reservoirOfS" value="后沃水庫"/>
+            <circle cx="429" cy="110" r="18.089842747137148" id="翡翠水庫" fill="rgba(12.560088523270906,159.87564268788842,242.00466088433853)" :class="classReservoir" value="翡翠水庫"/>
+            <circle cx="343" cy="138" r="15.020693284606589" id="石門水庫" fill="rgba(3.8198264056189544,159.96217993657802,251.04780337240416)" :class="classReservoir" value="石門水庫"/>
+            <circle cx="281" cy="163" r="8.315364047667975" id="寶山第二水庫" fill="rgba(15.731928265939672,159.8442383340006,238.72290590306244)" :class="classReservoir" value="寶山第二水庫"/>
+            <circle cx="446" cy="47" r="6.427602611192743" id="新山水庫" fill="rgba(0,160,255)" :class="classReservoir" value="新山水庫"/>
+            <circle cx="266" cy="176" r="5.770735146367147" id="大埔水庫" fill="rgba(135.52755236837137,158.6581430458577,114.77594829213061)" :class="classReservoir" value="大埔水庫"/>
+            <circle cx="277" cy="156.6" r="5.721479341804703" id="寶山水庫" fill="rgba(17.34018529241456,159.8283149971048,237.05891719745225)" :class="classReservoir" value="寶山水庫"/>
+            <circle cx="460" cy="61" r="4.483882229302048" id="西勢水庫" fill="rgba(0,160,255)" :class="classReservoir" value="西勢水庫"/>
+            <circle cx="313" cy="295" r="14.565753542885338" id="德基水庫" fill="rgba(0,160,255)" :class="classReservoir" value="德基水庫"/>
+            <circle cx="246" cy="413" r="12.753389875901028" id="日月潭水庫" fill="rgba(0,160,255)" :class="classReservoir" value="日月潭水庫"/>
+            <circle cx="213" cy="274" r="12.269094811046905" id="鯉魚潭水庫" fill="rgba(10.537689070576278,159.89566644484577,244.09714348638394)" :class="classReservoir" value="鯉魚潭水庫"/>
+            <circle cx="165" cy="462" r="9.47091827260855" id="湖山水庫" fill="rgba(0,160,255)" :class="classReservoir" value="湖山水庫"/>
+            <circle cx="305" cy="365" r="8.667969668753468" id="霧社水庫" fill="rgba(34.55941615750177,159.65782756279702,219.24298031228778)" :class="classReservoir" value="霧社水庫"/>
+            <circle cx="248" cy="187" r="8.208634404447107" id="永和山水庫" fill="rgba(0,160,255)" :class="classReservoir" value="永和山水庫"/>
+            <circle cx="234" cy="201" r="6.708566292514685" id="明德水庫" fill="rgba(84.75156471802812,159.1608755968512,167.3114998709511)" :class="classReservoir" value="明德水庫"/>
+            <circle cx="206" cy="292" r="4.9371049463498595" id="石岡壩" fill="rgba(227.89468364665453,90.57610673135234,23.52536891045078)" :class="classReservoir" value="石岡壩"/>
+            <circle cx="155" cy="584" r="21.317990098885286" id="曾文水庫" fill="rgba(0,160,255)" :class="classReservoir" value="曾文水庫"/>
+            <circle cx="144" cy="635" r="11.276858025404474" id="南化水庫" fill="rgba(0,160,255)" :class="classReservoir" value="南化水庫"/>
+            <circle cx="101" cy="600" r="10.846089023029323" id="烏山頭水庫" fill="rgba(16.178986472411424,159.83981201512464,238.26035558052482)" :class="classReservoir" value="烏山頭水庫"/>
+            <circle cx="203" cy="900" r="7.960843852472429" id="牡丹水庫" fill="rgba(26.511300031682367,159.73751188087442,227.56999155137817)" :class="classReservoir" value="牡丹水庫"/>
+            <circle cx="139" cy="530" r="7.830946860262335" id="仁義潭水庫" fill="rgba(0,160,255)" :class="classReservoir" value="仁義潭水庫"/>
+            <circle cx="97" cy="715" r="6.998826200346005" id="阿公店水庫" fill="rgba(0,160,255)" :class="classReservoir" value="阿公店水庫"/>
+            <circle cx="130" cy="561" r="6.865320081875257" id="白河水庫" fill="rgba(206.79387387387388,145.51783783783785,41.83927927927928)" :class="classReservoir" value="白河水庫"/>
+            <circle cx="129" cy="527" r="6.335473799857855" id="蘭潭水庫" fill="rgba(0,160,255)" :class="classReservoir" value="蘭潭水庫"/>
+            <circle cx="104" cy="796" r="6.058321255424562" id="鳳山水庫" fill="rgba(206.21927374301677,147.01396648044692,42.33798882681564)" :class="classReservoir" value="鳳山水庫"/>
+            <circle cx="95" cy="758" r="5.240275785327054" id="澄清湖水庫" fill="rgba(56.28097472785328,159.4427626264569,196.76869446474586)" :class="classReservoir" value="澄清湖水庫"/>
+            <circle cx="130" cy="645" r="4.759982871186609" id="鏡面水庫" fill="rgba(23.12104292592977,159.7710787829116,231.07773281426077)" :class="classReservoir" value="鏡面水庫"/>
+            <circle cx="70" cy="138" r="4.784464540552736" id="成功水庫" fill="rgba(235.8996153846154,69.73307692307692,16.577692307692306)" :class="classReservoir" value="成功水庫"/>
+            <circle cx="63" cy="143" r="4.61394061351492" id="興仁水庫" fill="rgba(234.3657770800628,73.72684458398744,17.90894819466248)" :class="classReservoir" value="興仁水庫"/>
+            <circle cx="75" cy="29" r="4.936125718558541" id="太湖水庫" fill="rgba(0,160,255)" :class="classReservoir" value="太湖水庫"/>
+            <circle cx="82" cy="23" r="4.536259232551796" id="田埔水庫" fill="rgba(0,160,255)" :class="classReservoir" value="田埔水庫"/>
+            <circle cx="72" cy="17" r="4.507342536856651" id="金沙水庫" fill="rgba(44.231034482758616,159.56206896551726,209.23620689655175)" :class="classReservoir" value="金沙水庫"/>
+            <circle cx="145" cy="37" r="4.49631780236734" id="后沃水庫" fill="rgba(218.23228441028107,115.73480662983424,31.911602209944746)" :class="classReservoir" value="后沃水庫"/>
 
         </g>
     </svg>
@@ -73,7 +89,7 @@
   
       <h1 id="rname"></h1>
       <span id="Percentage"></span>
-      <div id="btn"></div>
+      <div id="btn" class="btnA"></div>
     </div>
   </div>
 
@@ -113,6 +129,11 @@
       width: 50%;
         height: 100vmin;
         border: 1px solid black;
+    }
+    .btnA{
+      width: 20vmin;
+      height: 4vmin;
+      background-color: rgb(171, 69, 69);
     }
   }
 </style>
