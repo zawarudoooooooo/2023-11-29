@@ -1,12 +1,5 @@
 <script>
 
-fetch("./50C8256D-30C5-4B8D-9B84-2E14D5C6DF71.json")
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-    obj2 = data;
-  });
-
 
 export default{
   data(){
@@ -14,6 +7,13 @@ export default{
       classReservoir:"reservoirOfS"
     }
     
+  },
+  methods:{
+  
+    goVisual(){
+      let go=this
+      go.$router.push('/Visual')
+    }
   }
 }
 </script>
@@ -81,15 +81,20 @@ export default{
             <circle cx="75" cy="29" r="4.936125718558541" id="太湖水庫" fill="rgba(0,160,255)" :class="classReservoir" value="太湖水庫"/>
             <circle cx="82" cy="23" r="4.536259232551796" id="田埔水庫" fill="rgba(0,160,255)" :class="classReservoir" value="田埔水庫"/>
             <circle cx="72" cy="17" r="4.507342536856651" id="金沙水庫" fill="rgba(44.231034482758616,159.56206896551726,209.23620689655175)" :class="classReservoir" value="金沙水庫"/>
-            <circle cx="145" cy="37" r="4.49631780236734" id="后沃水庫" fill="rgba(218.23228441028107,115.73480662983424,31.911602209944746)" :class="classReservoir" value="后沃水庫"/>
+            <circle  cx="145" cy="37" r="4.49631780236734" id="后沃水庫" fill="rgba(218.23228441028107,115.73480662983424,31.911602209944746)" :class="classReservoir" value="后沃水庫"/>
 
         </g>
     </svg>
     <div class="content">
-  
+    <div class="title">
+
       <h1 id="rname"></h1>
-      <span id="Percentage"></span>
-      <div id="btn" class="btnA"></div>
+    </div>
+      <h1 id="PercentageTiele"></h1>
+      <span id="Percentage" class="Percentage"></span>
+      <div id="btn" class="btn">
+        
+      </div>
     </div>
   </div>
 
@@ -111,29 +116,34 @@ export default{
       cursor: pointer;
     }
     circle:hover {
-    // fill: #B99362;
     transform: translate(-5px, -5px);
     }
-    // path{
-    //   transition: all 0.3s;
-    //   fill: transparent;
-    //   paint-order:stroke;
-    //   transition: 0.5s;
-    //   cursor: pointer;
-    // }
-    // path:hover {
-    // fill: #B99362 ;
-    // transform: translate(-5px, -5px);
-    // }
     .content{
-      width: 50%;
-        height: 100vmin;
+      width: 50vmin;
+        height: 50vmin;
+        border-radius: 10px;
+        background-color: #fff;
         border: 1px solid black;
-    }
-    .btnA{
-      width: 20vmin;
-      height: 4vmin;
-      background-color: rgb(171, 69, 69);
+        span{
+          font-size: 100px;
+        }
+        .title{
+          background-color: bisque;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+          h1{
+            text-align: center;
+            margin-top: 0px;
+          }
+        }
+        .Percentage{
+          margin-bottom: 10px;
+          margin-left: 50px;
+        }
+        .btn{
+          margin-top: 15%;
+          margin-left: 35%;
+        }
     }
   }
 </style>
