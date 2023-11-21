@@ -1,6 +1,5 @@
 <script>
 let obj1 = {};
-let obj2 = {};
 fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
     .then((response) => response.json())
     .then((data) => {
@@ -73,18 +72,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
             }
         })
     });
-
-fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Station")
-    .then(response => response.json())
-    .then((data) => {
-        const TNO = document.getElementById("TNO")
-        obj2 = data;
-        obj2.forEach((item) => {
-            if(M8.innerText==item.StationNo){
-                TME.innerText = obj1.Time
-            }
-        })
-    })
 
 </script>
 
@@ -366,26 +353,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Station")
             <th id="IPOSMSE"></th>
         </tr>
 
-        <!-- 頭社水庫 -->
-        <tr>
-            <th id="M8">20504</th>
-            <th>頭社水庫</th>
-            <!-- 水情時間 -->
-            <th id="TME"></th>
-            <!-- 本日集水區累積降雨量(mm) -->
-            <th id="ARFME"></th>
-            <!-- 進流量(cms) -->
-            <th id="INME"></th>
-            <!-- 水位(公尺) -->
-            <th id="WHME"></th>
-            <!-- 滿水位(公尺) -->
-            <th id="FWHME"></th>
-            <!-- 有效蓄水量(萬立方公尺) -->
-            <th id="IESME"></th>
-            <!-- 蓄水百分比(%) -->
-            <th id="IPOSME"></th>
-        </tr>
-
+       
         <!-- 湖山水庫 -->
         <tr>
             <th id="M9">20509</th>
