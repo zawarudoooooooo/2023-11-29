@@ -28,7 +28,8 @@ export default{
             width: 100vw;
             height: 13vh;
             text-align: center;
-            margin-top: 5vmin;
+            // margin-top: 5vmin;
+            padding-top: 5vmin;
             .routerItem{
                 text-decoration-line: none;
                 text-decoration-color:none ;
@@ -36,7 +37,15 @@ export default{
                 font-size: 36pt;
                 color: aliceblue;
             }
+            a.router-link-exact-active{
+            background-color: #fff;
+            color: #0766AD;
+            border-radius: 10px;
+            box-shadow: 4px 5px 1px black;
+            font-weight: bold;
+}
         }
+        
 
         nav{
             width: 100vw;
@@ -52,4 +61,11 @@ export default{
                 color: aliceblue;
             }
         }
+        a.router-link-exact-active{
+            background-color: #fff;
+            color: #0766AD;
+            border-radius: 10px;
+            box-shadow: 4px 5px 1px black;
+            font-weight: bold;
+}
 </style>

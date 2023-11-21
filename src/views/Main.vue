@@ -166,6 +166,16 @@ fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14
     circle:hover {
     transform: translate(-5px, -5px);
     }
+    path{
+      transition: all 0.3s;
+      paint-order:stroke;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+    path:hover {
+      fill:#35A29F;
+    transform: translate(-5px, -5px);
+    }
     .content{
       width: 50vmin;
         height: 50vmin;

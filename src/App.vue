@@ -8,13 +8,20 @@ import Header from './components/Header.vue'
   <div class="header">
     <Header />
   </div>
-  <RouterView />
+  <div class="content">
+    <RouterView />
+  </div>
 </template>
 
 <style lang="scss" scoped>
   .header{
     width: 100vw;
-    height: 23vh;
+    height: 28vh;
+    background-color: #279EFF;
+  }
+  .content{
+    margin-top: 20px;
+    background-color: lightblue;
   }
 
 </style>
