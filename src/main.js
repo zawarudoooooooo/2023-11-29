@@ -82,11 +82,6 @@ let obj3 = {};
 // const ESMSE = document.getElementById("ESMSE")
 // const ECMSE = document.getElementById("ECMSE")
 
-// const IFTME = document.getElementById("IFTME")
-// const BRFME = document.getElementById("BRFME")
-// const ESME = document.getElementById("ESME")
-// const ECME = document.getElementById("ECME")
-
 // const IFTMN = document.getElementById("IFTMN")
 // const BRFMN = document.getElementById("BRFMN")
 // const ESMN = document.getElementById("ESMN")
