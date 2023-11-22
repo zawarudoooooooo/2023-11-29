@@ -307,6 +307,310 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
     obj4=data
 //     console.log("水庫即時資料");
     console.log(obj4);
+        // 北
+        const n1=document.getElementById("10201")   
+        const n2=document.getElementById("10203")   
+        const n3=document.getElementById("10204")   
+        const n4=document.getElementById("10205")   
+        const n5=document.getElementById("10401")   
+        const n6=document.getElementById("10405")   
+        //中    
+        const m1=document.getElementById("10501")   
+        const m2=document.getElementById("10503")   
+        const m3=document.getElementById("10601")   
+        const m4=document.getElementById("20101")   
+        const m5=document.getElementById("20201")   
+        const m6=document.getElementById("20501")   
+        const m7=document.getElementById("20502")   
+        const m8=document.getElementById("20509")   
+        //    南
+        const s1=document.getElementById("30302")   
+        const s2=document.getElementById("30401")   
+        const s3=document.getElementById("30502")   
+        const s4=document.getElementById("30501")   
+        const s5=document.getElementById("30503")   
+        const s6=document.getElementById("30802")   
+        const s7=document.getElementById("31201")
+        
+        
+        // 1
+        const CTNO=document.getElementById("CTNO")
+        const CWHNO=document.getElementById("CWHNO")
+        const CESNO=document.getElementById("CESNO")
+        const CPOSNO=document.getElementById("CPOSNO")
+        // 2
+        const CTNT=document.getElementById("CTNT")
+        const CWHNT=document.getElementById("CWHNT")
+        const CESNT=document.getElementById("CESNT")
+        const CPOSNT=document.getElementById("CPOSNT")
+        // 3
+        const CTNTH=document.getElementById("CTNTH")
+        const CWHNTH=document.getElementById("CWHNTH")
+        const CESNTH=document.getElementById("CESNTH")
+        const CPOSNTH=document.getElementById("CPOSNTH")
+        // 4
+        const CTNF=document.getElementById("CTNF")
+        const CWHNF=document.getElementById("CWHNF")
+        const CESNF=document.getElementById("CESNF")
+        const CPOSNF=document.getElementById("CPOSNF")
+        // 5
+        const CTNFI=document.getElementById("CTNFI")
+        const CWHNFI=document.getElementById("CWHNFI")
+        const CESNFI=document.getElementById("CESNFI")
+        const CPOSNFI=document.getElementById("CPOSNFI")
+        // 6
+        const CTNS=document.getElementById("CTNS")
+        const CWHNS=document.getElementById("CWHNS")
+        const CESNS=document.getElementById("CESNS")
+        const CPOSNS=document.getElementById("CPOSNS")
+        // 7
+        const CTMO=document.getElementById("CTMO")
+        const CWHMO=document.getElementById("CWHMO")
+        const CESMO=document.getElementById("CESMO")
+        const CPOSMO=document.getElementById("CPOSMO")
+        // 8
+        const CTMT=document.getElementById("CTMT")
+        const CWHMT=document.getElementById("CWHMT")
+        const CESMT=document.getElementById("CESMT")
+        const CPOSMT=document.getElementById("CPOSMT")
+        // 9
+        const CTMTH=document.getElementById("CTMTH")
+        const CWHMTH=document.getElementById("CWHMTH")
+        const CESMTH=document.getElementById("CESMTH")
+        const CPOSMTH=document.getElementById("CPOSMTH")
+        // 10
+        const CTMF=document.getElementById("CTMF")
+        const CWHMF=document.getElementById("CWHMF")
+        const CESMF=document.getElementById("CESMF")
+        const CPOSMF=document.getElementById("CPOSMF")
+        // 11
+        const CTMFI=document.getElementById("CTMFI")
+        const CWHMFI=document.getElementById("CWHMFI")
+        const CESMFI=document.getElementById("CESMFI")
+        const CPOSMFI=document.getElementById("CPOSMFI")
+        // 12
+        const CTMS=document.getElementById("CTMS")
+        const CWHMS=document.getElementById("CWHMS")
+        const CESMS=document.getElementById("CESMS")
+        const CPOSMS=document.getElementById("CPOSMS")
+        // 13
+        const CTMTSE=document.getElementById("CTMTSE")
+        const CWHMSE=document.getElementById("CWHMSE")
+        const CESMSE=document.getElementById("CESMSE")
+        const CPOSMSE=document.getElementById("CPOSMSE")
+        // 14
+        const CTMN=document.getElementById("CTMN")
+        const CWHMN=document.getElementById("CWHMN")
+        const CESMN=document.getElementById("CESMN")
+        const CPOSMN=document.getElementById("CPOSMN")
+        // 15
+        const CTSO=document.getElementById("CTSO")
+        const CWHSO=document.getElementById("CWHSO")
+        const CESSO=document.getElementById("CESSO")
+        const CPOSSO=document.getElementById("CPOSSO")
+        // 16
+        const CTST=document.getElementById("CTST")
+        const CWHST=document.getElementById("CWHST")
+        const CESST=document.getElementById("CESST")
+        const CPOSST=document.getElementById("CPOSST")
+        // 17
+        const CTSTH=document.getElementById("CTSTH")
+        const CWHSTH=document.getElementById("CWHSTH")
+        const CESSTH=document.getElementById("CESSTH")
+        const CPOSSTH=document.getElementById("CPOSSTH")
+        // 18
+        const CTSF=document.getElementById("CTSF")
+        const CWHSF=document.getElementById("CWHSF")
+        const CESSF=document.getElementById("CESSF")
+        const CPOSSF=document.getElementById("CPOSSF")
+        // 19
+        const CTSFI=document.getElementById("CTSFI")
+        const CWHSFI=document.getElementById("CWHSFI")
+        const CESSFI=document.getElementById("CESSFI")
+        const CPOSSFI=document.getElementById("CPOSSFI")
+        // 20
+        const CTSS=document.getElementById("CTSS")
+        const CWHSS=document.getElementById("CWHSS")
+        const CESSS=document.getElementById("CESSS")
+        const CPOSSS=document.getElementById("CPOSSS")
+        // 21
+        const CTSSE=document.getElementById("CTSSE")
+        const CWHSSE=document.getElementById("CWHSSE")
+        const CESSSE=document.getElementById("CESSSE")
+        const CPOSSSE=document.getElementById("CPOSSSE")
+// ------------------------
+
+        obj4.forEach(item=>{
+                if(n1.getAttribute("id")==item.StationNo){
+                        CTNO.innerText=item.Time
+                        CWHNO.innerText=item.WaterHeight 
+                        CESNO.innerText=item.EffectiveStorage 
+                        CPOSNO.innerText=Math.floor(item.PercentageOfStorage)+"%"  
+
+                }
+                
+                if(n2.getAttribute("id")==item.StationNo){
+                        
+                        CTNT.innerText=item.Time
+                        CWHNT.innerText=item.WaterHeight
+                        CESNT.innerText=item.EffectiveStorage
+                        CPOSNT.innerText=Math.floor(item.PercentageOfStorage)+"%"    
+                        
+                }
+
+                if(n3.getAttribute("id")==item.StationNo){
+                        
+                        CTNTH.innerText=item.Time
+                        CWHNTH.innerText=item.WaterHeight
+                        CESNTH.innerText=item.EffectiveStorage
+                        CPOSNTH.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+
+                if(n4.getAttribute("id")==item.StationNo){
+                        
+                        CTNF.innerText=item.Time
+                        CWHNF.innerText=item.WaterHeight
+                        CESNF.innerText=item.EffectiveStorage
+                        CPOSNF.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+
+                if(n5.getAttribute("id")==item.StationNo){
+                        
+                        CTNFI.innerText=item.Time
+                        CWHNFI.innerText=item.WaterHeight
+                        CESNFI.innerText=item.EffectiveStorage
+                        CPOSNFI.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+
+                if(n6.getAttribute("id")==item.StationNo){
+                        
+                        CTNS.innerText=item.Time
+                        CWHNS.innerText=item.WaterHeight
+                        CESNS.innerText=item.EffectiveStorage
+                        CPOSNS.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+
+                if(m1.getAttribute("id")==item.StationNo){
+                        
+                        CTMO.innerText=item.Time
+                        CWHMO.innerText=item.WaterHeight
+                        CESMO.innerText=item.EffectiveStorage
+                        CPOSMO.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+
+                if(m2.getAttribute("id")==item.StationNo){
+                        
+                        CTMT.innerText=item.Time
+                        CWHMT.innerText=item.WaterHeight
+                        CESMT.innerText=item.EffectiveStorage
+                        CPOSMT.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+
+                if(m3.getAttribute("id")==item.StationNo){
+                        
+                        CTMTH.innerText=item.Time
+                        CWHMTH.innerText=item.WaterHeight
+                        CESMTH.innerText=item.EffectiveStorage
+                        CPOSMTH.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+// 10
+                if(m4.getAttribute("id")==item.StationNo){
+                        
+                        CTMF.innerText=item.Time
+                        CWHMF.innerText=item.WaterHeight
+                        CESMF.innerText=item.EffectiveStorage
+                        CPOSMF.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+// 11
+                if(m5.getAttribute("id")==item.StationNo){
+                        
+                        CTMFI.innerText=item.Time
+                        CWHMFI.innerText=item.WaterHeight
+                        CESMFI.innerText=item.EffectiveStorage
+                        CPOSMFI.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+// 12
+                if(m6.getAttribute("id")==item.StationNo){
+                        
+                        CTMS.innerText=item.Time
+                        CWHMS.innerText=item.WaterHeight
+                        CESMS.innerText=item.EffectiveStorage
+                        CPOSMS.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+// 13
+                if(m7.getAttribute("id")==item.StationNo){
+                        
+                        CTMTSE.innerText=item.Time
+                        CWHMSE.innerText=item.WaterHeight
+                        CESMSE.innerText=item.EffectiveStorage
+                        CPOSMSE.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+// 14
+                if(m8.getAttribute("id")==item.StationNo){
+                        
+                        CTMN.innerText=item.Time
+                        CWHMN.innerText=item.WaterHeight
+                        CESMN.innerText=item.EffectiveStorage
+                        CPOSMN.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+// 15
+                if(s1.getAttribute("id")==item.StationNo){
+                        
+                        CTSO.innerText=item.Time
+                        CWHSO.innerText=item.WaterHeight
+                        CESSO.innerText=item.EffectiveStorage
+                        CPOSSO.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+// 16
+                if(s2.getAttribute("id")==item.StationNo){
+                        
+                        CTST.innerText=item.Time
+                        CWHST.innerText=item.WaterHeight
+                        CESST.innerText=item.EffectiveStorage
+                        CPOSST.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+// 17
+                if(s3.getAttribute("id")==item.StationNo){
+                        
+                        CTSTH.innerText=item.Time
+                        CWHSTH.innerText=item.WaterHeight
+                        CESSTH.innerText=item.EffectiveStorage
+                        CPOSSTH.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+// 18
+                if(s4.getAttribute("id")==item.StationNo){
+                        
+                        CTSF.innerText=item.Time
+                        CWHSF.innerText=item.WaterHeight
+                        CESSF.innerText=item.EffectiveStorage
+                        CPOSSF.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+// 19
+                if(s5.getAttribute("id")==item.StationNo){
+
+                        CTSFI.innerText=item.Time
+                        CWHSFI.innerText=item.WaterHeight
+                        CESSFI.innerText=item.EffectiveStorage
+                        CPOSSFI.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+// 20
+                if(s6.getAttribute("id")==item.StationNo){
+                        
+                        CTSS.innerText=item.Time
+                        CWHSS.innerText=item.WaterHeight
+                        CESSS.innerText=item.EffectiveStorage
+                        CPOSSS.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+// 21
+                if(s7.getAttribute("id")==item.StationNo){
+                        
+                        CTSSE.innerText=item.Time
+                        CWHSSE.innerText=item.WaterHeight
+                        CESSSE.innerText=item.EffectiveStorage
+                        CPOSSSE.innerText=Math.floor(item.PercentageOfStorage)+"%"
+                }
+
+        })
     
   });
 
@@ -344,7 +648,7 @@ export default{
 <!-- 北區水庫 -->
 <!--石門水庫-->
             <tr>
-                <td id="r1" class="r1" value="石門水庫">石門水庫</td>
+                <td id="10201" class="r1" value="石門水庫">石門水庫</td>
         <!--有效容量-->
                 <td id="CECNO"></td>
         <!--集水區降雨量-->
@@ -365,7 +669,7 @@ export default{
 
 <!--西勢水庫-->
             <tr>
-                <td id="r2" class="r1" value="西勢水庫">西勢水庫</td>
+                <td id="10203" class="r1" value="西勢水庫">西勢水庫</td>
         <!--有效容量-->
                 <td id="CECNT"></td>
         <!--集水區降雨量-->
@@ -386,7 +690,7 @@ export default{
 
 <!--新山水庫-->
             <tr>
-                <td id="r3" class="r1" value="新山水庫">新山水庫</td>
+                <td id="10204" class="r1" value="新山水庫">新山水庫</td>
         <!--有效容量-->
                 <td id="CECNTH"></td>
         <!--集水區降雨量-->
@@ -407,7 +711,7 @@ export default{
     
 <!--翡翠水庫-->
             <tr>
-                <td id="r4" class="r1" value="翡翠水庫">翡翠水庫</td>
+                <td id="10205" class="r1" value="翡翠水庫">翡翠水庫</td>
         <!--有效容量-->
                 <td id="CECNF"></td>
         <!--集水區降雨量-->
@@ -428,7 +732,7 @@ export default{
 
 <!--寶山水庫-->
             <tr>
-                <td id="r5" class="r1" value="寶山水庫">寶山水庫</td>
+                <td id="10401" class="r1" value="寶山水庫">寶山水庫</td>
         <!--有效容量-->
                 <td id="CECNFI"></td>
         <!--集水區降雨量-->
@@ -449,7 +753,7 @@ export default{
 
 <!--寶山第二水庫-->
             <tr>
-                <td id="r6" class="r1" value="寶山第二水庫">寶山第二水庫</td>
+                <td id="10405" class="r1" value="寶山第二水庫">寶山第二水庫</td>
         <!--有效容量-->
                 <td id="CECNS"></td>
         <!--集水區降雨量-->
@@ -472,7 +776,7 @@ export default{
 <!-- 中區水庫 -->
 <!--永和山水庫-->
             <tr>
-                <td id="r7" class="r1" value="永和山水庫">永和山水庫</td>
+                <td id="10501" class="r1" value="永和山水庫">永和山水庫</td>
         <!--有效容量-->
                 <td id="CECMO"></td>
         <!--集水區降雨量-->
@@ -493,7 +797,7 @@ export default{
 
 <!--大埔水庫-->
             <tr>
-                <td id="r8" class="r1" value="大埔水庫">大埔水庫</td>
+                <td id="10503" class="r1" value="大埔水庫">大埔水庫</td>
         <!--有效容量-->
                 <td id="CECMT"></td>
         <!--集水區降雨量-->
@@ -514,7 +818,7 @@ export default{
 
 <!--明德水庫-->
             <tr>
-                <td id="r9" class="r1" value="明德水庫">明德水庫</td>
+                <td id="10601" class="r1" value="明德水庫">明德水庫</td>
         <!--有效容量-->
                 <td id="CECMTH"></td>
         <!--集水區降雨量-->
@@ -535,7 +839,7 @@ export default{
 
 <!--鯉魚潭水庫-->
             <tr>
-                <td id="r10" class="r1" value="鯉魚潭水庫">鯉魚潭水庫</td>
+                <td id="20101" class="r1" value="鯉魚潭水庫">鯉魚潭水庫</td>
         <!--有效容量-->
                 <td id="CECMF"></td>
         <!--集水區降雨量-->
@@ -556,7 +860,7 @@ export default{
 
 <!--德基水庫-->
             <tr>
-                <td id="r11" class="r1" value="德基水庫">德基水庫</td>
+                <td id="20201" class="r1" value="德基水庫">德基水庫</td>
         <!--有效容量-->
                 <td id="CECMFI"></td>
         <!--集水區降雨量-->
@@ -577,7 +881,7 @@ export default{
 
 <!--霧社水庫-->
             <tr>
-                <td id="r12" class="r1" value="霧社水庫">霧社水庫</td>
+                <td id="20501" class="r1" value="霧社水庫">霧社水庫</td>
         <!--有效容量-->
                 <td id="CECMS"></td>
         <!--集水區降雨量-->
@@ -598,7 +902,7 @@ export default{
 
 <!--日月潭水庫-->
             <tr>
-                <td id="r13" class="r1" value="日月潭水庫">日月潭水庫</td>
+                <td id="20502" class="r1" value="日月潭水庫">日月潭水庫</td>
         <!--有效容量-->
                 <td id="CECMSE"></td>
         <!--集水區降雨量-->
@@ -619,7 +923,7 @@ export default{
 
 <!--湖山水庫-->
             <tr>
-                <td id="r14" class="r1" value="湖山水庫">湖山水庫</td>
+                <td id="20509" class="r1" value="湖山水庫">湖山水庫</td>
         <!--有效容量-->
                 <td id="CECMN"></td>
         <!--集水區降雨量-->
@@ -642,7 +946,7 @@ export default{
 <!-- 南區水庫 -->
 <!--蘭潭水庫-->
             <tr>
-                <td id="r15" class="r1" value="蘭潭水庫">蘭潭水庫</td>
+                <td id="30302" class="r1" value="蘭潭水庫">蘭潭水庫</td>
         <!--有效容量-->
                 <td id="CECSO"></td>
         <!--集水區降雨量-->
@@ -663,7 +967,7 @@ export default{
 
 <!--白河水庫-->
             <tr>
-                <td id="r16" class="r1" value="白河水庫">白河水庫</td>
+                <td id="30401" class="r1" value="白河水庫">白河水庫</td>
         <!--有效容量-->
                 <td id="CECST"></td>
         <!--集水區降雨量-->
@@ -684,7 +988,7 @@ export default{
 
 <!--曾文水庫-->
             <tr>
-                <td id="r17" class="r1" value="曾文水庫">曾文水庫</td>
+                <td id="30502" class="r1" value="曾文水庫">曾文水庫</td>
         <!--有效容量-->
                 <td id="CECSTH"></td>
         <!--集水區降雨量-->
@@ -700,12 +1004,12 @@ export default{
         <!--有效蓄水量-->
                 <td id="CESSTH"></td>                
         <!--蓄水百分比(%)-->
-                <td id="CPOSST"></td>
+                <td id="CPOSSTH"></td>
             </tr>
 
 <!--烏山頭水庫-->
             <tr>
-                <td id="r18" class="r1" value="烏山頭水庫">烏山頭水庫</td>
+                <td id="30501" class="r1" value="烏山頭水庫">烏山頭水庫</td>
         <!--有效容量-->
                 <td id="CECSF"></td>
         <!--集水區降雨量-->
@@ -726,7 +1030,7 @@ export default{
 
 <!--南化水庫-->
             <tr>
-                <td id="r19" class="r1" value="南化水庫">南化水庫</td>
+                <td id="30503" class="r1" value="南化水庫">南化水庫</td>
         <!--有效容量-->
                 <td id="CECSFI"></td>
         <!--集水區降雨量-->
@@ -747,7 +1051,7 @@ export default{
 
 <!--阿公店水庫-->
             <tr>
-                <td id="r20" class="r1" value="阿公店水庫">阿公店水庫</td>
+                <td id="30802" class="r1" value="阿公店水庫">阿公店水庫</td>
         <!--有效容量-->
                 <td id="CECSS"></td>
         <!--集水區降雨量-->
@@ -768,7 +1072,7 @@ export default{
 
 <!--牡丹水庫-->
             <tr>
-                <td id="r21" class="r1" value="牡丹水庫">牡丹水庫</td>
+                <td id="31201" class="r1" value="牡丹水庫">牡丹水庫</td>
         <!--有效容量-->
                 <td id="CECSSE"></td>
         <!--集水區降雨量-->
