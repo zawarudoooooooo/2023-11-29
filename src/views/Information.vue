@@ -1,10 +1,12 @@
 <script>
+
 let obj1 = {};
 fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
     .then((response) => response.json())
     .then((data) => {
         console.log(data);
-        const TNO = document.getElementById("TNO")
+        setInterval(function(){
+            const TNO = document.getElementById("TNO")
         obj1 = data;
         obj1.forEach((item) => {
             if (N1.innerText == item.StationNo) {
@@ -71,6 +73,8 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 TSSE.innerText = item.Time
             }
         })
+        },1000)
+        
     });
 
 </script>
