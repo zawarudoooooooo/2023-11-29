@@ -6,31 +6,37 @@ const IFTNO = document.getElementById("IFTNO")
 const BRFNO = document.getElementById("BRFNO")
 const ESNO = document.getElementById("ESNO")
 const ECNO = document.getElementById("ECNO")
+const POSNO = document.getElementById("POSNO")
 
 const IFTNT = document.getElementById("IFTNT")
 const BRFNT = document.getElementById("BRFNT")
 const ESNT = document.getElementById("ESNT")
 const ECNT = document.getElementById("ECNT")
+const POSNT = document.getElementById("POSNT")
 
 const IFTNTH = document.getElementById("IFTNTH")
-const BRFNTH = document.getElementById("BRFTH")
+const BRFNTH = document.getElementById("BRFNTH")
 const ESNTH = document.getElementById("ESNTH")
 const ECNTH = document.getElementById("ECNTH")
+const POSNTH = document.getElementById("POSNTH")
 
 const IFTNF = document.getElementById("IFTNF")
 const BRFNF = document.getElementById("BRFNF")
 const ESNF = document.getElementById("ESNF")
 const ECNF = document.getElementById("ECNF")
+const POSNF = document.getElementById("POSNF")
 
 const IFTNFI = document.getElementById("IFTNFI")
 const BRFNFI = document.getElementById("BRFNFI")
 const ESNFI = document.getElementById("ESNFI")
 const ECNFI = document.getElementById("ECNFI")
+const POSNFI = document.getElementById("POSNFI")
 
 const IFTNS = document.getElementById("IFTNS")
 const BRFNS = document.getElementById("BRFNS")
 const ESNS = document.getElementById("ESNS")
 const ECNS = document.getElementById("ECNS")
+const POSNS = document.getElementById("POSNS")
 
 // 中部
 
@@ -38,46 +44,49 @@ const IFTMO = document.getElementById("IFTMO")
 const BRFMO = document.getElementById("BRFMO")
 const ESMO = document.getElementById("ESMO")
 const ECMO = document.getElementById("ECMO")
+const POSMO = document.getElementById("POSMO")
 
 const IFTMT = document.getElementById("IFTMT")
 const BRFMT = document.getElementById("BRFMT")
 const ESMT = document.getElementById("ESMT")
 const ECMT = document.getElementById("ECMT")
+const POSMT = document.getElementById("POSMT")
 
 const IFTMTH = document.getElementById("IFTMTH")
 const BRFMTH = document.getElementById("BRFMTH")
 const ESMTH = document.getElementById("ESMTH")
 const ECMTH = document.getElementById("ECMTH")
+const POSMTH = document.getElementById("POSMTH")
 
 const IFTMF = document.getElementById("IFTMF")
 const BRFMF = document.getElementById("BRFMF")
 const ESMF = document.getElementById("ESMF")
 const ECMF = document.getElementById("ECMF")
+const POSMF = document.getElementById("POSMF")
 
 const IFTMFI = document.getElementById("IFTMFI")
 const BRFMFI = document.getElementById("BRFMFI")
 const ESMFI = document.getElementById("ESMFI")
 const ECMFI = document.getElementById("ECMFI")
+const POSMFI = document.getElementById("POSMFI")
 
 const IFTMS = document.getElementById("IFTMS")
 const BRFMS = document.getElementById("BRFMS")
 const ESMS = document.getElementById("ESMS")
 const ECMS = document.getElementById("ECMS")
+const POSMS = document.getElementById("POSMS")
 
 const IFTMSE = document.getElementById("IFTMSE")
 const BRFMSE = document.getElementById("BRFMSE")
 const ESMSE = document.getElementById("ESMSE")
 const ECMSE = document.getElementById("ECMSE")
-
-const IFTME = document.getElementById("IFTME")
-const BRFME = document.getElementById("BRFME")
-const ESME = document.getElementById("ESME")
-const ECME = document.getElementById("ECME")
+const POSMSE = document.getElementById("POSMSE")
 
 const IFTMN = document.getElementById("IFTMN")
 const BRFMN = document.getElementById("BRFMN")
 const ESMN = document.getElementById("ESMN")
 const ECMN = document.getElementById("ECMN")
+const POSMN = document.getElementById("POSMN")
 
 // 南部
 
@@ -85,36 +94,43 @@ const IFTSO = document.getElementById("IFTSO")
 const BRFSO = document.getElementById("BRFSO")
 const ESSO = document.getElementById("ESSO")
 const ECSO = document.getElementById("ECSO")
+const POSSO = document.getElementById("POSSO")
 
 const IFTST = document.getElementById("IFTST")
 const BRFST = document.getElementById("BRFST")
 const ESST = document.getElementById("ESST")
 const ECST = document.getElementById("ECST")
+const POSST = document.getElementById("POSST")
 
 const IFTSTH = document.getElementById("IFTSTH")
 const BRFSTH = document.getElementById("BRFSTH")
 const ESSTH = document.getElementById("ESSTH")
 const ECSTH = document.getElementById("ECSTH")
+const POSSTH = document.getElementById("POSSTH")
 
 const IFTSF = document.getElementById("IFTSF")
 const BRFSF = document.getElementById("BRFSF")
 const ESSF = document.getElementById("ESSF")
 const ECSF = document.getElementById("ECSF")
+const POSSF = document.getElementById("POSSF")
 
 const IFTSFI = document.getElementById("IFTSFI")
 const BRFSFI = document.getElementById("BRFSFI")
 const ESSFI = document.getElementById("ESSFI")
 const ECSFI = document.getElementById("ECSFI")
+const POSSFI = document.getElementById("POSSFI")
 
 const IFTSS = document.getElementById("IFTSS")
 const BRFSS = document.getElementById("BRFSS")
 const ESSS = document.getElementById("ESSS")
 const ECSS = document.getElementById("ECSS")
+const POSSS = document.getElementById("POSSS")
 
 const IFTSSE = document.getElementById("IFTSSE")
 const BRFSSE = document.getElementById("BRFSSE")
 const ESSSE = document.getElementById("ESSSE")
 const ECSSE = document.getElementById("ECSSE")
+const POSSSE = document.getElementById("POSSSE")
 
 // 北部
 
@@ -146,107 +162,230 @@ const S5 = document.getElementById("30503")
 const S6 = document.getElementById("30802")
 const S7 = document.getElementById("31201")
 let arr = []
+let arr2 = []
+let arr3 = []
             fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14D5C6DF71/Data?size=1000&page=100")
             .then(response=>response.json())
             .then(data=>{
-                console.log(data);
                 arr = data
                 arr.responseData.forEach(item => {
 
                     //北部
 
                     if(N1.getAttribute("value") == item.ReservoirName){
-                        IFTNO.innerText = "本日總進水量:" +item.Inflow
-                        ECNO.innerText = "有效庫容量:" + item.Capacity
+                        IFTNO.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFNO.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECNO.innerText = "有效庫容量: " + item.Capacity + " 萬立方公尺"
                     }
                     if(N2.getAttribute("value") == item.ReservoirName){
-                        IFTNT.innerText = "本日總進水量:" +item.Inflow
-                        ECNT.innerText = "有效庫容量:" + item.Capacity
+                        IFTNT.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFNT.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECNT.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
                     if(N3.getAttribute("value") == item.ReservoirName){
-                        IFTNTH.innerText = "本日總進水量:" +item.Inflow
-                        ECNTH.innerText = "有效庫容量:" + item.Capacity
+                        IFTNTH.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFNTH.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECNTH.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
                     if(N4.getAttribute("value") == item.ReservoirName){
-                        IFTNF.innerText = "本日總進水量:" +item.Inflow
-                        ECNF.innerText = "有效庫容量:" + item.Capacity
+                        IFTNF.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFNF.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECNF.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
                     if(N5.getAttribute("value") == item.ReservoirName){
-                        IFTNFI.innerText = "本日總進水量:" +item.Inflow
-                        ECNFI.innerText = "有效庫容量:" + item.Capacity
+                        IFTNFI.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFNFI.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECNFI.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
                     if(N6.getAttribute("value") == item.ReservoirName){
-                        IFTNS.innerText = "本日總進水量:" +item.Inflow
-                        ECNS.innerText = "有效庫容量:" + item.Capacity
+                        IFTNS.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFNS.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECNS.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
 
                     //中部
 
                     if(M1.getAttribute("value") == item.ReservoirName){
-                        IFTMO.innerText = "本日總進水量:" +item.Inflow
-                        ECMO.innerText = "有效庫容量:" + item.Capacity
+                        IFTMO.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFMO.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECMO.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
                     if(M2.getAttribute("value") == item.ReservoirName){
-                        IFTMT.innerText = "本日總進水量:" +item.Inflow
-                        ECMT.innerText = "有效庫容量:" + item.Capacity
+                        IFTMT.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFMT.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECMT.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
                     if(M3.getAttribute("value") == item.ReservoirName){
-                        IFTMTH.innerText = "本日總進水量:" +item.Inflow
-                        ECMTH.innerText = "有效庫容量:" + item.Capacity
+                        IFTMTH.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFMTH.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECMTH.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
                     if(M4.getAttribute("value") == item.ReservoirName){
-                        IFTMF.innerText = "本日總進水量:" +item.Inflow
-                        ECMF.innerText = "有效庫容量:" + item.Capacity
+                        IFTMF.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFMF.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECMF.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
                     if(M5.getAttribute("value") == item.ReservoirName){
-                        IFTMFI.innerText = "本日總進水量:" +item.Inflow
-                        ECMFI.innerText = "有效庫容量:" + item.Capacity
+                        IFTMFI.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFMFI.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECMFI.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
                     if(M6.getAttribute("value") == item.ReservoirName){
-                        IFTMS.innerText = "本日總進水量:" +item.Inflow
-                        ECMS.innerText = "有效庫容量:" + item.Capacity
+                        IFTMS.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFMS.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECMS.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
                     if(M7.getAttribute("value") == item.ReservoirName){
-                        IFTMSE.innerText = "本日總進水量:" +item.Inflow
-                        ECMSE.innerText = "有效庫容量:" + item.Capacity
+                        IFTMSE.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFMSE.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECMSE.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
                     if(M9.getAttribute("value") == item.ReservoirName){
-                        IFTMN.innerText = "本日總進水量:" +item.Inflow
-                        ECMN.innerText = "有效庫容量:" + item.Capacity
+                        IFTMN.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFMN.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECMN.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
 
                     //南部
 
                     if(S1.getAttribute("value") == item.ReservoirName){
-                        IFTSO.innerText = "本日總進水量:" +item.Inflow
-                        ECSO.innerText = "有效庫容量:" + item.Capacity
+                        IFTSO.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFSO.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECSO.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
                     if(S2.getAttribute("value") == item.ReservoirName){
-                        IFTST.innerText = "本日總進水量:" +item.Inflow
-                        ECST.innerText = "有效庫容量:" + item.Capacity
+                        IFTST.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFST.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECST.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
                     if(S3.getAttribute("value") == item.ReservoirName){
-                        IFTSTH.innerText = "本日總進水量:" +item.Inflow
-                        ECSTH.innerText = "有效庫容量:" + item.Capacity
+                        IFTSTH.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFSTH.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECSTH.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
                     if(S4.getAttribute("value") == item.ReservoirName){
-                        IFTSF.innerText = "本日總進水量:" +item.Inflow
-                        ECSF.innerText = "有效庫容量:" + item.Capacity
+                        IFTSF.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFSF.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECSF.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
                     if(S5.getAttribute("value") == item.ReservoirName){
-                        IFTSFI.innerText = "本日總進水量:" +item.Inflow
-                        ECSFI.innerText = "有效庫容量:" + item.Capacity
+                        IFTSFI.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFSFI.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECSFI.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
                     if(S6.getAttribute("value") == item.ReservoirName){
-                        IFTSS.innerText = "本日總進水量:" +item.Inflow
-                        ECSS.innerText = "有效庫容量:" + item.Capacity
+                        IFTSS.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFSS.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECSS.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
                     if(S7.getAttribute("value") == item.ReservoirName){
-                        IFTSSE.innerText = "本日總進水量:" +item.Inflow
-                        ECSSE.innerText = "有效庫容量:" + item.Capacity
+                        IFTSSE.innerText = "本日總進水量 : " + item.Inflow + " mm"
+                        BRFSSE.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
+                        ECSSE.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
                 });
 })
+fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
+  .then((response) => response.json())
+  .then((data) => {
+    arr2 = data
+    console.log(N1.getAttribute("id"));
+    arr2.forEach(item => {
+        
+        //北部
+
+       if(N1.getAttribute("id") == item.StationNo){
+        ESNO.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSNO.innerText = item.PercentageOfStorage + " %"
+       }
+       if(N2.getAttribute("id") == item.StationNo){
+        ESNT.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSNT.innerText = item.PercentageOfStorage + " %"
+       }
+       if(N3.getAttribute("id") == item.StationNo){
+        ESNTH.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSNTH.innerText = item.PercentageOfStorage + " %"
+       }
+       if(N4.getAttribute("id") == item.StationNo){
+        ESNF.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSNF.innerText = item.PercentageOfStorage + " %"
+       }
+       if(N5.getAttribute("id") == item.StationNo){
+        ESNFI.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSNFI.innerText = item.PercentageOfStorage + " %"
+       }
+       if(N6.getAttribute("id") == item.StationNo){
+        ESNS.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSNS.innerText = item.PercentageOfStorage + " %"
+       }
+
+       //中部
+
+       if(M1.getAttribute("id") == item.StationNo){
+        ESMO.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSMO.innerText = item.PercentageOfStorage + " %"
+       }
+       if(M2.getAttribute("id") == item.StationNo){
+        ESMT.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSMT.innerText = item.PercentageOfStorage + " %"
+       }
+       if(M3.getAttribute("id") == item.StationNo){
+        ESMTH.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSMTH.innerText = item.PercentageOfStorage + " %"
+       }
+       if(M4.getAttribute("id") == item.StationNo){
+        ESMF.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSMF.innerText = item.PercentageOfStorage + " %"
+       }
+       if(M5.getAttribute("id") == item.StationNo){
+        ESMFI.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSMFI.innerText = item.PercentageOfStorage + " %"
+       }
+       if(M6.getAttribute("id") == item.StationNo){
+        ESMS.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSMS.innerText = item.PercentageOfStorage + " %"
+       }
+       if(M7.getAttribute("id") == item.StationNo){
+        ESMSE.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSMSE.innerText = item.PercentageOfStorage + " %"
+       }
+       if(M9.getAttribute("id") == item.StationNo){
+        ESMN.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSMN.innerText = item.PercentageOfStorage + " %"
+       }
+       
+       //南部
+
+       if(S1.getAttribute("id") == item.StationNo){
+        ESSO.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSSO.innerText = item.PercentageOfStorage + " %"
+       }
+       if(S2.getAttribute("id") == item.StationNo){
+        ESST.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSST.innerText = item.PercentageOfStorage + " %"
+       }
+       if(S3.getAttribute("id") == item.StationNo){
+        ESSTH.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSSTH.innerText = item.PercentageOfStorage + " %"
+       }
+       if(S4.getAttribute("id") == item.StationNo){
+        ESSF.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSSF.innerText = item.PercentageOfStorage + " %"
+       }
+       if(S5.getAttribute("id") == item.StationNo){
+        ESSFI.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSSFI.innerText = item.PercentageOfStorage + " %"
+       }
+       if(S6.getAttribute("id") == item.StationNo){
+        ESSS.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSSS.innerText = item.PercentageOfStorage + " %"
+       }
+       if(S7.getAttribute("id") == item.StationNo){
+        ESSSE.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        POSSSE.innerText = item.PercentageOfStorage + " %"
+       }
+    });
+  });
     }
 }
 
@@ -288,7 +427,7 @@ let arr = []
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
-                        <p id="POSNO"></p>
+                        <p id="POSNO">5</p>
                     </div>
                 </div>
             </div>
@@ -439,7 +578,7 @@ let arr = []
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
-                        <p id="POSMW"></p>
+                        <p id="POSMT"></p>
                     </div>
                 </div> 
             </div>
@@ -460,7 +599,7 @@ let arr = []
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
-                        <p id="POSMT"></p>
+                        <p id="POSMTH"></p>
                     </div>
                 </div> 
             </div>
@@ -736,7 +875,7 @@ let arr = []
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
-                        <p id="POSSE"></p>
+                        <p id="POSSSE"></p>
                     </div>
                 </div>
             </div>
