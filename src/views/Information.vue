@@ -1,77 +1,223 @@
 <script>
+
 let obj1 = {};
+let obj2 = {};
+// 水庫即時資料
 fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
     .then((response) => response.json())
     .then((data) => {
         console.log(data);
-        const TNO = document.getElementById("TNO")
-        obj1 = data;
-        obj1.forEach((item) => {
-            if (N1.innerText == item.StationNo) {
-                TNO.innerText = item.Time
-            }
-            if (N2.innerText == item.StationNo) {
-                TNT.innerText = item.Time
-            }
-            if (N3.innerText == item.StationNo) {
-                TNTH.innerText = item.Time
-            }
-            if (N4.innerText == item.StationNo) {
-                TNF.innerText = item.Time
-            }
-            if (N5.innerText == item.StationNo) {
-                TNFI.innerText = item.Time
-            }
-            if (N6.innerText == item.StationNo) {
-                TNS.innerText = item.Time
-            }
-            if (M1.innerText == item.StationNo) {
-                TMO.innerText = item.Time
-            }
-            if (M2.innerText == item.StationNo) {
-                TMT.innerText = item.Time
-            }
-            if (M3.innerText == item.StationNo) {
-                TMTH.innerText = item.Time
-            }
-            if (M4.innerText == item.StationNo) {
-                TMF.innerText = item.Time
-            }
-            if (M5.innerText == item.StationNo) {
-                TMFI.innerText = item.Time
-            }
-            if (M6.innerText == item.StationNo) {
-                TMS.innerText = item.Time
-            }
-            if (M7.innerText == item.StationNo) {
-                TMSE.innerText = item.Time
-            }
-            if (M9.innerText == item.StationNo) {
-                TMN.innerText = item.Time
-            }
-            if (S1.innerText == item.StationNo) {
-                TSO.innerText = item.Time
-            }
-            if (S2.innerText == item.StationNo) {
-                TST.innerText = item.Time
-            }
-            if (S3.innerText == item.StationNo) {
-                TSTH.innerText = item.Time
-            }
-            if (S4.innerText == item.StationNo) {
-                TSF.innerText = item.Time
-            }
-            if (S5.innerText == item.StationNo) {
-                TSFI.innerText = item.Time
-            }
-            if (S6.innerText == item.StationNo) {
-                TSS.innerText = item.Time
-            }
-            if (S7.innerText == item.StationNo) {
-                TSSE.innerText = item.Time
-            }
-        })
+        setInterval(function () {
+            const TNO = document.getElementById("TNO")
+            obj1 = data;
+            obj1.forEach((item) => {
+                if (N1.innerText == item.StationNo) {
+                    TNO.innerText = item.Time
+                    WHNO.innerText = item.WaterHeight
+                }
+                if (N2.innerText == item.StationNo) {
+                    TNT.innerText = item.Time
+                    WHNT.innerText = item.WaterHeight
+                }
+                if (N3.innerText == item.StationNo) {
+                    TNTH.innerText = item.Time
+                    WHNTH.innerText = item.WaterHeight
+                }
+                if (N4.innerText == item.StationNo) {
+                    TNF.innerText = item.Time
+                    WHNF.innerText = item.WaterHeight
+                }
+                if (N5.innerText == item.StationNo) {
+                    TNFI.innerText = item.Time
+                    WHNFI.innerText = item.WaterHeight
+                }
+                if (N6.innerText == item.StationNo) {
+                    TNS.innerText = item.Time
+                    WHNS.innerText = item.WaterHeight
+                }
+                if (M1.innerText == item.StationNo) {
+                    TMO.innerText = item.Time
+                    WHMO.innerText = item.WaterHeight
+                }
+                if (M2.innerText == item.StationNo) {
+                    TMT.innerText = item.Time
+                    WHMT.innerText = item.WaterHeight
+                }
+                if (M3.innerText == item.StationNo) {
+                    TMTH.innerText = item.Time
+                    WHMTH.innerText = item.WaterHeight
+                }
+                if (M4.innerText == item.StationNo) {
+                    TMF.innerText = item.Time
+                    WHMF.innerText = item.WaterHeight
+                }
+                if (M5.innerText == item.StationNo) {
+                    TMFI.innerText = item.Time
+                    WHMFI.innerText = item.WaterHeight
+                }
+                if (M6.innerText == item.StationNo) {
+                    TMS.innerText = item.Time
+                    WHMS.innerText = item.WaterHeight
+                }
+                if (M7.innerText == item.StationNo) {
+                    TMSE.innerText = item.Time
+                    WHMSE.innerText = item.WaterHeight
+                }
+                if (M9.innerText == item.StationNo) {
+                    TMN.innerText = item.Time
+                    WHMN.innerText = item.WaterHeight
+                }
+                if (S1.innerText == item.StationNo) {
+                    TSO.innerText = item.Time
+                    WHSO.innerText = item.WaterHeight
+                }
+                if (S2.innerText == item.StationNo) {
+                    TST.innerText = item.Time
+                    WHST.innerText = item.WaterHeight
+                }
+                if (S3.innerText == item.StationNo) {
+                    TSTH.innerText = item.Time
+                    WHSTH.innerText = item.WaterHeight
+                }
+                if (S4.innerText == item.StationNo) {
+                    TSF.innerText = item.Time
+                    WHSF.innerText = item.WaterHeight
+                }
+                if (S5.innerText == item.StationNo) {
+                    TSFI.innerText = item.Time
+                    WHSFI.innerText = item.WaterHeight
+                }
+                if (S6.innerText == item.StationNo) {
+                    TSS.innerText = item.Time
+                    WHSS.innerText = item.WaterHeight
+                }
+                if (S7.innerText == item.StationNo) {
+                    TSSE.innerText = item.Time
+                    WHSSE.innerText = item.WaterHeight
+                }
+            })
+        }, 1000)
+
     });
+// 水庫統計資料
+fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+        setInterval(function () {
+            const FWHNO = document.getElementById("FWHNO")
+            obj2 = data;
+            obj2.forEach((item) => {
+                if (N1.innerText == item.StationNo) {
+                    FWHNO.innerText = item.FullWaterHeight
+                    IESNO.innerText = item.EffectiveCapacity
+                    ARFNO.innerText = item.AccumulatedRainfall
+
+                }
+                if (N2.innerText == item.StationNo) {
+                    FWHNT.innerText = item.FullWaterHeight
+                    IESNT.innerText = item.EffectiveCapacity
+                    ARFNT.innerText = item.AccumulatedRainfall
+                }
+                if (N3.innerText == item.StationNo) {
+                    FWHNTH.innerText = item.FullWaterHeight
+                    IESNTH.innerText = item.EffectiveCapacity
+                    ARFNOTH.innerText = item.AccumulatedRainfall
+                }
+                if (N4.innerText == item.StationNo) {
+                    FWHNF.innerText = item.FullWaterHeight
+                    IESNF.innerText = item.EffectiveCapacity
+                    ARFNF.innerText = item.AccumulatedRainfall
+                }
+                if (N5.innerText == item.StationNo) {
+                    FWHNFI.innerText = item.FullWaterHeight
+                    IESNFI.innerText = item.EffectiveCapacity
+                    ARFNFI.innerText = item.AccumulatedRainfall
+                }
+                if (N6.innerText == item.StationNo) {
+                    FWHNS.innerText = item.FullWaterHeight
+                    IESNS.innerText = item.EffectiveCapacity
+                    ARFNS.innerText = item.AccumulatedRainfall
+                }
+                if (M1.innerText == item.StationNo) {
+                    FWHMO.innerText = item.FullWaterHeight
+                    IESMO.innerText = item.EffectiveCapacity
+                    ARFMO.innerText = item.AccumulatedRainfall
+                }
+                if (M2.innerText == item.StationNo) {
+                    FWHMT.innerText = item.FullWaterHeight
+                    IESMT.innerText = item.EffectiveCapacity
+                    ARFMT.innerText = item.AccumulatedRainfall
+                }
+                if (M3.innerText == item.StationNo) {
+                    FWHMTH.innerText = item.FullWaterHeight
+                    IESMTH.innerText = item.EffectiveCapacity
+                    ARFMTH.innerText = item.AccumulatedRainfall
+                }
+                if (M4.innerText == item.StationNo) {
+                    FWHMF.innerText = item.FullWaterHeight
+                    IESMF.innerText = item.EffectiveCapacity
+                    ARFMF.innerText = item.AccumulatedRainfall
+                }
+                if (M5.innerText == item.StationNo) {
+                    FWHMFI.innerText = item.FullWaterHeight
+                    IESMFI.innerText = item.EffectiveCapacity
+                    ARFMFI.innerText = item.AccumulatedRainfall
+                }
+                if (M6.innerText == item.StationNo) {
+                    FWHMS.innerText = item.FullWaterHeight
+                    IESMS.innerText = item.EffectiveCapacity
+                    ARFMS.innerText = item.AccumulatedRainfall
+                }
+                if (M7.innerText == item.StationNo) {
+                    FWHMSE.innerText = item.FullWaterHeight
+                    IESMSE.innerText = item.EffectiveCapacity
+                    ARFMSE.innerText = item.AccumulatedRainfall
+                }
+                if (M9.innerText == item.StationNo) {
+                    FWHMN.innerText = item.FullWaterHeight
+                    IESMN.innerText = item.EffectiveCapacity
+                    ARFMN.innerText = item.AccumulatedRainfall
+                }
+                if (S1.innerText == item.StationNo) {
+                    FWHSO.innerText = item.FullWaterHeight
+                    IESSO.innerText = item.EffectiveCapacity
+                    ARFSO.innerText = item.AccumulatedRainfall
+                }
+                if (S2.innerText == item.StationNo) {
+                    FWHST.innerText = item.FullWaterHeight
+                    IESST.innerText = item.EffectiveCapacity
+                    ARFST.innerText = item.AccumulatedRainfall
+                }
+                if (S3.innerText == item.StationNo) {
+                    FWHSTH.innerText = item.FullWaterHeight
+                    IESSTH.innerText = item.EffectiveCapacity
+                    ARFSTH.innerText = item.AccumulatedRainfall
+                }
+                if (S4.innerText == item.StationNo) {
+                    FWHSF.innerText = item.FullWaterHeight
+                    IESSF.innerText = item.EffectiveCapacity
+                    ARFSF.innerText = item.AccumulatedRainfall
+                }
+                if (S5.innerText == item.StationNo) {
+                    FWHSFI.innerText = item.FullWaterHeight
+                    IESSFI.innerText = item.EffectiveCapacity
+                    ARFSFI.innerText = item.AccumulatedRainfall
+                }
+                if (S6.innerText == item.StationNo) {
+                    FWHSS.innerText = item.FullWaterHeight
+                    IESSS.innerText = item.EffectiveCapacity
+                    ARFSS.innerText = item.AccumulatedRainfall
+                }
+                if (S7.innerText == item.StationNo) {
+                    FWHSSE.innerText = item.FullWaterHeight
+                    IESSSE.innerText = item.EffectiveCapacity
+                    ARFSSE.innerText = item.AccumulatedRainfall
+                }
+            })
+        }, 1000)
+    })
+
 
 </script>
 
@@ -89,6 +235,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
             <th>蓄水百分比(%)</th>
         </tr>
 
+<!-- 北區水庫 -->
 
         <!-- 北區水庫 -->
 
@@ -299,7 +446,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
         <!-- 德基水庫 -->
         <tr>
 
-            <th id="M5">10201</th>
+            <th id="M5">20201</th>
             <th>德基水庫</th>
             <!-- 水情時間 -->
             <th id="TMFI"></th>
@@ -359,7 +506,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
             <th id="IPOSMSE"></th>
         </tr>
 
-       
+
         <!-- 湖山水庫 -->
         <tr>
             <th id="M9">20509</th>
