@@ -163,7 +163,6 @@ const S6 = document.getElementById("30802")
 const S7 = document.getElementById("31201")
 let arr = []
 let arr2 = []
-let arr3 = []
             fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14D5C6DF71/Data?size=1000&page=100")
             .then(response=>response.json())
             .then(data=>{
@@ -295,93 +294,93 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
         //北部
 
        if(N1.getAttribute("id") == item.StationNo){
-        ESNO.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESNO.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSNO.innerText = item.PercentageOfStorage + " %"
        }
        if(N2.getAttribute("id") == item.StationNo){
-        ESNT.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESNT.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSNT.innerText = item.PercentageOfStorage + " %"
        }
        if(N3.getAttribute("id") == item.StationNo){
-        ESNTH.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESNTH.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSNTH.innerText = item.PercentageOfStorage + " %"
        }
        if(N4.getAttribute("id") == item.StationNo){
-        ESNF.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESNF.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSNF.innerText = item.PercentageOfStorage + " %"
        }
        if(N5.getAttribute("id") == item.StationNo){
-        ESNFI.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESNFI.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSNFI.innerText = item.PercentageOfStorage + " %"
        }
        if(N6.getAttribute("id") == item.StationNo){
-        ESNS.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESNS.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSNS.innerText = item.PercentageOfStorage + " %"
        }
 
        //中部
 
        if(M1.getAttribute("id") == item.StationNo){
-        ESMO.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESMO.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSMO.innerText = item.PercentageOfStorage + " %"
        }
        if(M2.getAttribute("id") == item.StationNo){
-        ESMT.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESMT.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSMT.innerText = item.PercentageOfStorage + " %"
        }
        if(M3.getAttribute("id") == item.StationNo){
-        ESMTH.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESMTH.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSMTH.innerText = item.PercentageOfStorage + " %"
        }
        if(M4.getAttribute("id") == item.StationNo){
-        ESMF.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESMF.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSMF.innerText = item.PercentageOfStorage + " %"
        }
        if(M5.getAttribute("id") == item.StationNo){
-        ESMFI.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESMFI.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSMFI.innerText = item.PercentageOfStorage + " %"
        }
        if(M6.getAttribute("id") == item.StationNo){
-        ESMS.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESMS.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSMS.innerText = item.PercentageOfStorage + " %"
        }
        if(M7.getAttribute("id") == item.StationNo){
-        ESMSE.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESMSE.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSMSE.innerText = item.PercentageOfStorage + " %"
        }
        if(M9.getAttribute("id") == item.StationNo){
-        ESMN.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESMN.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSMN.innerText = item.PercentageOfStorage + " %"
        }
        
        //南部
 
        if(S1.getAttribute("id") == item.StationNo){
-        ESSO.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESSO.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSSO.innerText = item.PercentageOfStorage + " %"
        }
        if(S2.getAttribute("id") == item.StationNo){
-        ESST.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESST.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSST.innerText = item.PercentageOfStorage + " %"
        }
        if(S3.getAttribute("id") == item.StationNo){
-        ESSTH.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESSTH.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSSTH.innerText = item.PercentageOfStorage + " %"
        }
        if(S4.getAttribute("id") == item.StationNo){
-        ESSF.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESSF.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSSF.innerText = item.PercentageOfStorage + " %"
        }
        if(S5.getAttribute("id") == item.StationNo){
-        ESSFI.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESSFI.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSSFI.innerText = item.PercentageOfStorage + " %"
        }
        if(S6.getAttribute("id") == item.StationNo){
-        ESSS.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESSS.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSSS.innerText = item.PercentageOfStorage + " %"
        }
        if(S7.getAttribute("id") == item.StationNo){
-        ESSSE.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
+        ESSSE.innerText = "有效蓄水量 : " + (item.EffectiveStorage.toFixed(2)) + " 萬立方公尺"
         POSSSE.innerText = item.PercentageOfStorage + " %"
        }
     });
