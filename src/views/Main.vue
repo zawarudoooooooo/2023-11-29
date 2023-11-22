@@ -49,11 +49,11 @@ fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14
                 // console.log(item1.ReservoirIdentifier);
                 obj1.forEach((item2) => {
                     if (item1.ReservoirIdentifier == item2.StationNo) {
-                      PercentageTiele.innerText="蓄水儲存比例："
+                      PercentageTiele.innerText="蓄水儲存比例"
                         Percentage.innerText = Math.floor(item2.PercentageOfStorage) + "% ";
                     }
                 });
-                btn.innerHTML =' <a href="./Visual"  style="text-decoration:none;color:white;background-color: #5CD2E6;margin-top: 10px;padding: 5px;border-radius: 10px;border: 1px solid black;"> 點我查看詳細</a>';
+                btn.innerHTML =' <a href="./Visual"  style="text-decoration:none;color:white;background-color: #19A7CE;border-radius: 10px; width:15vmin; height:3.5vmin;"> 詳細資料</a>';
             }
             });
         });
@@ -134,15 +134,13 @@ fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14
         </g>
     </svg>
     <div class="content">
-    <div class="title">
-
-      <h1 id="rname"></h1>
-    </div>
-      <h1 id="PercentageTiele"></h1>
-      <span id="Percentage" class="Percentage"></span>
-      <div id="btn" class="btn">
-        
-      </div>
+        <div class="title">  
+            <h1 id="rname"></h1>
+        </div>
+        <h1 id="PercentageTiele"></h1>
+        <span id="Percentage" class="Percentage"></span>
+        <div id="btn" class="btn">
+        </div>
     </div>
   </div>
 
@@ -151,57 +149,62 @@ fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14
 <style lang="scss" scoped>
 //SVG
   .svgArea{
-    margin-top: 10vmin;
-    display: flex;
-    svg{
-    width: 100vmin;
-    height: 100vmin;
-    }
-    circle{
-      transition: all 0.3s;
-      paint-order:stroke;
-      transition: 0.5s;
-      cursor: pointer;
-    }
-    circle:hover {
-    transform: translate(-5px, -5px);
-    }
-    path{
-      transition: all 0.3s;
-      paint-order:stroke;
-      transition: 0.5s;
-      cursor: pointer;
-    }
-    path:hover {
-      fill:#35A29F;
-    transform: translate(-5px, -5px);
-    }
+        margin-top: 10vmin;
+        display: flex;
+
+        svg{
+            width: 140vmin;
+            height: 140vmin;
+        }
+
+        circle{
+            transition: all 0.3s;
+            paint-order:stroke;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        circle:hover {
+            transform: translate(-5px, -5px);
+        }
+
+        path{
+            transition: all 0.3s;
+            paint-order:stroke;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        path:hover {
+            fill:#35A29F;
+            transform: translate(-5px, -5px);
+        }
+  }
     .content{
-      width: 50vmin;
+        width: 50vmin;
         height: 50vmin;
         border-radius: 10px;
         background-color: #fff;
-        border: 1px solid black;
+        text-align: center;
+        box-shadow: 4px 5px 1px black;
+
         span{
-          font-size: 100px;
+          font-size: 80pt;
         }
         .title{
-          background-color: bisque;
+          background-color: #AFD3E2;
           border-top-right-radius: 10px;
           border-top-left-radius: 10px;
           h1{
-            text-align: center;
             margin-top: 0px;
+            color: white;
           }
         }
-        .Percentage{
-          margin-bottom: 10px;
-          margin-left: 50px;
-        }
         .btn{
-          margin-top: 15%;
-          margin-left: 35%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3.5vmin;
         }
     }
-  }
 </style>
