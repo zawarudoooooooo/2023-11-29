@@ -13,66 +13,87 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
             obj1.forEach((item) => {
                 if (N1.innerText == item.StationNo) {
                     TNO.innerText = item.Time
+                    WHNO.innerText = item.WaterHeight
                 }
                 if (N2.innerText == item.StationNo) {
                     TNT.innerText = item.Time
+                    WHNT.innerText = item.WaterHeight
                 }
                 if (N3.innerText == item.StationNo) {
                     TNTH.innerText = item.Time
+                    WHNTH.innerText = item.WaterHeight
                 }
                 if (N4.innerText == item.StationNo) {
                     TNF.innerText = item.Time
+                    WHNF.innerText = item.WaterHeight
                 }
                 if (N5.innerText == item.StationNo) {
                     TNFI.innerText = item.Time
+                    WHNFI.innerText = item.WaterHeight
                 }
                 if (N6.innerText == item.StationNo) {
                     TNS.innerText = item.Time
+                    WHNS.innerText = item.WaterHeight
                 }
                 if (M1.innerText == item.StationNo) {
                     TMO.innerText = item.Time
+                    WHMO.innerText = item.WaterHeight
                 }
                 if (M2.innerText == item.StationNo) {
                     TMT.innerText = item.Time
+                    WHMT.innerText = item.WaterHeight
                 }
                 if (M3.innerText == item.StationNo) {
                     TMTH.innerText = item.Time
+                    WHMTH.innerText = item.WaterHeight
                 }
                 if (M4.innerText == item.StationNo) {
                     TMF.innerText = item.Time
+                    WHMF.innerText = item.WaterHeight
                 }
                 if (M5.innerText == item.StationNo) {
                     TMFI.innerText = item.Time
+                    WHMFI.innerText = item.WaterHeight
                 }
                 if (M6.innerText == item.StationNo) {
                     TMS.innerText = item.Time
+                    WHMS.innerText = item.WaterHeight
                 }
                 if (M7.innerText == item.StationNo) {
                     TMSE.innerText = item.Time
+                    WHMSE.innerText = item.WaterHeight
                 }
                 if (M9.innerText == item.StationNo) {
                     TMN.innerText = item.Time
+                    WHMN.innerText = item.WaterHeight
                 }
                 if (S1.innerText == item.StationNo) {
                     TSO.innerText = item.Time
+                    WHSO.innerText = item.WaterHeight
                 }
                 if (S2.innerText == item.StationNo) {
                     TST.innerText = item.Time
+                    WHST.innerText = item.WaterHeight
                 }
                 if (S3.innerText == item.StationNo) {
                     TSTH.innerText = item.Time
+                    WHSTH.innerText = item.WaterHeight
                 }
                 if (S4.innerText == item.StationNo) {
                     TSF.innerText = item.Time
+                    WHSF.innerText = item.WaterHeight
                 }
                 if (S5.innerText == item.StationNo) {
                     TSFI.innerText = item.Time
+                    WHSFI.innerText = item.WaterHeight
                 }
                 if (S6.innerText == item.StationNo) {
                     TSS.innerText = item.Time
+                    WHSS.innerText = item.WaterHeight
                 }
                 if (S7.innerText == item.StationNo) {
                     TSSE.innerText = item.Time
+                    WHSSE.innerText = item.WaterHeight
                 }
             })
         }, 1000)
