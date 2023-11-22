@@ -1,7 +1,7 @@
 <script>
 export default{
     mounted(){   
-                    // 北部
+    // 北部
 const IFTNO = document.getElementById("IFTNO")
 const BRFNO = document.getElementById("BRFNO")
 const ESNO = document.getElementById("ESNO")
@@ -134,7 +134,6 @@ const M4 = document.getElementById("20101")
 const M5 = document.getElementById("20201")
 const M6 = document.getElementById("20501")
 const M7 = document.getElementById("20502")
-const M8 = document.getElementById("20504")
 const M9 = document.getElementById("20509")
 
 // 南部
@@ -146,81 +145,107 @@ const S4 = document.getElementById("30501")
 const S5 = document.getElementById("30503")
 const S6 = document.getElementById("30802")
 const S7 = document.getElementById("31201")
-
+let arr = []
             fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14D5C6DF71/Data?size=1000&page=100")
             .then(response=>response.json())
             .then(data=>{
-                console.log(data.responseData[0].Capacity);
+                console.log(data);
+                arr = data
+                arr.responseData.forEach(item => {
 
                     //北部
-                    IFTNO.innerText = "本日總進水量:" + data.responseData[0].Inflow
-                    ECNO.innerText = "有效庫容量:" + data.responseData[0].Capacity
-                    
-                    IFTNT.innerText = "本日總進水量:" + data.responseData[1].Inflow
-                    ECNT.innerText = "有效庫容量:" + data.responseData[1].Capacity
 
-                    IFTNTH.innerText = "本日總進水量:" + data.responseData[2].Inflow
-                    ECNO.innerText = "有效庫容量:" + data.responseData[2].Capacity
-
-                    IFTNF.innerText = "本日總進水量:" + data.responseData[3].Inflow
-                    ECNF.innerText = "有效庫容量:" + data.responseData[3].Capacity
-
-                    IFTNFI.innerText = "本日總進水量:" + data.responseData[8].Inflow
-                    ECNFI.innerText = "有效庫容量:" + data.responseData[8].Capacity
-
-                    IFTNS.innerText = "本日總進水量:" + data.responseData[10].Inflow
-                    ECNS.innerText = "有效庫容量:" + data.responseData[10].Capacity
+                    if(N1.getAttribute("value") == item.ReservoirName){
+                        IFTNO.innerText = "本日總進水量:" +item.Inflow
+                        ECNO.innerText = "有效庫容量:" + item.Capacity
+                    }
+                    if(N2.getAttribute("value") == item.ReservoirName){
+                        IFTNT.innerText = "本日總進水量:" +item.Inflow
+                        ECNT.innerText = "有效庫容量:" + item.Capacity
+                    }
+                    if(N3.getAttribute("value") == item.ReservoirName){
+                        IFTNTH.innerText = "本日總進水量:" +item.Inflow
+                        ECNTH.innerText = "有效庫容量:" + item.Capacity
+                    }
+                    if(N4.getAttribute("value") == item.ReservoirName){
+                        IFTNF.innerText = "本日總進水量:" +item.Inflow
+                        ECNF.innerText = "有效庫容量:" + item.Capacity
+                    }
+                    if(N5.getAttribute("value") == item.ReservoirName){
+                        IFTNFI.innerText = "本日總進水量:" +item.Inflow
+                        ECNFI.innerText = "有效庫容量:" + item.Capacity
+                    }
+                    if(N6.getAttribute("value") == item.ReservoirName){
+                        IFTNS.innerText = "本日總進水量:" +item.Inflow
+                        ECNS.innerText = "有效庫容量:" + item.Capacity
+                    }
 
                     //中部
 
-                    IFTMO.innerText = "本日總進水量:" + data.responseData[11].Inflow
-                    ECMO.innerText = "有效庫容量:" + data.responseData[11].Capacity
-
-                    IFTMT.innerText = "本日總進水量:" + data.responseData[12].Inflow
-                    ECMT.innerText = "有效庫容量:" + data.responseData[12].Capacity
-
-                    IFTMTH.innerText = "本日總進水量:" + data.responseData[13].Inflow
-                    ECMTH.innerText = "有效庫容量:" + data.responseData[13].Capacity
-
-                    IFTMF.innerText = "本日總進水量:" + data.responseData[15].Inflow
-                    ECMF.innerText = "有效庫容量:" + data.responseData[15].Capacity
-
-                    IFTMFI.innerText = "本日總進水量:" + data.responseData[16].Inflow
-                    ECMFI.innerText = "有效庫容量:" + data.responseData[16].Capacity
-
-                    IFTMS.innerText = "本日總進水量:" + data.responseData[19].Inflow
-                    ECMS.innerText = "有效庫容量:" + data.responseData[19].Capacity
-
-                    IFTMSE.innerText = "本日總進水量:" + data.responseData[20].Inflow
-                    ECMSE.innerText = "有效庫容量:" + data.responseData[20].Capacity
-
-                    IFTMN.innerText = "本日總進水量:" + data.responseData[24].Inflow
-                    ECMN.innerText = "有效庫容量:" + data.responseData[24].Capacity
+                    if(M1.getAttribute("value") == item.ReservoirName){
+                        IFTMO.innerText = "本日總進水量:" +item.Inflow
+                        ECMO.innerText = "有效庫容量:" + item.Capacity
+                    }
+                    if(M2.getAttribute("value") == item.ReservoirName){
+                        IFTMT.innerText = "本日總進水量:" +item.Inflow
+                        ECMT.innerText = "有效庫容量:" + item.Capacity
+                    }
+                    if(M3.getAttribute("value") == item.ReservoirName){
+                        IFTMTH.innerText = "本日總進水量:" +item.Inflow
+                        ECMTH.innerText = "有效庫容量:" + item.Capacity
+                    }
+                    if(M4.getAttribute("value") == item.ReservoirName){
+                        IFTMF.innerText = "本日總進水量:" +item.Inflow
+                        ECMF.innerText = "有效庫容量:" + item.Capacity
+                    }
+                    if(M5.getAttribute("value") == item.ReservoirName){
+                        IFTMFI.innerText = "本日總進水量:" +item.Inflow
+                        ECMFI.innerText = "有效庫容量:" + item.Capacity
+                    }
+                    if(M6.getAttribute("value") == item.ReservoirName){
+                        IFTMS.innerText = "本日總進水量:" +item.Inflow
+                        ECMS.innerText = "有效庫容量:" + item.Capacity
+                    }
+                    if(M7.getAttribute("value") == item.ReservoirName){
+                        IFTMSE.innerText = "本日總進水量:" +item.Inflow
+                        ECMSE.innerText = "有效庫容量:" + item.Capacity
+                    }
+                    if(M9.getAttribute("value") == item.ReservoirName){
+                        IFTMN.innerText = "本日總進水量:" +item.Inflow
+                        ECMN.innerText = "有效庫容量:" + item.Capacity
+                    }
 
                     //南部
-                    
-                    IFTSO.innerText = "本日總進水量:" + data.rsesponseData[26].Inflow
-                    ECSO.innerText = "有效庫容量:" + data.responseData[26].Capacity
 
-                    IFTST.innerText = "本日總進水量:" + data.responseData[28].Inflow
-                    ECST.innerText = "有效庫容量:" + data.responseData[28].Capacity
-
-                    IFTSF.innerText = "本日總進水量:" + data.responseData[30].Inflow
-                    ECSF.innerText = "有效庫容量:" + data.responseData[30].Capacity
-                    
-                    IFTSTH.innerText = "本日總進水量:" + data.responseData[31].Inflow
-                    ECSTH.innerText = "有效庫容量:" + data.responseData[31].Capacity
-
-                    IFTSFI.innerText = "本日總進水量:" + data.responseData[32].Inflow
-                    ECSFI.innerText = "有效庫容量:" + data.responseData[32].Capacity
-
-                    IFTSS.innerText = "本日總進水量:" + data.responseData[37].Inflow
-                    ECSS.innerText = "有效庫容量:" + data.responseData[37].Capacity
-
-                    IFTSSE.innerText = "本日總進水量:" + data.responseData[41].Inflow
-                    ECSSE.innerText = "有效庫容量:" + data.responseData[41].Capacity
-
-
+                    if(S1.getAttribute("value") == item.ReservoirName){
+                        IFTSO.innerText = "本日總進水量:" +item.Inflow
+                        ECSO.innerText = "有效庫容量:" + item.Capacity
+                    }
+                    if(S2.getAttribute("value") == item.ReservoirName){
+                        IFTST.innerText = "本日總進水量:" +item.Inflow
+                        ECST.innerText = "有效庫容量:" + item.Capacity
+                    }
+                    if(S3.getAttribute("value") == item.ReservoirName){
+                        IFTSTH.innerText = "本日總進水量:" +item.Inflow
+                        ECSTH.innerText = "有效庫容量:" + item.Capacity
+                    }
+                    if(S4.getAttribute("value") == item.ReservoirName){
+                        IFTSF.innerText = "本日總進水量:" +item.Inflow
+                        ECSF.innerText = "有效庫容量:" + item.Capacity
+                    }
+                    if(S5.getAttribute("value") == item.ReservoirName){
+                        IFTSFI.innerText = "本日總進水量:" +item.Inflow
+                        ECSFI.innerText = "有效庫容量:" + item.Capacity
+                    }
+                    if(S6.getAttribute("value") == item.ReservoirName){
+                        IFTSS.innerText = "本日總進水量:" +item.Inflow
+                        ECSS.innerText = "有效庫容量:" + item.Capacity
+                    }
+                    if(S7.getAttribute("value") == item.ReservoirName){
+                        IFTSSE.innerText = "本日總進水量:" +item.Inflow
+                        ECSSE.innerText = "有效庫容量:" + item.Capacity
+                    }
+                });
 })
     }
 }
@@ -623,7 +648,7 @@ const S7 = document.getElementById("31201")
             <!-- 有效蓄水量，Effective Storage -->
                 <p id="ESSTH">有效蓄水量</p>
             <!-- 有效庫容量，Effective Capacity -->
-                <p id="ECTH">有效庫容量</p>
+                <p id="ECSTH">有效庫容量</p>
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
