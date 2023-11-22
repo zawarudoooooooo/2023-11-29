@@ -10,8 +10,8 @@ app.use(router);
 
 app.mount("#app");
 
-let obj1 = {};
-let obj2 = {};
+// let obj1 = {};
+// let obj2 = {};
 
 // //水庫基本資料
 // fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Station")
