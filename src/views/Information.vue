@@ -1,10 +1,12 @@
 <script>
+
 let obj1 = {};
 fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
     .then((response) => response.json())
     .then((data) => {
         console.log(data);
-        const TNO = document.getElementById("TNO")
+        setInterval(function(){
+            const TNO = document.getElementById("TNO")
         obj1 = data;
         obj1.forEach((item) => {
             if (N1.innerText == item.StationNo) {
@@ -71,6 +73,8 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 TSSE.innerText = item.Time
             }
         })
+        },1000)
+        
     });
 
 </script>
@@ -88,6 +92,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
             <th>有效蓄水量(萬立方公尺)</th>
             <th>蓄水百分比(%)</th>
         </tr>
+
 
         <!-- 北區水庫 -->
 
@@ -110,7 +115,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
             <!--蓄水百分比(%)-->
             <th id="IPOSNO"></th>
         </tr>
-
         <!--西勢水庫-->
         <tr>
             <th id="N2">10203</th>
@@ -130,7 +134,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
             <!--蓄水百分比(%)-->
             <th id="IPOSNT"></th>
         </tr>
-
         <!--新山水庫-->
         <tr>
             <th id="N3">10204</th>
@@ -150,7 +153,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
             <!--蓄水百分比(%)-->
             <th id="IPOSTH"></th>
         </tr>
-
         <!--翡翠水庫-->
         <tr>
             <th id="N4">10205</th>
@@ -173,6 +175,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
         <!--寶山水庫-->
         <tr>
+
             <th id="N5">10401</th>
             <th>寶山水庫</th>
             <!--水情時間-->
@@ -193,6 +196,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
         <!--寶山第二水庫-->
         <tr>
+
             <th id="N6">10405</th>
             <th>寶山第二水庫</th>
             <!--水情時間-->
@@ -235,6 +239,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
         <!-- 大埔水庫 -->
         <tr>
+
             <th id="M2">10503</th>
             <th>大埔水庫</th>
             <!-- 水情時間 -->
@@ -255,6 +260,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
         <!-- 明德水庫 -->
         <tr>
+
             <th id="M3">10601</th>
             <th>明德水庫</th>
             <!-- 水情時間 -->
@@ -275,6 +281,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
         <!-- 鯉魚潭水庫 -->
         <tr>
+
             <th id="M4">20101</th>
             <th>鯉魚潭水庫</th>
             <!-- 水情時間 -->
@@ -295,6 +302,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
         <!-- 德基水庫 -->
         <tr>
+
             <th id="M5">10201</th>
             <th>德基水庫</th>
             <!-- 水情時間 -->
@@ -315,6 +323,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
         <!-- 霧社水庫 -->
         <tr>
+
             <th id="M6">20501</th>
             <th>霧社水庫</th>
             <!-- 水情時間 -->
@@ -335,6 +344,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
         <!-- 日月潭水庫 -->
         <tr>
+
             <th id="M7">20502</th>
             <th>日月潭水庫</th>
             <!-- 水情時間 -->
@@ -398,6 +408,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
         <!-- 白河水庫 -->
         <tr>
+
             <th id="S2">30401</th>
             <th>白河水庫</th>
             <!-- 水情時間 -->
@@ -438,6 +449,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
         <!-- 烏山頭水庫 -->
         <tr>
+
             <th id="S4">30501</th>
             <th>烏山頭水庫</th>
             <!-- 水情時間 -->
@@ -458,6 +470,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
         <!-- 南化水庫 -->
         <tr>
+
             <th id="S5">30503</th>
             <th>南化水庫</th>
             <!-- 水情時間 -->
@@ -478,6 +491,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
         <!-- 阿公店水庫 -->
         <tr>
+
             <th id="S6">30802</th>
             <th>阿公店水庫</th>
             <!-- 水情時間 -->
@@ -498,6 +512,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
         <!-- 牡丹水庫 -->
         <tr>
+
             <th id="S7">31201</th>
             <th>牡丹水庫</th>
             <!-- 水情時間 -->
