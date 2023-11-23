@@ -10,9 +10,19 @@ const router = createRouter({
       component: Main
     },
     {
-      path: '/Visual',
-      name: 'Visual',
-      component: () => import('../views/Visual.vue')
+      path: '/VisualNorth',
+      name: 'VisualNorth',
+      component: () => import('../views/VisualNorth.vue')
+    },
+    {
+      path: '/VisualMiddle',
+      name: 'VisualMiddle',
+      component: () => import('../views/VisualMiddle.vue')
+    },
+    {
+      path: '/VisualSouth',
+      name: 'VisualSouth',
+      component: () => import('../views/VisualSouth.vue')
     },
     {
       path: '/Information',
