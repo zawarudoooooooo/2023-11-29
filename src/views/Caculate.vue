@@ -1,121 +1,133 @@
 <script>
+import { mapState,mapActions } from 'pinia';
+import counter from '../stores/counter';
+import { watch } from 'vue';
+
+
 let obj1 = {};
 let obj2 = {};
 let obj3 = {};
 let obj4 = {};
 
-
-
-fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Station")
-.then((response) => response.json())
-.then((data) => {
-        obj1=data
-        // console.log("水庫基本資料");
-        // console.log(obj1);
-        // console.log(obj1[0].EffectiveCapacity);
-        const r1=document.querySelectorAll(".r1")
-        const CECNO=document.getElementById("CECNO")
-        const CECNT=document.getElementById("CECNT")
-        const CECNTH=document.getElementById("CECNTH")
-        const CECNF=document.getElementById("CECNF")
-        const CECNFI=document.getElementById("CECNFI")
-        const CECNS=document.getElementById("CECNS")
-        const CECMO=document.getElementById("CECMO")
-        const CECMT=document.getElementById("CECMT")
-        const CECMTH=document.getElementById("CECMTH")
-        const CECMF=document.getElementById("CECMF")
-        const CECMFI=document.getElementById("CECMFI")
-        const CECMS=document.getElementById("CECMS")
-        const CECMSE=document.getElementById("CECMSE")
-        const CECMN=document.getElementById("CECMN")
-        const CECSO=document.getElementById("CECSO")
-        const CECST=document.getElementById("CECST")
-        const CECSTH=document.getElementById("CECSTH")
-        const CECSF=document.getElementById("CECSF")
-        const CECSFI=document.getElementById("CECSFI")
-        const CECSS=document.getElementById("CECSS")
-        const CECSSE=document.getElementById("CECSSE")
-        setInterval(()=>{
-                r1.forEach(reservoir=>{
-        if(reservoir.getAttribute("value")==obj1[0].StationName){
-                CECNO.innerText=obj1[0].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[1].StationName){
-                CECNT.innerText=obj1[1].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[2].StationName){
-                CECNTH.innerText=obj1[2].EffectiveCapacity 
-        }
-        if(reservoir.getAttribute("value")==obj1[3].StationName){
-                CECNF.innerText=obj1[3].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[15].StationName){
-                CECNFI.innerText=obj1[15].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[18].StationName){
-                CECNS.innerText=obj1[18].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[19].StationName){
-                CECMO.innerText=obj1[19].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[20].StationName){
-                CECMT.innerText=obj1[20].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[21].StationName){
-                CECMTH.innerText=obj1[21].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[24].StationName){
-                CECMF.innerText=obj1[24].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[25].StationName){
-                CECMFI.innerText=obj1[25].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[33].StationName){
-                CECMS.innerText=obj1[33].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[34].StationName){
-                CECMSE.innerText=obj1[34].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[41].StationName){
-                CECMN.innerText=obj1[41].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[44].StationName){
-                CECSO.innerText=obj1[44].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[49].StationName){
-                CECST.innerText=obj1[49].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[53].StationName){
-                CECSTH.innerText=obj1[53].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[54].StationName){
-                CECSFI.innerText=obj1[54].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[60].StationName){
-                CECSS.innerText=obj1[60].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[66].StationName){
-                CECSSE.innerText=obj1[66].EffectiveCapacity
-        }
-        if(reservoir.getAttribute("value")==obj1[52].StationName){
-                CECSF.innerText=obj1[52].EffectiveCapacity
-        }
-    })
-        },100)
+export default{
+  data(){
+    return{
+      
+    }
     
-        
+  },
+  methods:{
+        ...mapActions(counter,["getBasic","getImmediate","getOperating","getStatistics"])
+  },
+  computed:{
+        ...mapState(counter,["basicInfo","immediateInfo","OperatingInfo","StatisticsInfo"])
+    },
+  created(){
+        this.getBasic();
+        this.getImmediate();
+        this.getOperating();
+        this.getStatistics();
+  },
+  mounted(){
+        // 基本資料
+        watch(()=>this.basicInfo,()=>{
+                // this.basicInfo.forEach(item=>{
+                //         // console.log(item);
+                // })
+                const r1=document.querySelectorAll(".r1")
+                const CECNO=document.getElementById("CECNO")
+                const CECNT=document.getElementById("CECNT")
+                const CECNTH=document.getElementById("CECNTH")
+                const CECNF=document.getElementById("CECNF")
+                const CECNFI=document.getElementById("CECNFI")
+                const CECNS=document.getElementById("CECNS")
+                const CECMO=document.getElementById("CECMO")
+                const CECMT=document.getElementById("CECMT")
+                const CECMTH=document.getElementById("CECMTH")
+                const CECMF=document.getElementById("CECMF")
+                const CECMFI=document.getElementById("CECMFI")
+                const CECMS=document.getElementById("CECMS")
+                const CECMSE=document.getElementById("CECMSE")
+                const CECMN=document.getElementById("CECMN")
+                const CECSO=document.getElementById("CECSO")
+                const CECST=document.getElementById("CECST")
+                const CECSTH=document.getElementById("CECSTH")
+                const CECSF=document.getElementById("CECSF")
+                const CECSFI=document.getElementById("CECSFI")
+                const CECSS=document.getElementById("CECSS")
+                const CECSSE=document.getElementById("CECSSE")
 
-    
-    
-
-  });
-  fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
-  .then((response) => response.json())
-  .then((data) => {
-    obj2=data
-//     console.log("水庫統計資料");
-    console.log(obj2);
-    // 北
+        r1.forEach(reservoir=>{
+                if(reservoir.getAttribute("value")==this.basicInfo[0].StationName){
+                        CECNO.innerText=this.basicInfo[0].EffectiveCapacity
+                        // CECNO.innerText="123"
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[1].StationName){
+                        CECNT.innerText=this.basicInfo[1].EffectiveCapacity
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[2].StationName){
+                        CECNTH.innerText=this.basicInfo[2].EffectiveCapacity 
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[3].StationName){
+                        CECNF.innerText=this.basicInfo[3].EffectiveCapacity
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[15].StationName){
+                        CECNFI.innerText=this.basicInfo[15].EffectiveCapacity
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[18].StationName){
+                        CECNS.innerText=this.basicInfo[18].EffectiveCapacity
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[19].StationName){
+                        CECMO.innerText=this.basicInfo[19].EffectiveCapacity
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[20].StationName){
+                        CECMT.innerText=this.basicInfo[20].EffectiveCapacity
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[21].StationName){
+                        CECMTH.innerText=this.basicInfo[21].EffectiveCapacity
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[24].StationName){
+                        CECMF.innerText=this.basicInfo[24].EffectiveCapacity
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[25].StationName){
+                        CECMFI.innerText=this.basicInfo[25].EffectiveCapacity
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[33].StationName){
+                        CECMS.innerText=this.basicInfo[33].EffectiveCapacity
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[34].StationName){
+                        CECMSE.innerText=this.basicInfo[34].EffectiveCapacity
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[41].StationName){
+                        CECMN.innerText=this.basicInfo[41].EffectiveCapacity
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[44].StationName){
+                        CECSO.innerText=this.basicInfo[44].EffectiveCapacity
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[49].StationName){
+                        CECST.innerText=this.basicInfo[49].EffectiveCapacity
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[53].StationName){
+                        CECSTH.innerText=this.basicInfo[53].EffectiveCapacity
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[54].StationName){
+                        CECSFI.innerText=this.basicInfo[54].EffectiveCapacity
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[60].StationName){
+                        CECSS.innerText=this.basicInfo[60].EffectiveCapacity
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[66].StationName){
+                        CECSSE.innerText=this.basicInfo[66].EffectiveCapacity
+                }
+                if(reservoir.getAttribute("value")==this.basicInfo[52].StationName){
+                        CECSF.innerText=this.basicInfo[52].EffectiveCapacity
+                }
+                })
+                
+        })
+        // 即時資料
+        watch(()=>this.StatisticsInfo,()=>{
+                // 北
         const n1=document.getElementById("10201")   
         const n2=document.getElementById("10203")   
         const n3=document.getElementById("10204")   
@@ -164,7 +176,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Station")
         const CARFSSE=document.getElementById("CARFSSE")
 
 
-        obj2.forEach(item=>{
+        this.StatisticsInfo.forEach(item=>{
 // 1
                 if(n1.getAttribute("id")==item.StationNo){
                         CARFNO.innerText=item.AccumulatedRainfall
@@ -250,199 +262,187 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Station")
                         CARFSSE.innerText=item.AccumulatedRainfall
                 }
         })
-        
-    });
-fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14D5C6DF71/Data?size=1000&page=100")
-  .then((response) => response.json())
-  .then((data) => {
-    obj3=data
-//     console.log("水庫每日營運狀況");
-//     console.log(obj3);
-        
-    const r1=document.querySelectorAll(".r1")
+        })
+        // 營運狀況
+        watch(()=>this.OperatingInfo,()=>{
+                const r1=document.querySelectorAll(".r1")
 // 1
-    const CIFNO=document.getElementById("CIFNO")
-    const COFTNO=document.getElementById("COFTNO")
-// 2
-    const CIFNT=document.getElementById("CIFNT")
-    const COFTNT=document.getElementById("COFTNT")
-// 3
-    const CIFNTH=document.getElementById("CIFNTH")
-    const COFTNTH=document.getElementById("COFTNTH")
-// 4
-    const CIFNF=document.getElementById("CIFNF")
-    const COFTNF=document.getElementById("COFTNF")
-// 5
-    const CIFNFI=document.getElementById("CIFNFI")
-    const COFTNFI=document.getElementById("COFTNFI")
-// 6
-    const CIFNS=document.getElementById("CIFNS")
-    const COFTNS=document.getElementById("COFTNS")
-// 7
-    const CIFMO=document.getElementById("CIFMO")
-    const COFTMO=document.getElementById("COFTMO")
-// 8
-    const CIFMT=document.getElementById("CIFMT")
-    const COFTMT=document.getElementById("COFTMT")
-// 9
-    const CIFMTH=document.getElementById("CIFMTH")
-    const COFTMTH=document.getElementById("COFTMTH")
+        const CIFNO=document.getElementById("CIFNO")
+        const COFTNO=document.getElementById("COFTNO")
+// 2    
+        const CIFNT=document.getElementById("CIFNT")
+        const COFTNT=document.getElementById("COFTNT")
+// 3    
+        const CIFNTH=document.getElementById("CIFNTH")
+        const COFTNTH=document.getElementById("COFTNTH")
+// 4    
+        const CIFNF=document.getElementById("CIFNF")
+        const COFTNF=document.getElementById("COFTNF")
+// 5    
+        const CIFNFI=document.getElementById("CIFNFI")
+        const COFTNFI=document.getElementById("COFTNFI")
+// 6    
+        const CIFNS=document.getElementById("CIFNS")
+        const COFTNS=document.getElementById("COFTNS")
+// 7    
+        const CIFMO=document.getElementById("CIFMO")
+        const COFTMO=document.getElementById("COFTMO")
+// 8    
+        const CIFMT=document.getElementById("CIFMT")
+        const COFTMT=document.getElementById("COFTMT")
+// 9    
+        const CIFMTH=document.getElementById("CIFMTH")
+        const COFTMTH=document.getElementById("COFTMTH")
 // 10
-    const CIFMF=document.getElementById("CIFMF")
-    const COFTMF=document.getElementById("COFTMF")
+        const CIFMF=document.getElementById("CIFMF")
+        const COFTMF=document.getElementById("COFTMF")
 // 11
-    const CIFMFI=document.getElementById("CIFMFI")
-    const COFTMFI=document.getElementById("COFTMFI")
+        const CIFMFI=document.getElementById("CIFMFI")
+        const COFTMFI=document.getElementById("COFTMFI")
 // 12
-    const CIFMS=document.getElementById("CIFMS")
-    const COFTMS=document.getElementById("COFTMS")
+        const CIFMS=document.getElementById("CIFMS")
+        const COFTMS=document.getElementById("COFTMS")
 // 13
-    const CIFMSE=document.getElementById("CIFMSE")
-    const COFTMSE=document.getElementById("COFTMSE")
+        const CIFMSE=document.getElementById("CIFMSE")
+        const COFTMSE=document.getElementById("COFTMSE")
 // 14
-    const CIFMN=document.getElementById("CIFMN")
-    const COFTMN=document.getElementById("COFTMN")
+        const CIFMN=document.getElementById("CIFMN")
+        const COFTMN=document.getElementById("COFTMN")
 // 15
-    const CIFSO=document.getElementById("CIFSO")
-    const COFTSO=document.getElementById("COFTSO")
+        const CIFSO=document.getElementById("CIFSO")
+        const COFTSO=document.getElementById("COFTSO")
 // 16
-    const CIFST=document.getElementById("CIFST")
-    const COFTST=document.getElementById("COFTST")
+        const CIFST=document.getElementById("CIFST")
+        const COFTST=document.getElementById("COFTST")
 // 17
-    const CIFSTH=document.getElementById("CIFSTH")
-    const COFTSTH=document.getElementById("COFTSTH")
+        const CIFSTH=document.getElementById("CIFSTH")
+        const COFTSTH=document.getElementById("COFTSTH")
 // 18
-    const CIFSF=document.getElementById("CIFSF")
-    const COFTSF=document.getElementById("COFTSF")
+        const CIFSF=document.getElementById("CIFSF")
+        const COFTSF=document.getElementById("COFTSF")
 // 19
-    const CIFSFI=document.getElementById("CIFSFI")
-    const COFTSFI=document.getElementById("COFTSFI")
+        const CIFSFI=document.getElementById("CIFSFI")
+        const COFTSFI=document.getElementById("COFTSFI")
 // 20
-    const CIFSS=document.getElementById("CIFSS")
-    const COFTSS=document.getElementById("COFTSS")
+        const CIFSS=document.getElementById("CIFSS")
+        const COFTSS=document.getElementById("COFTSS")
 // 21
-    const CIFSSE=document.getElementById("CIFSSE")
-    const COFTSSE=document.getElementById("COFTSSE")
+        const CIFSSE=document.getElementById("CIFSSE")
+        const COFTSSE=document.getElementById("COFTSSE")
 
-setInterval(()=>{
-r1.forEach(item=>{
+
+        r1.forEach(item=>{
         // 1        
-                if(item.getAttribute("value")==obj3.responseData[0].ReservoirName){
-                        CIFNO.innerText=obj3.responseData[0].Inflow
-                        COFTNO.innerText=obj3.responseData[0].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[0].ReservoirName){
+                        CIFNO.innerText=this.OperatingInfo.responseData[0].Inflow
+                        COFTNO.innerText=this.OperatingInfo.responseData[0].Outflow
                 }
                 // 2
-                if(item.getAttribute("value")==obj3.responseData[1].ReservoirName){
-                        CIFNT.innerText=obj3.responseData[1].Inflow
-                        COFTNT.innerText=obj3.responseData[1].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[1].ReservoirName){
+                        CIFNT.innerText=this.OperatingInfo.responseData[1].Inflow
+                        COFTNT.innerText=this.OperatingInfo.responseData[1].Outflow
                 }
                 // 3
-                if(item.getAttribute("value")==obj3.responseData[2].ReservoirName){
-                        CIFNTH.innerText=obj3.responseData[2].Inflow
-                        COFTNTH.innerText=obj3.responseData[2].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[2].ReservoirName){
+                        CIFNTH.innerText=this.OperatingInfo.responseData[2].Inflow
+                        COFTNTH.innerText=this.OperatingInfo.responseData[2].Outflow
                 }
                 // 4
-                if(item.getAttribute("value")==obj3.responseData[3].ReservoirName){
-                        CIFNF.innerText=obj3.responseData[3].Inflow
-                        COFTNF.innerText=obj3.responseData[3].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[3].ReservoirName){
+                        CIFNF.innerText=this.OperatingInfo.responseData[3].Inflow
+                        COFTNF.innerText=this.OperatingInfo.responseData[3].Outflow
                 }
                 // 5
-                if(item.getAttribute("value")==obj3.responseData[11].ReservoirName){
-                        CIFNFI.innerText=obj3.responseData[11].Inflow
-                        COFTNFI.innerText=obj3.responseData[11].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[11].ReservoirName){
+                        CIFNFI.innerText=this.OperatingInfo.responseData[11].Inflow
+                        COFTNFI.innerText=this.OperatingInfo.responseData[11].Outflow
                 }
                 // 6
-                if(item.getAttribute("value")==obj3.responseData[13].ReservoirName){
-                        CIFNS.innerText=obj3.responseData[13].Inflow
-                        COFTNS.innerText=obj3.responseData[13].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[13].ReservoirName){
+                        CIFNS.innerText=this.OperatingInfo.responseData[13].Inflow
+                        COFTNS.innerText=this.OperatingInfo.responseData[13].Outflow
                 }
                 // 7
-                if(item.getAttribute("value")==obj3.responseData[14].ReservoirName){
-                        CIFMO.innerText=obj3.responseData[14].Inflow
-                        COFTMO.innerText=obj3.responseData[14].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[14].ReservoirName){
+                        CIFMO.innerText=this.OperatingInfo.responseData[14].Inflow
+                        COFTMO.innerText=this.OperatingInfo.responseData[14].Outflow
                 }
                 // 8
 
-                if(item.getAttribute("value")==obj3.responseData[15].ReservoirName){
-                        CIFMT.innerText=obj3.responseData[15].Inflow
-                        COFTMT.innerText=obj3.responseData[15].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[15].ReservoirName){
+                        CIFMT.innerText=this.OperatingInfo.responseData[15].Inflow
+                        COFTMT.innerText=this.OperatingInfo.responseData[15].Outflow
                 }
 // 9
-                if(item.getAttribute("value")==obj3.responseData[16].ReservoirName){
-                        CIFMTH.innerText=obj3.responseData[16].Inflow
-                        COFTMTH.innerText=obj3.responseData[16].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[16].ReservoirName){
+                        CIFMTH.innerText=this.OperatingInfo.responseData[16].Inflow
+                        COFTMTH.innerText=this.OperatingInfo.responseData[16].Outflow
                 }
 // 10
-                if(item.getAttribute("value")==obj3.responseData[18].ReservoirName){
-                        CIFMF.innerText=obj3.responseData[18].Inflow
-                        COFTMF.innerText=obj3.responseData[18].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[18].ReservoirName){
+                        CIFMF.innerText=this.OperatingInfo.responseData[18].Inflow
+                        COFTMF.innerText=this.OperatingInfo.responseData[18].Outflow
                 }
 // 11
-                if(item.getAttribute("value")==obj3.responseData[19].ReservoirName){
-                        CIFMFI.innerText=obj3.responseData[19].Inflow
-                        COFTMFI.innerText=obj3.responseData[19].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[19].ReservoirName){
+                        CIFMFI.innerText=this.OperatingInfo.responseData[19].Inflow
+                        COFTMFI.innerText=this.OperatingInfo.responseData[19].Outflow
                 }
 // 12
-                if(item.getAttribute("value")==obj3.responseData[22].ReservoirName){
-                        CIFMS.innerText=obj3.responseData[22].Inflow
-                        COFTMS.innerText=obj3.responseData[22].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[22].ReservoirName){
+                        CIFMS.innerText=this.OperatingInfo.responseData[22].Inflow
+                        COFTMS.innerText=this.OperatingInfo.responseData[22].Outflow
                 }
 // 13
-                if(item.getAttribute("value")==obj3.responseData[23].ReservoirName){
-                        CIFMSE.innerText=obj3.responseData[23].Inflow
-                        COFTMSE.innerText=obj3.responseData[23].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[23].ReservoirName){
+                        CIFMSE.innerText=this.OperatingInfo.responseData[23].Inflow
+                        COFTMSE.innerText=this.OperatingInfo.responseData[23].Outflow
                 }
 // 14
-                if(item.getAttribute("value")==obj3.responseData[27].ReservoirName){
-                        CIFMN.innerText=obj3.responseData[27].Inflow
-                        COFTMN.innerText=obj3.responseData[27].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[27].ReservoirName){
+                        CIFMN.innerText=this.OperatingInfo.responseData[27].Inflow
+                        COFTMN.innerText=this.OperatingInfo.responseData[27].Outflow
                 }
 // 15
-                if(item.getAttribute("value")==obj3.responseData[29].ReservoirName){
-                        CIFSO.innerText=obj3.responseData[29].Inflow
-                        COFTSO.innerText=obj3.responseData[29].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[29].ReservoirName){
+                        CIFSO.innerText=this.OperatingInfo.responseData[29].Inflow
+                        COFTSO.innerText=this.OperatingInfo.responseData[29].Outflow
                 }
 // 16
-                if(item.getAttribute("value")==obj3.responseData[31].ReservoirName){
-                        CIFST.innerText=obj3.responseData[31].Inflow
-                        COFTST.innerText=obj3.responseData[31].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[31].ReservoirName){
+                        CIFST.innerText=this.OperatingInfo.responseData[31].Inflow
+                        COFTST.innerText=this.OperatingInfo.responseData[31].Outflow
                 }
 // 17
-                if(item.getAttribute("value")==obj3.responseData[33].ReservoirName){
-                        CIFSF.innerText=obj3.responseData[33].Inflow
-                        COFTSF.innerText=obj3.responseData[33].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[33].ReservoirName){
+                        CIFSF.innerText=this.OperatingInfo.responseData[33].Inflow
+                        COFTSF.innerText=this.OperatingInfo.responseData[33].Outflow
                 }
 // 18
-                if(item.getAttribute("value")==obj3.responseData[34].ReservoirName){
-                        CIFSTH.innerText=obj3.responseData[34].Inflow
-                        COFTSTH.innerText=obj3.responseData[34].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[34].ReservoirName){
+                        CIFSTH.innerText=this.OperatingInfo.responseData[34].Inflow
+                        COFTSTH.innerText=this.OperatingInfo.responseData[34].Outflow
                 }
 // 19
-                if(item.getAttribute("value")==obj3.responseData[35].ReservoirName){
-                        CIFSFI.innerText=obj3.responseData[35].Inflow
-                        COFTSFI.innerText=obj3.responseData[35].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[35].ReservoirName){
+                        CIFSFI.innerText=this.OperatingInfo.responseData[35].Inflow
+                        COFTSFI.innerText=this.OperatingInfo.responseData[35].Outflow
                 }
 // 20
-                if(item.getAttribute("value")==obj3.responseData[40].ReservoirName){
-                        CIFSS.innerText=obj3.responseData[40].Inflow
-                        COFTSS.innerText=obj3.responseData[40].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[40].ReservoirName){
+                        CIFSS.innerText=this.OperatingInfo.responseData[40].Inflow
+                        COFTSS.innerText=this.OperatingInfo.responseData[40].Outflow
                 }
 // 21
-                if(item.getAttribute("value")==obj3.responseData[44].ReservoirName){
-                        CIFSSE.innerText=obj3.responseData[44].Inflow
-                        COFTSSE.innerText=obj3.responseData[44].Outflow
+                if(item.getAttribute("value")==this.OperatingInfo.responseData[44].ReservoirName){
+                        CIFSSE.innerText=this.OperatingInfo.responseData[44].Inflow
+                        COFTSSE.innerText=this.OperatingInfo.responseData[44].Outflow
                 }
-
-        })},100)
-        
-  });
-fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
-  .then((response) => response.json())
-  .then((data) => {
-    obj4=data
-//     console.log("水庫即時資料");
-//     console.log(obj4);
-        // 北
+})
+        })
+        // 統計資料
+        watch(()=>this.immediateInfo,()=>{
+                // 北
         const n1=document.getElementById("10201")   
         const n2=document.getElementById("10203")   
         const n3=document.getElementById("10204")   
@@ -577,7 +577,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
         
 
-obj4.forEach(item=>{
+        this.immediateInfo.forEach(item=>{
                 let dayTime=new Date(item.Time)
                 let Time= dayTime.getFullYear()+"-"+(dayTime.getMonth()+1)+"-"+dayTime.getDate()+" "+dayTime.getHours()+":"+"0"+dayTime.getMinutes()+":"+"0"+dayTime.getSeconds()
                 if(n1.getAttribute("id")==item.StationNo){
@@ -750,21 +750,19 @@ obj4.forEach(item=>{
                 }
 
         })
-    
-  });
-
-export default{
-  data(){
-    return{
-      
-    }
-    
-  },
-}
+        })
+  }
+  }
 
 </script>
 
 <template>
+
+        <button type="button" @click="getBasic">Basic</button>
+        <button type="button" @click="getImmediate">Immediate</button>
+        <button type="button" @click="getOperating">Operating</button>
+        <button type="button" @click="getStatistics">Statistics</button>
+
     <div class="content">
         <table>
             <tr>
