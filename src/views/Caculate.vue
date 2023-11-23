@@ -101,7 +101,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Station")
                 CECSF.innerText=obj1[52].EffectiveCapacity
         }
     })
-        },1000)
+        },100)
     
         
 
@@ -114,7 +114,142 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Station")
   .then((data) => {
     obj2=data
 //     console.log("水庫統計資料");
-//     console.log(obj2);
+    console.log(obj2);
+    // 北
+        const n1=document.getElementById("10201")   
+        const n2=document.getElementById("10203")   
+        const n3=document.getElementById("10204")   
+        const n4=document.getElementById("10205")   
+        const n5=document.getElementById("10401")   
+        const n6=document.getElementById("10405")   
+        //中 
+        const m1=document.getElementById("10501")   
+        const m2=document.getElementById("10503")   
+        const m3=document.getElementById("10601")   
+        const m4=document.getElementById("20101")   
+        const m5=document.getElementById("20201")   
+        const m6=document.getElementById("20501")   
+        const m7=document.getElementById("20502")   
+        const m8=document.getElementById("20509")   
+        // 南
+        const s1=document.getElementById("30302")   
+        const s2=document.getElementById("30401")   
+        const s3=document.getElementById("30502")   
+        const s4=document.getElementById("30501")   
+        const s5=document.getElementById("30503")   
+        const s6=document.getElementById("30802")   
+        const s7=document.getElementById("31201")
+        
+        
+        const CARFNO=document.getElementById("CARFNO")
+        const CARFNT=document.getElementById("CARFNT")
+        const CARFNTH=document.getElementById("CARFNTH")
+        const CARFNF=document.getElementById("CARFNF")
+        const CARFNFI=document.getElementById("CARFNFI")
+        const CARFNS=document.getElementById("CARFNS")
+        const CARFMO=document.getElementById("CARFMO")
+        const CARFMT=document.getElementById("CARFMT")
+        const CARFMTH=document.getElementById("CARFMTH")
+        const CARFMF=document.getElementById("CARFMF")
+        const CARFMFI=document.getElementById("CARFMFI")
+        const CARFMS=document.getElementById("CARFMS")
+        const CARFMSE=document.getElementById("CARFMSE")
+        const CARFMN=document.getElementById("CARFMN")
+        const CARFSO=document.getElementById("CARFSO")
+        const CARFST=document.getElementById("CARFST")
+        const CARFSTH=document.getElementById("CARFSTH")
+        const CARFSF=document.getElementById("CARFSF")
+        const CARFSFI=document.getElementById("CARFSFI")
+        const CARFSS=document.getElementById("CARFSS")
+        const CARFSSE=document.getElementById("CARFSSE")
+
+
+        obj2.forEach(item=>{
+// 1
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFNO.innerText=item.AccumulatedRainfall
+                }
+// 2
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFNT.innerText=item.AccumulatedRainfall
+                }
+// 3
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFNTH.innerText=item.AccumulatedRainfall
+                }
+// 4
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFNF.innerText=item.AccumulatedRainfall
+                }
+// 5
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFNFI.innerText=item.AccumulatedRainfall
+                }
+// 6
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFNS.innerText=item.AccumulatedRainfall
+                }
+// 7
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFMO.innerText=item.AccumulatedRainfall
+                }
+// 8
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFMT.innerText=item.AccumulatedRainfall
+                }
+// 9
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFMTH.innerText=item.AccumulatedRainfall
+                }
+// 10
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFMF.innerText=item.AccumulatedRainfall
+                }
+// 11
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFMFI.innerText=item.AccumulatedRainfall
+                }
+// 12
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFMS.innerText=item.AccumulatedRainfall
+                }
+// 13
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFMSE.innerText=item.AccumulatedRainfall
+                }
+// 14
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFMN.innerText=item.AccumulatedRainfall
+                }
+// 15
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFSO.innerText=item.AccumulatedRainfall
+                }
+// 16
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFST.innerText=item.AccumulatedRainfall
+                }
+// 17
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFSTH.innerText=item.AccumulatedRainfall
+                }
+// 18
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFSF.innerText=item.AccumulatedRainfall
+                }
+// 19
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFSFI.innerText=item.AccumulatedRainfall
+                }
+// 20
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFSS.innerText=item.AccumulatedRainfall
+                }
+// 21
+                if(n1.getAttribute("id")==item.StationNo){
+                        CARFSSE.innerText=item.AccumulatedRainfall
+                }
+        })
         
     });
 fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14D5C6DF71/Data?size=1000&page=100")
@@ -191,7 +326,7 @@ fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14
 
 setInterval(()=>{
 r1.forEach(item=>{
-        // 1
+        // 1        
                 if(item.getAttribute("value")==obj3.responseData[0].ReservoirName){
                         CIFNO.innerText=obj3.responseData[0].Inflow
                         COFTNO.innerText=obj3.responseData[0].Outflow
@@ -298,7 +433,7 @@ r1.forEach(item=>{
                         COFTSSE.innerText=obj3.responseData[44].Outflow
                 }
 
-        })},1000)
+        })},100)
         
   });
 fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
@@ -306,7 +441,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
   .then((data) => {
     obj4=data
 //     console.log("水庫即時資料");
-    console.log(obj4);
+//     console.log(obj4);
         // 北
         const n1=document.getElementById("10201")   
         const n2=document.getElementById("10203")   
@@ -440,9 +575,13 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
         const CPOSSSE=document.getElementById("CPOSSSE")
 // ------------------------
 
-        obj4.forEach(item=>{
+        
+
+obj4.forEach(item=>{
+                let dayTime=new Date(item.Time)
+                let Time= dayTime.getFullYear()+"-"+(dayTime.getMonth()+1)+"-"+dayTime.getDate()+" "+dayTime.getHours()+":"+"0"+dayTime.getMinutes()+":"+"0"+dayTime.getSeconds()
                 if(n1.getAttribute("id")==item.StationNo){
-                        CTNO.innerText=item.Time
+                        CTNO.innerText=Time
                         CWHNO.innerText=item.WaterHeight 
                         CESNO.innerText=item.EffectiveStorage 
                         CPOSNO.innerText=Math.floor(item.PercentageOfStorage)+"%"  
@@ -451,7 +590,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 
                 if(n2.getAttribute("id")==item.StationNo){
                         
-                        CTNT.innerText=item.Time
+                        CTNT.innerText=Time
                         CWHNT.innerText=item.WaterHeight
                         CESNT.innerText=item.EffectiveStorage
                         CPOSNT.innerText=Math.floor(item.PercentageOfStorage)+"%"    
@@ -460,7 +599,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
                 if(n3.getAttribute("id")==item.StationNo){
                         
-                        CTNTH.innerText=item.Time
+                        CTNTH.innerText=Time
                         CWHNTH.innerText=item.WaterHeight
                         CESNTH.innerText=item.EffectiveStorage
                         CPOSNTH.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -468,7 +607,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
                 if(n4.getAttribute("id")==item.StationNo){
                         
-                        CTNF.innerText=item.Time
+                        CTNF.innerText=Time
                         CWHNF.innerText=item.WaterHeight
                         CESNF.innerText=item.EffectiveStorage
                         CPOSNF.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -476,7 +615,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
                 if(n5.getAttribute("id")==item.StationNo){
                         
-                        CTNFI.innerText=item.Time
+                        CTNFI.innerText=Time
                         CWHNFI.innerText=item.WaterHeight
                         CESNFI.innerText=item.EffectiveStorage
                         CPOSNFI.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -484,7 +623,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
                 if(n6.getAttribute("id")==item.StationNo){
                         
-                        CTNS.innerText=item.Time
+                        CTNS.innerText=Time
                         CWHNS.innerText=item.WaterHeight
                         CESNS.innerText=item.EffectiveStorage
                         CPOSNS.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -492,7 +631,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
                 if(m1.getAttribute("id")==item.StationNo){
                         
-                        CTMO.innerText=item.Time
+                        CTMO.innerText=Time
                         CWHMO.innerText=item.WaterHeight
                         CESMO.innerText=item.EffectiveStorage
                         CPOSMO.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -500,7 +639,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
                 if(m2.getAttribute("id")==item.StationNo){
                         
-                        CTMT.innerText=item.Time
+                        CTMT.innerText=Time
                         CWHMT.innerText=item.WaterHeight
                         CESMT.innerText=item.EffectiveStorage
                         CPOSMT.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -508,7 +647,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
                 if(m3.getAttribute("id")==item.StationNo){
                         
-                        CTMTH.innerText=item.Time
+                        CTMTH.innerText=Time
                         CWHMTH.innerText=item.WaterHeight
                         CESMTH.innerText=item.EffectiveStorage
                         CPOSMTH.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -516,7 +655,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 // 10
                 if(m4.getAttribute("id")==item.StationNo){
                         
-                        CTMF.innerText=item.Time
+                        CTMF.innerText=Time
                         CWHMF.innerText=item.WaterHeight
                         CESMF.innerText=item.EffectiveStorage
                         CPOSMF.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -524,7 +663,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 // 11
                 if(m5.getAttribute("id")==item.StationNo){
                         
-                        CTMFI.innerText=item.Time
+                        CTMFI.innerText=Time
                         CWHMFI.innerText=item.WaterHeight
                         CESMFI.innerText=item.EffectiveStorage
                         CPOSMFI.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -532,7 +671,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 // 12
                 if(m6.getAttribute("id")==item.StationNo){
                         
-                        CTMS.innerText=item.Time
+                        CTMS.innerText=Time
                         CWHMS.innerText=item.WaterHeight
                         CESMS.innerText=item.EffectiveStorage
                         CPOSMS.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -540,7 +679,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 // 13
                 if(m7.getAttribute("id")==item.StationNo){
                         
-                        CTMTSE.innerText=item.Time
+                        CTMTSE.innerText=Time
                         CWHMSE.innerText=item.WaterHeight
                         CESMSE.innerText=item.EffectiveStorage
                         CPOSMSE.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -548,7 +687,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 // 14
                 if(m8.getAttribute("id")==item.StationNo){
                         
-                        CTMN.innerText=item.Time
+                        CTMN.innerText=Time
                         CWHMN.innerText=item.WaterHeight
                         CESMN.innerText=item.EffectiveStorage
                         CPOSMN.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -556,7 +695,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 // 15
                 if(s1.getAttribute("id")==item.StationNo){
                         
-                        CTSO.innerText=item.Time
+                        CTSO.innerText=Time
                         CWHSO.innerText=item.WaterHeight
                         CESSO.innerText=item.EffectiveStorage
                         CPOSSO.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -564,7 +703,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 // 16
                 if(s2.getAttribute("id")==item.StationNo){
                         
-                        CTST.innerText=item.Time
+                        CTST.innerText=Time
                         CWHST.innerText=item.WaterHeight
                         CESST.innerText=item.EffectiveStorage
                         CPOSST.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -572,7 +711,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 // 17
                 if(s3.getAttribute("id")==item.StationNo){
                         
-                        CTSTH.innerText=item.Time
+                        CTSTH.innerText=Time
                         CWHSTH.innerText=item.WaterHeight
                         CESSTH.innerText=item.EffectiveStorage
                         CPOSSTH.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -580,7 +719,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 // 18
                 if(s4.getAttribute("id")==item.StationNo){
                         
-                        CTSF.innerText=item.Time
+                        CTSF.innerText=Time
                         CWHSF.innerText=item.WaterHeight
                         CESSF.innerText=item.EffectiveStorage
                         CPOSSF.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -588,7 +727,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 // 19
                 if(s5.getAttribute("id")==item.StationNo){
 
-                        CTSFI.innerText=item.Time
+                        CTSFI.innerText=Time
                         CWHSFI.innerText=item.WaterHeight
                         CESSFI.innerText=item.EffectiveStorage
                         CPOSSFI.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -596,7 +735,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 // 20
                 if(s6.getAttribute("id")==item.StationNo){
                         
-                        CTSS.innerText=item.Time
+                        CTSS.innerText=Time
                         CWHSS.innerText=item.WaterHeight
                         CESSS.innerText=item.EffectiveStorage
                         CPOSSS.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -604,7 +743,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 // 21
                 if(s7.getAttribute("id")==item.StationNo){
                         
-                        CTSSE.innerText=item.Time
+                        CTSSE.innerText=Time
                         CWHSSE.innerText=item.WaterHeight
                         CESSSE.innerText=item.EffectiveStorage
                         CPOSSSE.innerText=Math.floor(item.PercentageOfStorage)+"%"
@@ -1098,30 +1237,32 @@ export default{
 </template>
 
 <style lang="scss" scoped>
-    .content{
+
+        .content{
         width: 100vw;
-        height: 100vw;
+        height: 45vw;
+        margin-top: 8vmin;
 
-        table{
-            width: 90vw;
-            height: 100vh;
-            margin: auto;
-            tr{
-                th{
-                    border: 1px solid black;
-                    background-color: aliceblue;
+                table{
+                        width: 90vw;
+                        height: 40vh;
+                        margin: auto;
+                        tr{
+                                th{
+                                border: 1px solid black;
+                                background-color: #AFD3E2;
+                                opacity: 0.8;
+                                }
+
+                                td{
+                                text-align: center;
+                                border: 1px solid black;
+                                background-color: white;
+                                }
+                        }
                 }
-
-                td{
-                    text-align: center;
-                    border: 1px solid black;
-                    background-color: aliceblue;
-                }
-
-            }
         }
 
-    }
 
 
 </style>
