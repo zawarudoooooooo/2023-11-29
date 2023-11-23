@@ -427,7 +427,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
             <!-- 蓄水比，Percentage Of Storage -->
                 <div class="quan">
                     <div class="shui">
-                        <p id="POSNO">5</p>
+                        <p id="POSNO"></p>
                     </div>
                 </div>
             </div>
