@@ -112,107 +112,127 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
                     FWHNO.innerText = item.FullWaterHeight
                     IESNO.innerText = item.EffectiveCapacity
                     ARFNO.innerText = item.AccumulatedRainfall
-
+                    INNO.innerText = item.InflowTotal
                 }
                 if (N2.innerText == item.StationNo) {
                     FWHNT.innerText = item.FullWaterHeight
                     IESNT.innerText = item.EffectiveCapacity
                     ARFNT.innerText = item.AccumulatedRainfall
+                    INNT.innerText = item.InflowTotal
                 }
                 if (N3.innerText == item.StationNo) {
                     FWHNTH.innerText = item.FullWaterHeight
                     IESNTH.innerText = item.EffectiveCapacity
                     ARFNOTH.innerText = item.AccumulatedRainfall
+                    INNTH.innerText = item.InflowTotal
                 }
                 if (N4.innerText == item.StationNo) {
                     FWHNF.innerText = item.FullWaterHeight
                     IESNF.innerText = item.EffectiveCapacity
                     ARFNF.innerText = item.AccumulatedRainfall
+                    INNF.innerText = item.InflowTotal
                 }
                 if (N5.innerText == item.StationNo) {
                     FWHNFI.innerText = item.FullWaterHeight
                     IESNFI.innerText = item.EffectiveCapacity
                     ARFNFI.innerText = item.AccumulatedRainfall
+                    INNFI.innerText = item.InflowTotal
                 }
                 if (N6.innerText == item.StationNo) {
                     FWHNS.innerText = item.FullWaterHeight
                     IESNS.innerText = item.EffectiveCapacity
                     ARFNS.innerText = item.AccumulatedRainfall
+                    INNS.innerText = item.InflowTotal
                 }
                 if (M1.innerText == item.StationNo) {
                     FWHMO.innerText = item.FullWaterHeight
                     IESMO.innerText = item.EffectiveCapacity
                     ARFMO.innerText = item.AccumulatedRainfall
+                    INMO.innerText = item.InflowTotal
                 }
                 if (M2.innerText == item.StationNo) {
                     FWHMT.innerText = item.FullWaterHeight
                     IESMT.innerText = item.EffectiveCapacity
                     ARFMT.innerText = item.AccumulatedRainfall
+                    INMT.innerText = item.InflowTotal
                 }
                 if (M3.innerText == item.StationNo) {
                     FWHMTH.innerText = item.FullWaterHeight
                     IESMTH.innerText = item.EffectiveCapacity
                     ARFMTH.innerText = item.AccumulatedRainfall
+                    INMTH.innerText = item.InflowTotal
                 }
                 if (M4.innerText == item.StationNo) {
                     FWHMF.innerText = item.FullWaterHeight
                     IESMF.innerText = item.EffectiveCapacity
                     ARFMF.innerText = item.AccumulatedRainfall
+                    INMF.innerText = item.InflowTotal
                 }
                 if (M5.innerText == item.StationNo) {
                     FWHMFI.innerText = item.FullWaterHeight
                     IESMFI.innerText = item.EffectiveCapacity
                     ARFMFI.innerText = item.AccumulatedRainfall
+                    INMFI.innerText = item.InflowTotal
                 }
                 if (M6.innerText == item.StationNo) {
                     FWHMS.innerText = item.FullWaterHeight
                     IESMS.innerText = item.EffectiveCapacity
                     ARFMS.innerText = item.AccumulatedRainfall
+                    INMS.innerText = item.InflowTotal
                 }
                 if (M7.innerText == item.StationNo) {
                     FWHMSE.innerText = item.FullWaterHeight
                     IESMSE.innerText = item.EffectiveCapacity
                     ARFMSE.innerText = item.AccumulatedRainfall
+                    INMSE.innerText = item.InflowTotal
                 }
                 if (M9.innerText == item.StationNo) {
                     FWHMN.innerText = item.FullWaterHeight
                     IESMN.innerText = item.EffectiveCapacity
                     ARFMN.innerText = item.AccumulatedRainfall
+                    INMN.innerText = item.InflowTotal
                 }
                 if (S1.innerText == item.StationNo) {
                     FWHSO.innerText = item.FullWaterHeight
                     IESSO.innerText = item.EffectiveCapacity
                     ARFSO.innerText = item.AccumulatedRainfall
+                    INSO.innerText = item.InflowTotal
                 }
                 if (S2.innerText == item.StationNo) {
                     FWHST.innerText = item.FullWaterHeight
                     IESST.innerText = item.EffectiveCapacity
                     ARFST.innerText = item.AccumulatedRainfall
+                    INST.innerText = item.InflowTotal
                 }
                 if (S3.innerText == item.StationNo) {
                     FWHSTH.innerText = item.FullWaterHeight
                     IESSTH.innerText = item.EffectiveCapacity
                     ARFSTH.innerText = item.AccumulatedRainfall
+                    INSTH.innerText = item.InflowTotal
                 }
                 if (S4.innerText == item.StationNo) {
                     FWHSF.innerText = item.FullWaterHeight
                     IESSF.innerText = item.EffectiveCapacity
                     ARFSF.innerText = item.AccumulatedRainfall
+                    INSF.innerText = item.InflowTotal
                 }
                 if (S5.innerText == item.StationNo) {
                     FWHSFI.innerText = item.FullWaterHeight
                     IESSFI.innerText = item.EffectiveCapacity
                     ARFSFI.innerText = item.AccumulatedRainfall
+                    INSFI.innerText = item.InflowTotal
                 }
                 if (S6.innerText == item.StationNo) {
                     FWHSS.innerText = item.FullWaterHeight
                     IESSS.innerText = item.EffectiveCapacity
                     ARFSS.innerText = item.AccumulatedRainfall
+                    INSS.innerText = item.AccumulatedRainfall
                 }
                 if (S7.innerText == item.StationNo) {
                     FWHSSE.innerText = item.FullWaterHeight
                     IESSSE.innerText = item.EffectiveCapacity
                     ARFSSE.innerText = item.AccumulatedRainfall
+                    INSSE.innerText = item.InflowTotal
                 }
             })
         }, 100)
