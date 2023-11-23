@@ -211,43 +211,43 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Station")
                 }
 // 12
                 if(n1.getAttribute("id")==item.StationNo){
-                        CARFNO.innerText=item.AccumulatedRainfall
+                        CARFMS.innerText=item.AccumulatedRainfall
                 }
 // 13
                 if(n1.getAttribute("id")==item.StationNo){
-                        CARFNO.innerText=item.AccumulatedRainfall
+                        CARFMSE.innerText=item.AccumulatedRainfall
                 }
 // 14
                 if(n1.getAttribute("id")==item.StationNo){
-                        CARFNO.innerText=item.AccumulatedRainfall
+                        CARFMN.innerText=item.AccumulatedRainfall
                 }
 // 15
                 if(n1.getAttribute("id")==item.StationNo){
-                        CARFNO.innerText=item.AccumulatedRainfall
+                        CARFSO.innerText=item.AccumulatedRainfall
                 }
 // 16
                 if(n1.getAttribute("id")==item.StationNo){
-                        CARFNO.innerText=item.AccumulatedRainfall
+                        CARFST.innerText=item.AccumulatedRainfall
                 }
 // 17
                 if(n1.getAttribute("id")==item.StationNo){
-                        CARFNO.innerText=item.AccumulatedRainfall
+                        CARFSTH.innerText=item.AccumulatedRainfall
                 }
 // 18
                 if(n1.getAttribute("id")==item.StationNo){
-                        CARFNO.innerText=item.AccumulatedRainfall
+                        CARFSF.innerText=item.AccumulatedRainfall
                 }
 // 19
                 if(n1.getAttribute("id")==item.StationNo){
-                        CARFNO.innerText=item.AccumulatedRainfall
+                        CARFSFI.innerText=item.AccumulatedRainfall
                 }
 // 20
                 if(n1.getAttribute("id")==item.StationNo){
-                        CARFNO.innerText=item.AccumulatedRainfall
+                        CARFSS.innerText=item.AccumulatedRainfall
                 }
 // 21
                 if(n1.getAttribute("id")==item.StationNo){
-                        CARFNO.innerText=item.AccumulatedRainfall
+                        CARFSSE.innerText=item.AccumulatedRainfall
                 }
         })
         
