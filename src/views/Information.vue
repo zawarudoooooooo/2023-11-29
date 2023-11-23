@@ -96,7 +96,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                     WHSSE.innerText = item.WaterHeight
                 }
             })
-        }, 1000)
+        }, 100)
 
     });
 // 水庫統計資料
@@ -215,7 +215,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
                     ARFSSE.innerText = item.AccumulatedRainfall
                 }
             })
-        }, 1000)
+        }, 100)
     })
 
 
