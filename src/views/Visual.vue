@@ -923,7 +923,10 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
         p{
             color: black;
-            font-size: 10pt;
+            font-size: 20pt;
+            position: absolute;
+            top: 12%;
+            left: 11%;
             z-index: 1;
         }
         }   
@@ -1150,7 +1153,18 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
         background-color: rgb(23, 106, 201);
         border-radius: 50%;
         overflow: hidden;
-        }   
+        p{
+            color: black;
+            font-size: 20pt;
+            position: absolute;
+            top: 12%;
+            left: 11%;
+            z-index: 1;
+        }
+        }
+
+
+           
 
         .shui::after {
         content: '';
@@ -1427,6 +1441,14 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
         background-color: rgb(23, 106, 201);
         border-radius: 50%;
         overflow: hidden;
+        p{
+            color: black;
+            font-size: 20pt;
+            position: absolute;
+            top: 12%;
+            left: 11%;
+            z-index: 1;
+        }
         }   
 
         .shui::after {
