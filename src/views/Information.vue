@@ -222,17 +222,18 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
 </script>
 
 <template>
-    <table>
+    <div class="content">
+        <table>
         <tr>
             <th>水庫編號</th>
             <th>水庫名稱</th>
             <th>水情時間</th>
-            <th>本日集水區累積降雨量(mm)</th>
-            <th>進流量(cms)</th>
-            <th>水位(公尺)</th>
-            <th>滿水位(公尺)</th>
-            <th>有效蓄水量(萬立方公尺)</th>
-            <th>蓄水百分比(%)</th>
+            <th>本日集水區累積降雨量<br>(毫米)</th>
+            <th>進流量<br>(cms)</th>
+            <th>水位<br>(公尺)</th>
+            <th>滿水位<br>(公尺)</th>
+            <th>有效蓄水量<br>(萬立方公尺)</th>
+            <th>蓄水百分比<br>百分比(%)</th>
         </tr>
 
 <!-- 北區水庫 -->
@@ -241,439 +242,468 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
 
         <!--石門水庫-->
         <tr>
-            <th id="N1">10201</th>
-            <th>石門水庫</th>
+            <td id="N1">10201</td>
+            <td>石門水庫</td>
             <!--水情時間-->
-            <th id="TNO"></th>
+            <td id="TNO"></td>
             <!--本日集水區累積降雨量(mm)-->
-            <th id="ARFNO"></th>
+            <td id="ARFNO"></td>
             <!--進流量(cms)-->
-            <th id="INNO"></th>
+            <td id="INNO"></td>
             <!--水位(公尺)-->
-            <th id="WHNO"></th>
+            <td id="WHNO"></td>
             <!--滿水位(公尺)-->
-            <th id="FWHNO"></th>
+            <td id="FWHNO"></td>
             <!--有效蓄水量(萬立方公尺)-->
-            <th id="IESNO"></th>
+            <td id="IESNO"></td>
             <!--蓄水百分比(%)-->
-            <th id="IPOSNO"></th>
+            <td id="IPOSNO"></td>
         </tr>
         <!--西勢水庫-->
         <tr>
-            <th id="N2">10203</th>
-            <th>西勢水庫</th>
+            <td id="N2">10203</td>
+            <td>西勢水庫</td>
             <!--水情時間-->
-            <th id="TNT"></th>
+            <td id="TNT"></td>
             <!--本日集水區累積降雨量(mm)-->
-            <th id="ARFNT"></th>
+            <td id="ARFNT"></td>
             <!--進流量(cms)-->
-            <th id="INNT"></th>
+            <td id="INNT"></td>
             <!--水位(公尺)-->
-            <th id="WHNT"></th>
+            <td id="WHNT"></td>
             <!--滿水位(公尺)-->
-            <th id="FWHNT"></th>
+            <td id="FWHNT"></td>
             <!--有效蓄水量(萬立方公尺)-->
-            <th id="IESNT"></th>
+            <td id="IESNT"></td>
             <!--蓄水百分比(%)-->
-            <th id="IPOSNT"></th>
+            <td id="IPOSNT"></td>
         </tr>
         <!--新山水庫-->
         <tr>
-            <th id="N3">10204</th>
-            <th>新山水庫</th>
+            <td id="N3">10204</td>
+            <td>新山水庫</td>
             <!--水情時間-->
-            <th id="TNTH"></th>
+            <td id="TNTH"></td>
             <!--本日集水區累積降雨量(mm)-->
-            <th id="ARFNOTH"></th>
+            <td id="ARFNOTH"></td>
             <!--進流量(cms)-->
-            <th id="INNTH"></th>
+            <td id="INNTH"></td>
             <!--水位(公尺)-->
-            <th id="WHNTH"></th>
+            <td id="WHNTH"></td>
             <!--滿水位(公尺)-->
-            <th id="FWHNTH"></th>
+            <td id="FWHNTH"></td>
             <!--有效蓄水量(萬立方公尺)-->
-            <th id="IESNTH"></th>
+            <td id="IESNTH"></td>
             <!--蓄水百分比(%)-->
-            <th id="IPOSTH"></th>
+            <td id="IPOSTH"></td>
         </tr>
         <!--翡翠水庫-->
         <tr>
-            <th id="N4">10205</th>
-            <th>翡翠水庫</th>
+            <td id="N4">10205</td>
+            <td>翡翠水庫</td>
             <!--水情時間 -->
-            <th id="TNF"></th>
+            <td id="TNF"></td>
             <!--本日集水區累積降雨量(mm)-->
-            <th id="ARFNF"></th>
+            <td id="ARFNF"></td>
             <!--進流量(cms)-->
-            <th id="INNF"></th>
+            <td id="INNF"></td>
             <!--水位(公尺)-->
-            <th id="WHNF"></th>
+            <td id="WHNF"></td>
             <!--滿水位(公尺)-->
-            <th id="FWHNF"></th>
+            <td id="FWHNF"></td>
             <!--有效蓄水量(萬立方公尺)-->
-            <th id="IESNF"></th>
+            <td id="IESNF"></td>
             <!--蓄水百分比(%)-->
-            <th id="IPOSNF"></th>
+            <td id="IPOSNF"></td>
         </tr>
 
         <!--寶山水庫-->
         <tr>
 
-            <th id="N5">10401</th>
-            <th>寶山水庫</th>
+            <td id="N5">10401</td>
+            <td>寶山水庫</td>
             <!--水情時間-->
-            <th id="TNFI"></th>
+            <td id="TNFI"></td>
             <!--本日集水區累積降雨量(mm)-->
-            <th id="ARFNFI"></th>
+            <td id="ARFNFI"></td>
             <!--進流量(cms)-->
-            <th id="INNFI"></th>
+            <td id="INNFI"></td>
             <!--水位(公尺)-->
-            <th id="WHNFI"></th>
+            <td id="WHNFI"></td>
             <!--滿水位(公尺)-->
-            <th id="FWHNFI"></th>
+            <td id="FWHNFI"></td>
             <!--有效蓄水量(萬立方公尺)-->
-            <th id="IESNFI"></th>
+            <td id="IESNFI"></td>
             <!--蓄水百分比(%)-->
-            <th id="IPOSNFI"></th>
+            <td id="IPOSNFI"></td>
         </tr>
 
         <!--寶山第二水庫-->
         <tr>
 
-            <th id="N6">10405</th>
-            <th>寶山第二水庫</th>
+            <td id="N6">10405</td>
+            <td>寶山第二水庫</td>
             <!--水情時間-->
-            <th id="TNS"></th>
+            <td id="TNS"></td>
             <!--本日集水區累積降雨量(mm)-->
-            <th id="ARFNS"></th>
+            <td id="ARFNS"></td>
             <!--進流量(cms)-->
-            <th id="INNS"></th>
+            <td id="INNS"></td>
             <!--水位(公尺)-->
-            <th id="WHNS"></th>
+            <td id="WHNS"></td>
             <!--滿水位(公尺)-->
-            <th id="FWHNS"></th>
+            <td id="FWHNS"></td>
             <!--有效蓄水量(萬立方公尺)-->
-            <th id="IESNS"></th>
+            <td id="IESNS"></td>
             <!--蓄水百分比(%)-->
-            <th id="IPOSNS"></th>
+            <td id="IPOSNS"></td>
         </tr>
 
         <!-- 中區水庫 -->
 
         <!--永和山水庫 -->
         <tr>
-            <th id="M1">10501</th>
-            <th>永和山水庫</th>
+            <td id="M1">10501</td>
+            <td>永和山水庫</td>
             <!-- 水情時間-->
-            <th id="TMO"></th>
+            <td id="TMO"></td>
             <!-- 本日集水區累積降雨量(mm)-->
-            <th id="ARFMO"></th>
+            <td id="ARFMO"></td>
             <!-- 進流量(cms)-->
-            <th id="INMO"></th>
+            <td id="INMO"></td>
             <!-- 水位(公尺)-->
-            <th id="WHMO"></th>
+            <td id="WHMO"></td>
             <!-- 滿水位(公尺)-->
-            <th id="FWHMO"></th>
+            <td id="FWHMO"></td>
             <!-- 有效蓄水量(萬立方公尺) -->
-            <th id="IESMO"></th>
+            <td id="IESMO"></td>
             <!-- 蓄水百分比(%) -->
-            <th id="IPOSMO"></th>
+            <td id="IPOSMO"></td>
         </tr>
 
         <!-- 大埔水庫 -->
         <tr>
 
-            <th id="M2">10503</th>
-            <th>大埔水庫</th>
+            <td id="M2">10503</td>
+            <td>大埔水庫</td>
             <!-- 水情時間 -->
-            <th id="TMT"></th>
+            <td id="TMT"></td>
             <!-- 本日集水區累積降雨量(mm) -->
-            <th id="ARFMT"></th>
+            <td id="ARFMT"></td>
             <!-- 進流量(cms) -->
-            <th id="INMT"></th>
+            <td id="INMT"></td>
             <!-- 水位(公尺) -->
-            <th id="WHMT"></th>
+            <td id="WHMT"></td>
             <!-- 滿水位(公尺) -->
-            <th id="FWHMT"></th>
+            <td id="FWHMT"></td>
             <!-- 有效蓄水量(萬立方公尺) -->
-            <th id="IESMT"></th>
+            <td id="IESMT"></td>
             <!-- 蓄水百分比(%) -->
-            <th id="IPOSMT"></th>
+            <td id="IPOSMT"></td>
         </tr>
 
         <!-- 明德水庫 -->
         <tr>
 
-            <th id="M3">10601</th>
-            <th>明德水庫</th>
+            <td id="M3">10601</td>
+            <td>明德水庫</td>
             <!-- 水情時間 -->
-            <th id="TMTH"></th>
+            <td id="TMTH"></td>
             <!-- 本日集水區累積降雨量(mm) -->
-            <th id="ARFMTH"></th>
+            <td id="ARFMTH"></td>
             <!-- 進流量(cms) -->
-            <th id="INMTH"></th>
+            <td id="INMTH"></td>
             <!-- 水位(公尺) -->
-            <th id="WHMTH"></th>
+            <td id="WHMTH"></td>
             <!-- 滿水位(公尺) -->
-            <th id="FWHMTH"></th>
+            <td id="FWHMTH"></td>
             <!-- 有效蓄水量(萬立方公尺) -->
-            <th id="IESMTH"></th>
+            <td id="IESMTH"></td>
             <!-- 蓄水百分比(%) -->
-            <th id="IPOSMTH"></th>
+            <td id="IPOSMTH"></td>
         </tr>
 
         <!-- 鯉魚潭水庫 -->
         <tr>
 
-            <th id="M4">20101</th>
-            <th>鯉魚潭水庫</th>
+            <td id="M4">20101</td>
+            <td>鯉魚潭水庫</td>
             <!-- 水情時間 -->
-            <th id="TMF"></th>
+            <td id="TMF"></td>
             <!-- 本日集水區累積降雨量(mm) -->
-            <th id="ARFMF"></th>
+            <td id="ARFMF"></td>
             <!-- 進流量(cms) -->
-            <th id="INMF"></th>
+            <td id="INMF"></td>
             <!-- 水位(公尺) -->
-            <th id="WHMF"></th>
+            <td id="WHMF"></td>
             <!-- 滿水位(公尺)  -->
-            <th id="FWHMF"></th>
+            <td id="FWHMF"></td>
             <!-- 有效蓄水量(萬立方公尺) -->
-            <th id="IESMF"></th>
+            <td id="IESMF"></td>
             <!-- 蓄水百分比(%) -->
-            <th id="IPOSMF"></th>
+            <td id="IPOSMF"></td>
         </tr>
 
         <!-- 德基水庫 -->
         <tr>
 
-            <th id="M5">20201</th>
-            <th>德基水庫</th>
+            <td id="M5">20201</td>
+            <td>德基水庫</td>
             <!-- 水情時間 -->
-            <th id="TMFI"></th>
+            <td id="TMFI"></td>
             <!-- 本日集水區累積降雨量(mm) -->
-            <th id="ARFMFI"></th>
+            <td id="ARFMFI"></td>
             <!-- 進流量(cms) -->
-            <th id="INMFI"></th>
+            <td id="INMFI"></td>
             <!-- 水位(公尺) -->
-            <th id="WHMFI"></th>
+            <td id="WHMFI"></td>
             <!-- 滿水位(公尺) -->
-            <th id="FWHMFI"></th>
+            <td id="FWHMFI"></td>
             <!-- 有效蓄水量(萬立方公尺) -->
-            <th id="IESMFI"></th>
+            <td id="IESMFI"></td>
             <!-- 蓄水百分比(%) -->
-            <th id="IPOSMFI"></th>
+            <td id="IPOSMFI"></td>
         </tr>
 
         <!-- 霧社水庫 -->
         <tr>
 
-            <th id="M6">20501</th>
-            <th>霧社水庫</th>
+            <td id="M6">20501</td>
+            <td>霧社水庫</td>
             <!-- 水情時間 -->
-            <th id="TMS"></th>
+            <td id="TMS"></td>
             <!-- 本日集水區累積降雨量(mm) -->
-            <th id="ARFMS"></th>
+            <td id="ARFMS"></td>
             <!-- 進流量(cms) -->
-            <th id="INMS"></th>
+            <td id="INMS"></td>
             <!-- 水位(公尺) -->
-            <th id="WHMS"></th>
+            <td id="WHMS"></td>
             <!-- 滿水位(公尺) -->
-            <th id="FWHMS"></th>
+            <td id="FWHMS"></td>
             <!-- 有效蓄水量(萬立方公尺) -->
-            <th id="IESMS"></th>
+            <td id="IESMS"></td>
             <!-- 蓄水百分比(%) -->
-            <th id="IPOSMS"></th>
+            <td id="IPOSMS"></td>
         </tr>
 
         <!-- 日月潭水庫 -->
         <tr>
 
-            <th id="M7">20502</th>
-            <th>日月潭水庫</th>
+            <td id="M7">20502</td>
+            <td>日月潭水庫</td>
             <!-- 水情時間 -->
-            <th id="TMSE"></th>
+            <td id="TMSE"></td>
             <!-- 本日集水區累積降雨量(mm) -->
-            <th id="ARFMSE"></th>
+            <td id="ARFMSE"></td>
             <!-- 進流量(cms) -->
-            <th id="INMSE"></th>
+            <td id="INMSE"></td>
             <!-- 水位(公尺) -->
-            <th id="WHMSE"></th>
+            <td id="WHMSE"></td>
             <!-- 滿水位(公尺) -->
-            <th id="FWHMSE"></th>
+            <td id="FWHMSE"></td>
             <!-- 有效蓄水量(萬立方公尺) -->
-            <th id="IESMSE"></th>
+            <td id="IESMSE"></td>
             <!-- 蓄水百分比(%) -->
-            <th id="IPOSMSE"></th>
+            <td id="IPOSMSE"></td>
         </tr>
 
 
         <!-- 湖山水庫 -->
         <tr>
-            <th id="M9">20509</th>
-            <th>湖山水庫</th>
+            <td id="M9">20509</td>
+            <td>湖山水庫</td>
             <!-- 水情時間 -->
-            <th id="TMN"></th>
+            <td id="TMN"></td>
             <!-- 本日集水區累積降雨量(mm) -->
-            <th id="ARFMN"></th>
+            <td id="ARFMN"></td>
             <!-- 進流量(cms) -->
-            <th id="INMN"></th>
+            <td id="INMN"></td>
             <!-- 水位(公尺) -->
-            <th id="WHMN"></th>
+            <td id="WHMN"></td>
             <!-- 滿水位(公尺) -->
-            <th id="FWHMN"></th>
+            <td id="FWHMN"></td>
             <!-- 有效蓄水量(萬立方公尺) -->
-            <th id="IESMN"></th>
+            <td id="IESMN"></td>
             <!-- 蓄水百分比(%) -->
-            <th id="IPOSMN"></th>
+            <td id="IPOSMN"></td>
         </tr>
 
         <!-- 南區水庫 -->
 
         <!-- 蘭潭水庫 -->
         <tr>
-            <th id="S1">30302</th>
-            <th>蘭潭水庫</th>
+            <td id="S1">30302</td>
+            <td>蘭潭水庫</td>
             <!-- 水情時間 -->
-            <th id="TSO"></th>
+            <td id="TSO"></td>
             <!-- 本日集水區累積降雨量(mm) -->
-            <th id="ARFSO"></th>
+            <td id="ARFSO"></td>
             <!-- 進流量(cms) -->
-            <th id="INSO"></th>
+            <td id="INSO"></td>
             <!-- 水位(公尺) -->
-            <th id="WHSO"></th>
+            <td id="WHSO"></td>
             <!-- 滿水位(公尺) -->
-            <th id="FWHSO"></th>
+            <td id="FWHSO"></td>
             <!-- 有效蓄水量(萬立方公尺) -->
-            <th id="IESSO"></th>
+            <td id="IESSO"></td>
             <!-- 蓄水百分比(%) -->
-            <th id="IPOSSO"></th>
+            <td id="IPOSSO"></td>
         </tr>
 
         <!-- 白河水庫 -->
         <tr>
 
-            <th id="S2">30401</th>
-            <th>白河水庫</th>
+            <td id="S2">30401</td>
+            <td>白河水庫</td>
             <!-- 水情時間 -->
-            <th id="TST"></th>
+            <td id="TST"></td>
             <!-- 本日集水區累積降雨量(mm) -->
-            <th id="ARFST"></th>
+            <td id="ARFST"></td>
             <!-- 進流量(cms) -->
-            <th id="INST"></th>
+            <td id="INST"></td>
             <!-- 水位(公尺) -->
-            <th id="WHST"></th>
+            <td id="WHST"></td>
             <!-- 滿水位(公尺) -->
-            <th id="FWHST"></th>
+            <td id="FWHST"></td>
             <!-- 有效蓄水量(萬立方公尺) -->
-            <th id="IESST"></th>
+            <td id="IESST"></td>
             <!-- 蓄水百分比(%) -->
-            <th id="IPOSST"></th>
+            <td id="IPOSST"></td>
         </tr>
 
         <!-- 曾文水庫 -->
         <tr>
-            <th id="S3">30502</th>
-            <th>曾文水庫</th>
+            <td id="S3">30502</td>
+            <td>曾文水庫</td>
             <!-- 水情時間 -->
-            <th id="TSTH"></th>
+            <td id="TSTH"></td>
             <!-- 本日集水區累積降雨量(mm) -->
-            <th id="ARFSTH"></th>
+            <td id="ARFSTH"></td>
             <!-- 進流量(cms) -->
-            <th id="INSTH"></th>
+            <td id="INSTH"></td>
             <!-- 水位(公尺) -->
-            <th id="WHSTH"></th>
+            <td id="WHSTH"></td>
             <!-- 滿水位(公尺) -->
-            <th id="FWHSTH"></th>
+            <td id="FWHSTH"></td>
             <!-- 有效蓄水量(萬立方公尺) -->
-            <th id="IESSTH"></th>
+            <td id="IESSTH"></td>
             <!-- 蓄水百分比(%) -->
-            <th id="IPOSSTH"></th>
+            <td id="IPOSSTH"></td>
         </tr>
 
         <!-- 烏山頭水庫 -->
         <tr>
 
-            <th id="S4">30501</th>
-            <th>烏山頭水庫</th>
+            <td id="S4">30501</td>
+            <td>烏山頭水庫</td>
             <!-- 水情時間 -->
-            <th id="TSF"></th>
+            <td id="TSF"></td>
             <!-- 本日集水區累積降雨量(mm) -->
-            <th id="ARFSF"></th>
+            <td id="ARFSF"></td>
             <!-- 進流量(cms) -->
-            <th id="INSF"></th>
+            <td id="INSF"></td>
             <!-- 水位(公尺) -->
-            <th id="WHSF"></th>
+            <td id="WHSF"></td>
             <!-- 滿水位(公尺) -->
-            <th id="FWHSF"></th>
+            <td id="FWHSF"></td>
             <!-- 有效蓄水量(萬立方公尺) -->
-            <th id="IESSF"></th>
+            <td id="IESSF"></td>
             <!-- 蓄水百分比(%) -->
-            <th id="IPOSSF"></th>
+            <td id="IPOSSF"></td>
         </tr>
 
         <!-- 南化水庫 -->
         <tr>
 
-            <th id="S5">30503</th>
-            <th>南化水庫</th>
+            <td id="S5">30503</td>
+            <td>南化水庫</td>
             <!-- 水情時間 -->
-            <th id="TSFI"></th>
+            <td id="TSFI"></td>
             <!-- 本日集水區累積降雨量(mm) -->
-            <th id="ARFSFI"></th>
+            <td id="ARFSFI"></td>
             <!-- 進流量(cms) -->
-            <th id="INSFI"></th>
+            <td id="INSFI"></td>
             <!-- 水位(公尺) -->
-            <th id="WHSFI"></th>
+            <td id="WHSFI"></td>
             <!-- 滿水位(公尺) -->
-            <th id="FWHSFI"></th>
+            <td id="FWHSFI"></td>
             <!-- 有效蓄水量(萬立方公尺) -->
-            <th id="IESSFI"></th>
+            <td id="IESSFI"></td>
             <!-- 蓄水百分比(%) -->
-            <th id="IPOSSFI"></th>
+            <td id="IPOSSFI"></td>
         </tr>
 
         <!-- 阿公店水庫 -->
         <tr>
 
-            <th id="S6">30802</th>
-            <th>阿公店水庫</th>
+            <td id="S6">30802</td>
+            <td>阿公店水庫</td>
             <!-- 水情時間 -->
-            <th id="TSS"></th>
+            <td id="TSS"></td>
             <!-- 本日集水區累積降雨量(mm) -->
-            <th id="ARFSS"></th>
+            <td id="ARFSS"></td>
             <!-- 進流量(cms) -->
-            <th id="INSS"></th>
+            <td id="INSS"></td>
             <!-- 水位(公尺) -->
-            <th id="WHSS"></th>
+            <td id="WHSS"></td>
             <!-- 滿水位(公尺) -->
-            <th id="FWHSS"></th>
+            <td id="FWHSS"></td>
             <!-- 有效蓄水量(萬立方公尺) -->
-            <th id="IESSS"></th>
+            <td id="IESSS"></td>
             <!-- 蓄水百分比(%) -->
-            <th id="IPOSSS"></th>
+            <td id="IPOSSS"></td>
         </tr>
 
         <!-- 牡丹水庫 -->
         <tr>
 
-            <th id="S7">31201</th>
-            <th>牡丹水庫</th>
+            <td id="S7">31201</td>
+            <td>牡丹水庫</td>
             <!-- 水情時間 -->
-            <th id="TSSE"></th>
+            <td id="TSSE"></td>
             <!-- 本日集水區累積降雨量(mm) -->
-            <th id="ARFSSE"></th>
+            <td id="ARFSSE"></td>
             <!-- 進流量(cms) -->
-            <th id="INSSE"></th>
+            <td id="INSSE"></td>
             <!-- 水位(公尺) -->
-            <th id="WHSSE"></th>
+            <td id="WHSSE"></td>
             <!-- 滿水位(公尺) -->
-            <th id="FWHSSE"></th>
+            <td id="FWHSSE"></td>
             <!-- 有效蓄水量(萬立方公尺) -->
-            <th id="IESSSE"></th>
+            <td id="IESSSE"></td>
             <!-- 蓄水百分比(%) -->
-            <th id="IPOSSSE"></th>
+            <td id="IPOSSSE"></td>
         </tr>
     </table>
+
+    </div>
+
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+        .content{
+        width: 100vw;
+        height: 45vw;
+        margin-top: 8vmin;
+
+        table{
+            width: 90vw;
+            height: 40vh;
+            margin: auto;   
+            tr{
+                th{
+                    border: 1px solid black;
+                    background-color: #AFD3E2;
+                    opacity: 0.8;
+                }
+
+                td{
+                    text-align: center;
+                    border: 1px solid black;
+                    background-color: white;
+                }
+
+            }
+        }
+    }
+</style>

@@ -1237,30 +1237,32 @@ export default{
 </template>
 
 <style lang="scss" scoped>
-    .content{
+
+        .content{
         width: 100vw;
-        height: 100vw;
+        height: 45vw;
+        margin-top: 8vmin;
 
-        table{
-            width: 90vw;
-            height: 100vh;
-            margin: auto;
-            tr{
-                th{
-                    border: 1px solid black;
-                    background-color: aliceblue;
+                table{
+                        width: 90vw;
+                        height: 40vh;
+                        margin: auto;
+                        tr{
+                                th{
+                                border: 1px solid black;
+                                background-color: #AFD3E2;
+                                opacity: 0.8;
+                                }
+
+                                td{
+                                text-align: center;
+                                border: 1px solid black;
+                                background-color: white;
+                                }
+                        }
                 }
-
-                td{
-                    text-align: center;
-                    border: 1px solid black;
-                    background-color: aliceblue;
-                }
-
-            }
         }
 
-    }
 
 
 </style>

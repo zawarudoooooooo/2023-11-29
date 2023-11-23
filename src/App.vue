@@ -16,7 +16,7 @@ import Header from './components/Header.vue'
 <style lang="scss" scoped>
   .header{
     width: 100vw;
-    height: 33vh;
+    height: 31vh;
     background-color: #AFD3E2;
     opacity: 0.7;
 
@@ -39,10 +39,4 @@ import Header from './components/Header.vue'
 //   0%  {background-position-x:-200%, -100%, 0%, 100%}
 //   100%{background-position-x:  0%, 100%, 200%, 300%}
 }
-
-  
-  .content{
-    margin-top: 10vmin;
-  }
-
 </style>
