@@ -11,88 +11,90 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
             const TNO = document.getElementById("TNO")
             obj1 = data;
             obj1.forEach((item) => {
+                let dayTime=new Date(item.Time)
+                let Time= dayTime.getFullYear()+"-"+(dayTime.getMonth()+1)+"-"+dayTime.getDate()+" "+dayTime.getHours()+":"+"0"+dayTime.getMinutes()+":"+"0"+dayTime.getSeconds()
                 if (N1.innerText == item.StationNo) {
-                    TNO.innerText = item.Time
+                    TNO.innerText = Time
                     WHNO.innerText = item.WaterHeight
                 }
                 if (N2.innerText == item.StationNo) {
-                    TNT.innerText = item.Time
+                    TNT.innerText = Time
                     WHNT.innerText = item.WaterHeight
                 }
                 if (N3.innerText == item.StationNo) {
-                    TNTH.innerText = item.Time
+                    TNTH.innerText = Time
                     WHNTH.innerText = item.WaterHeight
                 }
                 if (N4.innerText == item.StationNo) {
-                    TNF.innerText = item.Time
+                    TNF.innerText = Time
                     WHNF.innerText = item.WaterHeight
                 }
                 if (N5.innerText == item.StationNo) {
-                    TNFI.innerText = item.Time
+                    TNFI.innerText = Time
                     WHNFI.innerText = item.WaterHeight
                 }
                 if (N6.innerText == item.StationNo) {
-                    TNS.innerText = item.Time
+                    TNS.innerText = Time
                     WHNS.innerText = item.WaterHeight
                 }
                 if (M1.innerText == item.StationNo) {
-                    TMO.innerText = item.Time
+                    TMO.innerText = Time
                     WHMO.innerText = item.WaterHeight
                 }
                 if (M2.innerText == item.StationNo) {
-                    TMT.innerText = item.Time
+                    TMT.innerText = Time
                     WHMT.innerText = item.WaterHeight
                 }
                 if (M3.innerText == item.StationNo) {
-                    TMTH.innerText = item.Time
+                    TMTH.innerText = Time
                     WHMTH.innerText = item.WaterHeight
                 }
                 if (M4.innerText == item.StationNo) {
-                    TMF.innerText = item.Time
+                    TMF.innerText = Time
                     WHMF.innerText = item.WaterHeight
                 }
                 if (M5.innerText == item.StationNo) {
-                    TMFI.innerText = item.Time
+                    TMFI.innerText = Time
                     WHMFI.innerText = item.WaterHeight
                 }
                 if (M6.innerText == item.StationNo) {
-                    TMS.innerText = item.Time
+                    TMS.innerText = Time
                     WHMS.innerText = item.WaterHeight
                 }
                 if (M7.innerText == item.StationNo) {
-                    TMSE.innerText = item.Time
+                    TMSE.innerText = Time
                     WHMSE.innerText = item.WaterHeight
                 }
                 if (M9.innerText == item.StationNo) {
-                    TMN.innerText = item.Time
+                    TMN.innerText = Time
                     WHMN.innerText = item.WaterHeight
                 }
                 if (S1.innerText == item.StationNo) {
-                    TSO.innerText = item.Time
+                    TSO.innerText = Time
                     WHSO.innerText = item.WaterHeight
                 }
                 if (S2.innerText == item.StationNo) {
-                    TST.innerText = item.Time
+                    TST.innerText = Time
                     WHST.innerText = item.WaterHeight
                 }
                 if (S3.innerText == item.StationNo) {
-                    TSTH.innerText = item.Time
+                    TSTH.innerText = Time
                     WHSTH.innerText = item.WaterHeight
                 }
                 if (S4.innerText == item.StationNo) {
-                    TSF.innerText = item.Time
+                    TSF.innerText = Time
                     WHSF.innerText = item.WaterHeight
                 }
                 if (S5.innerText == item.StationNo) {
-                    TSFI.innerText = item.Time
+                    TSFI.innerText = Time
                     WHSFI.innerText = item.WaterHeight
                 }
                 if (S6.innerText == item.StationNo) {
-                    TSS.innerText = item.Time
+                    TSS.innerText = Time
                     WHSS.innerText = item.WaterHeight
                 }
                 if (S7.innerText == item.StationNo) {
-                    TSSE.innerText = item.Time
+                    TSSE.innerText = Time
                     WHSSE.innerText = item.WaterHeight
                 }
             })
