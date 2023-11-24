@@ -69,7 +69,7 @@ fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14
             .then(data=>{
                 arr = data
                 arr.responseData.forEach(item => {
-                    setInterval(function () {
+
                         //中部
 
                     if(M1.getAttribute("value") == item.ReservoirName){
@@ -112,7 +112,7 @@ fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14
                         BRFMN.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
                         ECMN.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
-    },100);
+
             })
 })
 
@@ -121,7 +121,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
   .then((data) => {
     arr2 = data
     arr2.forEach(item => {
-        setInterval(function () {
 
        //中部
        if(M1.getAttribute("id") == item.StationNo){
@@ -157,7 +156,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
         POSMN.innerText = (item.PercentageOfStorage).toFixed(1) + " %"
        }
     });
-    },100)
   });
     },
     methods:{
