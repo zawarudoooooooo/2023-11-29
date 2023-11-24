@@ -386,6 +386,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                     font-weight: bold;
                     color: #0766AD;
                     font-size: 26pt;
+                    cursor: pointer;
 
                     &:hover{
                         background-color: #0766AD;
