@@ -3,12 +3,6 @@ import { mapState,mapActions } from 'pinia';
 import counter from '../stores/counter';
 import { watch } from 'vue';
 
-
-let obj1 = {};
-let obj2 = {};
-let obj3 = {};
-let obj4 = {};
-
 export default{
   data(){
     return{
@@ -757,11 +751,6 @@ export default{
 </script>
 
 <template>
-
-        <button type="button" @click="getBasic">Basic</button>
-        <button type="button" @click="getImmediate">Immediate</button>
-        <button type="button" @click="getOperating">Operating</button>
-        <button type="button" @click="getStatistics">Statistics</button>
 
     <div class="content">
         <table>
