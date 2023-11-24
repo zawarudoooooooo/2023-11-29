@@ -134,12 +134,22 @@ fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14
         </g>
     </svg>
     <div class="content">
-        <div class="title">  
+
+        <div class="reservoirArea">
+          <div class="reservoirName">
             <h1 id="rname"></h1>
+          </div>
+          <h1 id="PercentageTiele"></h1>
+            <span id="Percentage" class="Percentage"></span>
+          <div id="btn" class="btn">
+          </div>
         </div>
-        <h1 id="PercentageTiele"></h1>
-        <span id="Percentage" class="Percentage"></span>
-        <div id="btn" class="btn">
+
+        <div class="rainArea">
+          <div class="cityname">
+            <h1></h1>
+          </div>
+          <span class="rainPercentage"></span>
         </div>
     </div>
   </div>
@@ -182,7 +192,7 @@ fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14
   }
     .content{
         width: 50vmin;
-        height: 50vmin;
+        height: 60vmin;
         border-radius: 10px;
         background-color: #fff;
         text-align: center;
@@ -191,7 +201,7 @@ fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14
         span{
           font-size: 80pt;
         }
-        .title{
+        .reservoirName{
           background-color: #AFD3E2;
           border-top-right-radius: 10px;
           border-top-left-radius: 10px;
@@ -205,6 +215,30 @@ fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14
             justify-content: center;
             align-items: center;
             margin-top: 3.5vmin;
+        }
+
+        .rainArea{
+        width: 50vmin;
+        height: 50vmin;
+        border-radius: 10px;
+        background-color: #fff;
+        text-align: center;
+        box-shadow: 4px 5px 1px black;
+        margin-top: 5vmin;
+
+        span{
+          font-size: 80pt;
+        }
+        .cityname{
+          background-color: #AFD3E2;
+          // border-top-right-radius: 10px;
+          // border-top-left-radius: 10px;
+          h1{
+            margin-top: 0px;
+            color: white;
+          }
+        }
+
         }
     }
 </style>
