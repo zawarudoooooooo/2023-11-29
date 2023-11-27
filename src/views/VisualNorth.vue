@@ -947,7 +947,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                     }
                 }
 
-                .north{
+                .northFour{
                     height: 33vh;
                     p{
                         font-size: 7pt;

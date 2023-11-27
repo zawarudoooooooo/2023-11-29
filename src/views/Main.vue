@@ -15,7 +15,7 @@ export default{
 
     goVisual(){
       let go=this
-      go.$router.push('/Visual')
+      go.$router.push('/VisualNorth')
     },
     svgUpData(){
       let obj1 = {};
@@ -56,7 +56,7 @@ export default{
                             Percentage.innerText = Math.floor(item2.PercentageOfStorage) + "% ";
                         }
                     });
-                    btn.innerHTML =' <a href="./Visual"  style="text-decoration:none;color:white;background-color: #19A7CE;border-radius: 10px; width:15vmin; height:3.5vmin;"> 詳細資料</a>';
+                    btn.innerHTML =' <a href="./VisualNorth"  style="text-decoration:none;color:white;background-color: #19A7CE;border-radius: 10px; width:15vmin; height:4vmin;"> 詳細資料</a>';
                 }
                 });
             });
@@ -68,6 +68,7 @@ export default{
       const city=document.querySelectorAll(".city")
       const cityName=document.getElementById("cityName")
       const rainPercentage=document.getElementById("rainPercentage")
+      const rainPercentageTitle=document.getElementById("rainPercentageTitle")
 
 
       city.forEach(cityall=>{
@@ -76,14 +77,14 @@ export default{
           this.weatherInfo.records.location.forEach(item=>{
             if(cityall.getAttribute("value")==item.locationName){
               cityName.innerText=item.locationName
-              rainPercentage.innerText="降雨機率："+item.weatherElement[1].time[0].parameter.parameterName+"%"
+              rainPercentageTitle.innerText="降雨機率"
+              rainPercentage.innerText=item.weatherElement[1].time[0].parameter.parameterName+"%"
             }
           })
         })
         
       })
-    }
-    
+    },
   },
   computed:{
         ...mapState(counter,["weatherInfo"])
@@ -169,14 +170,15 @@ export default{
           </div>
           <h1 id="PercentageTiele"></h1>
             <span id="Percentage" class="Percentage"></span>
-          <div id="btn" class="btn">
+          <div class="btn" id="btn">
           </div>
-        </div>
+      </div>
 
         <div class="rainArea">
           <div class="cityname">
             <h1 id="cityName"></h1>
           </div>
+          <h1 id="rainPercentageTitle"></h1>
           <span class="rainPercentage" id="rainPercentage"></span>
         </div>
     </div>
@@ -188,11 +190,12 @@ export default{
 //SVG
   .svgArea{
         margin-top: 10vmin;
+        margin-left: 10vmin;
         display: flex;
 
         svg{
-            width: 140vmin;
-            height: 140vmin;
+            width: 120vmin;
+            height: 110vmin;
         }
 
         circle{
@@ -219,54 +222,236 @@ export default{
         }
   }
     .content{
-        width: 50vmin;
-        height: 60vmin;
-        border-radius: 10px;
-        background-color: #fff;
-        text-align: center;
-        box-shadow: 4px 5px 1px black;
+      margin-top: 5vmin;
+        .reservoirArea{
+          width: 45vmin;
+          height: 48vmin;
+          border-radius: 10px;
+          background-color: #fff;
+          text-align: center;
+          box-shadow: 4px 5px 1px black;
 
-        span{
-          font-size: 80pt;
-        }
-        .reservoirName{
-          background-color: #AFD3E2;
-          border-top-right-radius: 10px;
-          border-top-left-radius: 10px;
-          h1{
-            margin-top: 0px;
-            color: white;
+          span{
+              font-size: 80pt;
           }
-        }
-        .btn{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 3.5vmin;
+
+          .reservoirName{
+            background-color: #AFD3E2;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+
+              h1{
+                margin-top: 0px;
+                color: white;
+              }
+          }
+
+          .btn{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-top: 2vmin;
+          }
         }
 
         .rainArea{
-        width: 50vmin;
-        height: 50vmin;
+        width: 45vmin;
+        height: 45vmin;
         border-radius: 10px;
         background-color: #fff;
         text-align: center;
         box-shadow: 4px 5px 1px black;
         margin-top: 5vmin;
 
-        span{
-          font-size: 80pt;
+          .cityname{
+            background-color: #AFD3E2;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+
+              h1{
+                color: white;
+              }
+          }
+
+          span{
+              font-size: 80pt;
+          }
         }
-        .cityname{
-          background-color: #AFD3E2;
-          // border-top-right-radius: 10px;
-          // border-top-left-radius: 10px;
-          h1{
-            margin-top: 0px;
-            color: white;
+      }
+
+    @media(max-width:992px){
+      .svgArea{
+        margin-top: 5vmin;
+        margin-left: 0;
+
+        svg{
+          width: 80vmin;
+          height: 70vmin;
+        }
+      }
+      .content{
+        margin-top: 0;
+        margin-right: 10vmin;
+        .reservoirArea{
+          width: 28vmin;
+          height: 33vmin;
+          
+          span{
+            font-size: 42pt;
           }
         }
 
+        .btn{
+          margin-top: 0;
         }
+
+        .rainArea{
+          width: 28vmin;
+          height: 28vmin;
+
+          span{
+            font-size: 42pt;
+          }
+        }
+      }
+    }
+
+    @media(max-width:768px){
+      .content{
+        .reservoirArea{
+          .reservoirName{
+
+              h1{
+                font-size: 22pt;
+              }
+          }
+
+          h1{
+              font-size: 20pt;
+            }
+            
+          }
+          span{
+            font-size: 36pt;
+          }
+
+        .rainArea{
+          .cityname{
+            h1{
+              font-size: 22pt;
+            }
+          }
+          h1{
+              font-size: 20pt;
+            }
+            
+          }
+          span{
+            font-size: 36pt;
+          }
+        }
+    }
+
+    @media(max-width:576px){
+      .content{
+        margin-right: 18vmin;
+        .reservoirArea{
+          height: 35vmin;
+          .reservoirName{
+
+              h1{
+                font-size: 16pt;
+                margin-bottom: 0;
+              }
+          }
+
+          h1{
+              font-size: 12pt;
+            }
+            
+          span{
+            font-size: 25pt;
+          }
+
+          .btn{
+            font-size: 8pt;
+          }
+
+        }
+
+
+        .rainArea{
+          height: 30vmin;
+          .cityname{
+            h1{
+              font-size: 16pt;
+              margin-bottom: 0;
+            }
+          }
+
+          h1{
+              font-size: 12pt;
+            }
+
+          span{
+            font-size: 25pt;
+          }
+        }
+    }
+    }
+
+    @media(max-width:414px){
+
+      .svgArea{
+        margin-left: 10vmin;
+      }
+      .content{
+        .reservoirArea{
+          height: 37vmin;
+          margin-left: 8vmin;
+          .reservoirName{
+
+              h1{
+                font-size: 14pt;
+                margin-bottom: 0;
+              }
+          }
+
+          h1{
+              font-size: 10pt;
+            }
+            
+          span{
+            font-size: 25pt;
+          }
+
+          .btn{
+            font-size: 8pt;
+          }
+
+        }
+
+
+        .rainArea{
+          height: 28vmin;
+          margin-left: 8vmin;
+          .cityname{
+            h1{
+              font-size: 14pt;
+              margin-bottom: 0;
+            }
+          }
+
+          h1{
+              font-size: 10pt;
+              margin-bottom: 0;
+            }
+
+          span{
+            font-size: 25pt;
+          }
+        }
+    }
+
     }
 </style>
