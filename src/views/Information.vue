@@ -220,6 +220,7 @@ export default {
                             TSS.innerText = Time
                             WHSS.innerText = item.WaterHeight
                             IPOSSS.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                            ARFSS.innerText = item.AccumulatedRainfall
                         }
                         if (S7.getAttribute("value") == item.StationNo) {
                             TSSE.innerText = Time
@@ -484,7 +485,6 @@ export default {
                         if (S6.getAttribute("value") == item.StationNo) {
                             FWHSS.innerText = item.FullWaterHeight
                             IESSS.innerText = item.EffectiveCapacity
-                            ARFSS.innerText = item.AccumulatedRainfall
                             INSS.innerText = item.InflowTotal
                         }
                         if (S7.getAttribute("value") == item.StationNo) {
