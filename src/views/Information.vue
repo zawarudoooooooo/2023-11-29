@@ -119,108 +119,108 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
             obj1.forEach((item) => {
                 let dayTime = new Date(item.Time)
                 let Time = dayTime.getFullYear() + "-" + (dayTime.getMonth() + 1) + "-" + dayTime.getDate() + " " + dayTime.getHours() + ":" + "0" + dayTime.getMinutes() + ":" + "0" + dayTime.getSeconds()
-                if (N1.innerText == item.StationNo) {
+                if (N1.getAttribute("value") == item.StationNo) {
                     TNO.innerText = Time
                     WHNO.innerText = item.WaterHeight
                     IPOSNO.innerText = Math.floor(item.PercentageOfStorage) + "%"
 
                 }
-                if (N2.innerText == item.StationNo) {
+                if (N2.getAttribute("value") == item.StationNo) {
                     TNT.innerText = Time
                     WHNT.innerText = item.WaterHeight
                     IPOSNT.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (N3.innerText == item.StationNo) {
+                if (N3.getAttribute("value") == item.StationNo) {
                     TNTH.innerText = Time
                     WHNTH.innerText = item.WaterHeight
                     IPOSTH.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (N4.innerText == item.StationNo) {
+                if (N4.getAttribute("value") == item.StationNo) {
                     TNF.innerText = Time
                     WHNF.innerText = item.WaterHeight
                     IPOSNF.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (N5.innerText == item.StationNo) {
+                if (N5.getAttribute("value") == item.StationNo) {
                     TNFI.innerText = Time
                     WHNFI.innerText = item.WaterHeight
                     IPOSNFI.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (N6.innerText == item.StationNo) {
+                if (N6.getAttribute("value") == item.StationNo) {
                     TNS.innerText = Time
                     WHNS.innerText = item.WaterHeight
                     IPOSNS.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (M1.innerText == item.StationNo) {
+                if (M1.getAttribute("value") == item.StationNo) {
                     TMO.innerText = Time
                     WHMO.innerText = item.WaterHeight
                     IPOSMO.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (M2.innerText == item.StationNo) {
+                if (M2.getAttribute("value") == item.StationNo) {
                     TMT.innerText = Time
                     WHMT.innerText = item.WaterHeight
                     IPOSMT.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (M3.innerText == item.StationNo) {
+                if (M3.getAttribute("value") == item.StationNo) {
                     TMTH.innerText = Time
                     WHMTH.innerText = item.WaterHeight
                     IPOSMTH.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (M4.innerText == item.StationNo) {
+                if (M4.getAttribute("value") == item.StationNo) {
                     TMF.innerText = Time
                     WHMF.innerText = item.WaterHeight
                     IPOSMF.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (M5.innerText == item.StationNo) {
+                if (M5.getAttribute("value") == item.StationNo) {
                     TMFI.innerText = Time
                     WHMFI.innerText = item.WaterHeight
                     IPOSMFI.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (M6.innerText == item.StationNo) {
+                if (M6.getAttribute("value") == item.StationNo) {
                     TMS.innerText = Time
                     WHMS.innerText = item.WaterHeight
                     IPOSMS.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (M7.innerText == item.StationNo) {
+                if (M7.getAttribute("value") == item.StationNo) {
                     TMSE.innerText = Time
                     WHMSE.innerText = item.WaterHeight
                     IPOSMSE.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (M9.innerText == item.StationNo) {
+                if (M9.getAttribute("value") == item.StationNo) {
                     TMN.innerText = Time
                     WHMN.innerText = item.WaterHeight
                     IPOSMN.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (S1.innerText == item.StationNo) {
+                if (S1.getAttribute("value") == item.StationNo) {
                     TSO.innerText = Time
                     WHSO.innerText = item.WaterHeight
                     IPOSSO.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (S2.innerText == item.StationNo) {
+                if (S2.getAttribute("value") == item.StationNo) {
                     TST.innerText = Time
                     WHST.innerText = item.WaterHeight
                     IPOSST.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (S3.innerText == item.StationNo) {
+                if (S3.getAttribute("value") == item.StationNo) {
                     TSTH.innerText = Time
                     WHSTH.innerText = item.WaterHeight
                     IPOSSTH.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (S4.innerText == item.StationNo) {
+                if (S4.getAttribute("value") == item.StationNo) {
                     TSF.innerText = Time
                     WHSF.innerText = item.WaterHeight
                     IPOSSF.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (S5.innerText == item.StationNo) {
+                if (S5.getAttribute("value") == item.StationNo) {
                     TSFI.innerText = Time
                     WHSFI.innerText = item.WaterHeight
                     IPOSSFI.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (S6.innerText == item.StationNo) {
+                if (S6.getAttribute("value") == item.StationNo) {
                     TSS.innerText = Time
                     WHSS.innerText = item.WaterHeight
                     IPOSSS.innerText = Math.floor(item.PercentageOfStorage) + "%"
                 }
-                if (S7.innerText == item.StationNo) {
+                if (S7.getAttribute("value") == item.StationNo) {
                     TSSE.innerText = Time
                     WHSSE.innerText = item.WaterHeight
                     IPOSSSE.innerText = Math.floor(item.PercentageOfStorage) + "%"
@@ -366,127 +366,127 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
             const INSSE = document.getElementById("INSSE")
             obj2 = data;
             obj2.forEach((item) => {
-                if (N1.innerText == item.StationNo) {
+                if (N1.getAttribute("value") == item.StationNo) {
                     FWHNO.innerText = item.FullWaterHeight
                     IESNO.innerText = item.EffectiveCapacity
                     ARFNO.innerText = item.AccumulatedRainfall
                     INNO.innerText = item.InflowTotal
                 }
-                if (N2.innerText == item.StationNo) {
+                if (N2.getAttribute("value") == item.StationNo) {
                     FWHNT.innerText = item.FullWaterHeight
                     IESNT.innerText = item.EffectiveCapacity
                     ARFNT.innerText = item.AccumulatedRainfall
                     INNT.innerText = item.InflowTotal
                 }
-                if (N3.innerText == item.StationNo) {
+                if (N3.getAttribute("value") == item.StationNo) {
                     FWHNTH.innerText = item.FullWaterHeight
                     IESNTH.innerText = item.EffectiveCapacity
                     ARFNOTH.innerText = item.AccumulatedRainfall
                     INNTH.innerText = item.InflowTotal
                 }
-                if (N4.innerText == item.StationNo) {
+                if (N4.getAttribute("value") == item.StationNo) {
                     FWHNF.innerText = item.FullWaterHeight
                     IESNF.innerText = item.EffectiveCapacity
                     ARFNF.innerText = item.AccumulatedRainfall
                     INNF.innerText = item.InflowTotal
                 }
-                if (N5.innerText == item.StationNo) {
+                if (N5.getAttribute("value") == item.StationNo) {
                     FWHNFI.innerText = item.FullWaterHeight
                     IESNFI.innerText = item.EffectiveCapacity
                     ARFNFI.innerText = item.AccumulatedRainfall
                     INNFI.innerText = item.InflowTotal
                 }
-                if (N6.innerText == item.StationNo) {
+                if (N6.getAttribute("value") == item.StationNo) {
                     FWHNS.innerText = item.FullWaterHeight
                     IESNS.innerText = item.EffectiveCapacity
                     ARFNS.innerText = item.AccumulatedRainfall
                     INNS.innerText = item.InflowTotal
                 }
-                if (M1.innerText == item.StationNo) {
+                if (M1.getAttribute("value") == item.StationNo) {
                     FWHMO.innerText = item.FullWaterHeight
                     IESMO.innerText = item.EffectiveCapacity
                     ARFMO.innerText = item.AccumulatedRainfall
                     INMO.innerText = item.InflowTotal
                 }
-                if (M2.innerText == item.StationNo) {
+                if (M2.getAttribute("value")== item.StationNo) {
                     FWHMT.innerText = item.FullWaterHeight
                     IESMT.innerText = item.EffectiveCapacity
                     ARFMT.innerText = item.AccumulatedRainfall
                     INMT.innerText = item.InflowTotal
                 }
-                if (M3.innerText == item.StationNo) {
+                if (M3.getAttribute("value") == item.StationNo) {
                     FWHMTH.innerText = item.FullWaterHeight
                     IESMTH.innerText = item.EffectiveCapacity
                     ARFMTH.innerText = item.AccumulatedRainfall
                     INMTH.innerText = item.InflowTotal
                 }
-                if (M4.innerText == item.StationNo) {
+                if (M4.getAttribute("value") == item.StationNo) {
                     FWHMF.innerText = item.FullWaterHeight
                     IESMF.innerText = item.EffectiveCapacity
                     ARFMF.innerText = item.AccumulatedRainfall
                     INMF.innerText = item.InflowTotal
                 }
-                if (M5.innerText == item.StationNo) {
+                if (M5.getAttribute("value") == item.StationNo) {
                     FWHMFI.innerText = item.FullWaterHeight
                     IESMFI.innerText = item.EffectiveCapacity
                     ARFMFI.innerText = item.AccumulatedRainfall
                     INMFI.innerText = item.InflowTotal
                 }
-                if (M6.innerText == item.StationNo) {
+                if (M6.getAttribute("value") == item.StationNo) {
                     FWHMS.innerText = item.FullWaterHeight
                     IESMS.innerText = item.EffectiveCapacity
                     ARFMS.innerText = item.AccumulatedRainfall
                     INMS.innerText = item.InflowTotal
                 }
-                if (M7.innerText == item.StationNo) {
+                if (M7.getAttribute("value") == item.StationNo) {
                     FWHMSE.innerText = item.FullWaterHeight
                     IESMSE.innerText = item.EffectiveCapacity
                     ARFMSE.innerText = item.AccumulatedRainfall
                     INMSE.innerText = item.InflowTotal
                 }
-                if (M9.innerText == item.StationNo) {
+                if (M9.getAttribute("value") == item.StationNo) {
                     FWHMN.innerText = item.FullWaterHeight
                     IESMN.innerText = item.EffectiveCapacity
                     ARFMN.innerText = item.AccumulatedRainfall
                     INMN.innerText = item.InflowTotal
                 }
-                if (S1.innerText == item.StationNo) {
+                if (S1.getAttribute("value") == item.StationNo) {
                     FWHSO.innerText = item.FullWaterHeight
                     IESSO.innerText = item.EffectiveCapacity
                     ARFSO.innerText = item.AccumulatedRainfall
                     INSO.innerText = item.InflowTotal
                 }
-                if (S2.innerText == item.StationNo) {
+                if (S2.getAttribute("value") == item.StationNo) {
                     FWHST.innerText = item.FullWaterHeight
                     IESST.innerText = item.EffectiveCapacity
                     ARFST.innerText = item.AccumulatedRainfall
                     INST.innerText = item.InflowTotal
                 }
-                if (S3.innerText == item.StationNo) {
+                if (S3.getAttribute("value") == item.StationNo) {
                     FWHSTH.innerText = item.FullWaterHeight
                     IESSTH.innerText = item.EffectiveCapacity
                     ARFSTH.innerText = item.AccumulatedRainfall
                     INSTH.innerText = item.InflowTotal
                 }
-                if (S4.innerText == item.StationNo) {
+                if (S4.getAttribute("value") == item.StationNo) {
                     FWHSF.innerText = item.FullWaterHeight
                     IESSF.innerText = item.EffectiveCapacity
                     ARFSF.innerText = item.AccumulatedRainfall
                     INSF.innerText = item.InflowTotal
                 }
-                if (S5.innerText == item.StationNo) {
+                if (S5.getAttribute("value") == item.StationNo) {
                     FWHSFI.innerText = item.FullWaterHeight
                     IESSFI.innerText = item.EffectiveCapacity
                     ARFSFI.innerText = item.AccumulatedRainfall
                     INSFI.innerText = item.InflowTotal
                 }
-                if (S6.innerText == item.StationNo) {
+                if (S6.getAttribute("value") == item.StationNo) {
                     FWHSS.innerText = item.FullWaterHeight
                     IESSS.innerText = item.EffectiveCapacity
                     ARFSS.innerText = item.AccumulatedRainfall
                     INSS.innerText = item.InflowTotal
                 }
-                if (S7.innerText == item.StationNo) {
+                if (S7.getAttribute("value") == item.StationNo) {
                     FWHSSE.innerText = item.FullWaterHeight
                     IESSSE.innerText = item.EffectiveCapacity
                     ARFSSE.innerText = item.AccumulatedRainfall
@@ -520,7 +520,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
 
             <!--石門水庫-->
             <tr>
-                <td id="N1">10201</td>
+                <td id="N1" value="10201">10201</td>
                 <td>石門水庫</td>
                 <!--水情時間-->
                 <td id="TNO"></td>
@@ -539,7 +539,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
             </tr>
             <!--西勢水庫-->
             <tr>
-                <td id="N2">10203</td>
+                <td id="N2" value="10203">10203</td>
                 <td>西勢水庫</td>
                 <!--水情時間-->
                 <td id="TNT"></td>
@@ -558,7 +558,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
             </tr>
             <!--新山水庫-->
             <tr>
-                <td id="N3">10204</td>
+                <td id="N3" value="10204">10204</td>
                 <td>新山水庫</td>
                 <!--水情時間-->
                 <td id="TNTH"></td>
@@ -577,7 +577,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
             </tr>
             <!--翡翠水庫-->
             <tr>
-                <td id="N4">10205</td>
+                <td id="N4" value="10205">10205</td>
                 <td>翡翠水庫</td>
                 <!--水情時間 -->
                 <td id="TNF"></td>
@@ -598,7 +598,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
             <!--寶山水庫-->
             <tr>
 
-                <td id="N5">10401</td>
+                <td id="N5" value="10401">10401</td>
                 <td>寶山水庫</td>
                 <!--水情時間-->
                 <td id="TNFI"></td>
@@ -619,7 +619,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
             <!--寶山第二水庫-->
             <tr>
 
-                <td id="N6">10405</td>
+                <td id="N6" value="10405">10405</td>
                 <td>寶山第二水庫</td>
                 <!--水情時間-->
                 <td id="TNS"></td>
@@ -641,7 +641,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
 
             <!--永和山水庫 -->
             <tr>
-                <td id="M1">10501</td>
+                <td id="M1" value="10501">10501</td>
                 <td>永和山水庫</td>
                 <!-- 水情時間-->
                 <td id="TMO"></td>
@@ -662,7 +662,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
             <!-- 大埔水庫 -->
             <tr>
 
-                <td id="M2">10503</td>
+                <td id="M2" value="10503">10503</td>
                 <td>大埔水庫</td>
                 <!-- 水情時間 -->
                 <td id="TMT"></td>
@@ -683,7 +683,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
             <!-- 明德水庫 -->
             <tr>
 
-                <td id="M3">10601</td>
+                <td id="M3" value="10601">10601</td>
                 <td>明德水庫</td>
                 <!-- 水情時間 -->
                 <td id="TMTH"></td>
@@ -704,7 +704,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
             <!-- 鯉魚潭水庫 -->
             <tr>
 
-                <td id="M4">20101</td>
+                <td id="M4" value="20101">20101</td>
                 <td>鯉魚潭水庫</td>
                 <!-- 水情時間 -->
                 <td id="TMF"></td>
@@ -725,7 +725,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
             <!-- 德基水庫 -->
             <tr>
 
-                <td id="M5">20201</td>
+                <td id="M5" value="20201">20201</td>
                 <td>德基水庫</td>
                 <!-- 水情時間 -->
                 <td id="TMFI"></td>
@@ -746,7 +746,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
             <!-- 霧社水庫 -->
             <tr>
 
-                <td id="M6">20501</td>
+                <td id="M6" value="20501">20501</td>
                 <td>霧社水庫</td>
                 <!-- 水情時間 -->
                 <td id="TMS"></td>
@@ -767,7 +767,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
             <!-- 日月潭水庫 -->
             <tr>
 
-                <td id="M7">20502</td>
+                <td id="M7" value="20502">20502</td>
                 <td>日月潭水庫</td>
                 <!-- 水情時間 -->
                 <td id="TMSE"></td>
@@ -788,7 +788,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
 
             <!-- 湖山水庫 -->
             <tr>
-                <td id="M9">20509</td>
+                <td id="M9" value="20509">20509</td>
                 <td>湖山水庫</td>
                 <!-- 水情時間 -->
                 <td id="TMN"></td>
@@ -810,7 +810,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
 
             <!-- 蘭潭水庫 -->
             <tr>
-                <td id="S1">30302</td>
+                <td id="S1" value="30302">30302</td>
                 <td>蘭潭水庫</td>
                 <!-- 水情時間 -->
                 <td id="TSO"></td>
@@ -831,7 +831,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
             <!-- 白河水庫 -->
             <tr>
 
-                <td id="S2">30401</td>
+                <td id="S2" value="30401">30401</td>
                 <td>白河水庫</td>
                 <!-- 水情時間 -->
                 <td id="TST"></td>
@@ -851,7 +851,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
 
             <!-- 曾文水庫 -->
             <tr>
-                <td id="S3">30502</td>
+                <td id="S3" value="30502">30502</td>
                 <td>曾文水庫</td>
                 <!-- 水情時間 -->
                 <td id="TSTH"></td>
@@ -872,7 +872,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
             <!-- 烏山頭水庫 -->
             <tr>
 
-                <td id="S4">30501</td>
+                <td id="S4" value="30501">30501</td>
                 <td>烏山頭水庫</td>
                 <!-- 水情時間 -->
                 <td id="TSF"></td>
@@ -893,7 +893,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
             <!-- 南化水庫 -->
             <tr>
 
-                <td id="S5">30503</td>
+                <td id="S5" value="30503">30503</td>
                 <td>南化水庫</td>
                 <!-- 水情時間 -->
                 <td id="TSFI"></td>
@@ -914,7 +914,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
             <!-- 阿公店水庫 -->
             <tr>
 
-                <td id="S6">30802</td>
+                <td id="S6" value="30802">30802</td>
                 <td>阿公店水庫</td>
                 <!-- 水情時間 -->
                 <td id="TSS"></td>
@@ -935,7 +935,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
             <!-- 牡丹水庫 -->
             <tr>
 
-                <td id="S7">31201</td>
+                <td id="S7" value="31201">31201</td>
                 <td>牡丹水庫</td>
                 <!-- 水情時間 -->
                 <td id="TSSE"></td>
