@@ -1,500 +1,503 @@
 <script>
+export default {
+    mounted() {
+        let obj1 = [];
+        let obj2 = [];
+        // 水庫即時資料
+        fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                setInterval(function () {
+                    //北部
+                    const N1 = document.getElementById("N1")
+                    const TNO = document.getElementById("TNO")
+                    const WHNO = document.getElementById("WHNO")
+                    const IPOSNO = document.getElementById("IPOSNO")
 
-let obj1 = {};
-let obj2 = {};
-// 水庫即時資料
-fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
-    .then((response) => response.json())
-    .then((data) => {
-        console.log(data);
-        setInterval(function () {
-            //北部
-            const N1 = document.getElementById("N1")
-            const TNO = document.getElementById("TNO")
-            const WHNO = document.getElementById("WHNO")
-            const IPOSNO = document.getElementById("IPOSNO")
+                    const N2 = document.getElementById("N2")
+                    const TNT = document.getElementById("TNT")
+                    const WHNT = document.getElementById("WHNT")
+                    const IPOSNT = document.getElementById("IPOSNT")
 
-            const N2 = document.getElementById("N2")
-            const TNT = document.getElementById("TNT")
-            const WHNT = document.getElementById("WHNT")
-            const IPOSNT = document.getElementById("IPOSNT")
+                    const N3 = document.getElementById("N3")
+                    const TNTH = document.getElementById("TNTH")
+                    const WHNTH = document.getElementById("WHNTH")
+                    const IPOSTH = document.getElementById("IPOSTH")
 
-            const N3 = document.getElementById("N3")
-            const TNTH = document.getElementById("TNTH")
-            const WHNTH = document.getElementById("WHNTH")
-            const IPOSTH = document.getElementById("IPOSTH")
-            
-            const N4 = document.getElementById("N4")
-            const TNF = document.getElementById("TNF")
-            const WHNF = document.getElementById("WHNF")
-            const IPOSNF = document.getElementById("IPOSNF")
+                    const N4 = document.getElementById("N4")
+                    const TNF = document.getElementById("TNF")
+                    const WHNF = document.getElementById("WHNF")
+                    const IPOSNF = document.getElementById("IPOSNF")
 
-            const N5 = document.getElementById("N5")
-            const TNFI = document.getElementById("TNFI")
-            const WHNFI = document.getElementById("WHNFI")
-            const IPOSNFI = document.getElementById("IPOSNFI")
+                    const N5 = document.getElementById("N5")
+                    const TNFI = document.getElementById("TNFI")
+                    const WHNFI = document.getElementById("WHNFI")
+                    const IPOSNFI = document.getElementById("IPOSNFI")
 
-            const N6 = document.getElementById("N6")
-            const TNS = document.getElementById("TNS")
-            const WHNS = document.getElementById("WHNS")
-            const IPOSNS = document.getElementById("IPOSNS")
+                    const N6 = document.getElementById("N6")
+                    const TNS = document.getElementById("TNS")
+                    const WHNS = document.getElementById("WHNS")
+                    const IPOSNS = document.getElementById("IPOSNS")
 
-            // 中部
-            const M1 = document.getElementById("M1")
-            const TMO = document.getElementById("TMO")
-            const WHMO = document.getElementById("WHMO")
-            const IPOSMO = document.getElementById("IPOSMO")
+                    // 中部
+                    const M1 = document.getElementById("M1")
+                    const TMO = document.getElementById("TMO")
+                    const WHMO = document.getElementById("WHMO")
+                    const IPOSMO = document.getElementById("IPOSMO")
 
-            const M2 = document.getElementById("M2")
-            const TMT = document.getElementById("TMT")
-            const WHMT = document.getElementById("WHMT")
-            const IPOSMT = document.getElementById("IPOSMT")
+                    const M2 = document.getElementById("M2")
+                    const TMT = document.getElementById("TMT")
+                    const WHMT = document.getElementById("WHMT")
+                    const IPOSMT = document.getElementById("IPOSMT")
 
-            const M3 = document.getElementById("M3")
-            const TMTH = document.getElementById("TMTH")
-            const WHMTH = document.getElementById("WHMTH")
-            const IPOSMTH = document.getElementById("IPOSMTH")
-            
-            const M4 = document.getElementById("M4")
-            const TMF = document.getElementById("TMF")
-            const WHMF = document.getElementById("WHMF")
-            const IPOSMF = document.getElementById("IPOSMF")
+                    const M3 = document.getElementById("M3")
+                    const TMTH = document.getElementById("TMTH")
+                    const WHMTH = document.getElementById("WHMTH")
+                    const IPOSMTH = document.getElementById("IPOSMTH")
 
-            const M5 = document.getElementById("M5")
-            const TMFI = document.getElementById("TMFI")
-            const WHMFI = document.getElementById("WHMFI")
-            const IPOSMFI = document.getElementById("IPOSMFI")
+                    const M4 = document.getElementById("M4")
+                    const TMF = document.getElementById("TMF")
+                    const WHMF = document.getElementById("WHMF")
+                    const IPOSMF = document.getElementById("IPOSMF")
 
-            const M6 = document.getElementById("M6")
-            const TMS = document.getElementById("TMS")
-            const WHMS = document.getElementById("WHMS")
-            const IPOSMS = document.getElementById("IPOSMS")
+                    const M5 = document.getElementById("M5")
+                    const TMFI = document.getElementById("TMFI")
+                    const WHMFI = document.getElementById("WHMFI")
+                    const IPOSMFI = document.getElementById("IPOSMFI")
 
-            const M7 = document.getElementById("M7")
-            const TMSE = document.getElementById("TMSE")
-            const WHMSE = document.getElementById("WHMSE")
-            const IPOSMSE = document.getElementById("IPOSMSE")
+                    const M6 = document.getElementById("M6")
+                    const TMS = document.getElementById("TMS")
+                    const WHMS = document.getElementById("WHMS")
+                    const IPOSMS = document.getElementById("IPOSMS")
 
-            const M9 = document.getElementById("M9")
-            const TMN = document.getElementById("TMN")
-            const WHMN = document.getElementById("WHMN")
-            const IPOSMN = document.getElementById("IPOSMN")
+                    const M7 = document.getElementById("M7")
+                    const TMSE = document.getElementById("TMSE")
+                    const WHMSE = document.getElementById("WHMSE")
+                    const IPOSMSE = document.getElementById("IPOSMSE")
 
-            //南部
-            const S1 = document.getElementById("S1")
-            const TSO = document.getElementById("TSO")
-            const WHSO = document.getElementById("WHSO")
-            const IPOSSO = document.getElementById("IPOSSO")
+                    const M9 = document.getElementById("M9")
+                    const TMN = document.getElementById("TMN")
+                    const WHMN = document.getElementById("WHMN")
+                    const IPOSMN = document.getElementById("IPOSMN")
 
-            const S2 = document.getElementById("S2")
-            const TST = document.getElementById("TST")
-            const WHST = document.getElementById("WHST")
-            const IPOSST = document.getElementById("IPOSST")
+                    //南部
+                    const S1 = document.getElementById("S1")
+                    const TSO = document.getElementById("TSO")
+                    const WHSO = document.getElementById("WHSO")
+                    const IPOSSO = document.getElementById("IPOSSO")
 
-            const S3 = document.getElementById("S3")
-            const TSTH = document.getElementById("TSTH")
-            const WHSTH = document.getElementById("WHSTH")
-            const IPOSSTH = document.getElementById("IPOSSTH")
+                    const S2 = document.getElementById("S2")
+                    const TST = document.getElementById("TST")
+                    const WHST = document.getElementById("WHST")
+                    const IPOSST = document.getElementById("IPOSST")
 
-            const S4 = document.getElementById("S4")
-            const TSF = document.getElementById("TSF")
-            const WHSF = document.getElementById("WHSF")
-            const IPOSSF = document.getElementById("IPOSSF")
+                    const S3 = document.getElementById("S3")
+                    const TSTH = document.getElementById("TSTH")
+                    const WHSTH = document.getElementById("WHSTH")
+                    const IPOSSTH = document.getElementById("IPOSSTH")
 
-            const S5 = document.getElementById("S5")
-            const TSFI = document.getElementById("TSFI")
-            const WHSFI = document.getElementById("WHSFI")
-            const IPOSSFI = document.getElementById("IPOSSFI")
+                    const S4 = document.getElementById("S4")
+                    const TSF = document.getElementById("TSF")
+                    const WHSF = document.getElementById("WHSF")
+                    const IPOSSF = document.getElementById("IPOSSF")
 
-            const S6 = document.getElementById("S6")
-            const TSS = document.getElementById("TSS")
-            const WHSS = document.getElementById("WHSS")
-            const IPOSSS = document.getElementById("IPOSSS")
+                    const S5 = document.getElementById("S5")
+                    const TSFI = document.getElementById("TSFI")
+                    const WHSFI = document.getElementById("WHSFI")
+                    const IPOSSFI = document.getElementById("IPOSSFI")
 
-            const S7 = document.getElementById("S7")
-            const TSSE = document.getElementById("TSSE")
-            const WHSSE = document.getElementById("WHSSE")
-            const IPOSSSE = document.getElementById("IPOSSSE")
-            obj1 = data;
-            obj1.forEach((item) => {
-                let dayTime = new Date(item.Time)
-                let Time = dayTime.getFullYear() + "-" + (dayTime.getMonth() + 1) + "-" + dayTime.getDate() + " " + dayTime.getHours() + ":" + "0" + dayTime.getMinutes() + ":" + "0" + dayTime.getSeconds()
-                if (N1.getAttribute("value") == item.StationNo) {
-                    TNO.innerText = Time
-                    WHNO.innerText = item.WaterHeight
-                    IPOSNO.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                    const S6 = document.getElementById("S6")
+                    const TSS = document.getElementById("TSS")
+                    const WHSS = document.getElementById("WHSS")
+                    const IPOSSS = document.getElementById("IPOSSS")
 
-                }
-                if (N2.getAttribute("value") == item.StationNo) {
-                    TNT.innerText = Time
-                    WHNT.innerText = item.WaterHeight
-                    IPOSNT.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (N3.getAttribute("value") == item.StationNo) {
-                    TNTH.innerText = Time
-                    WHNTH.innerText = item.WaterHeight
-                    IPOSTH.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (N4.getAttribute("value") == item.StationNo) {
-                    TNF.innerText = Time
-                    WHNF.innerText = item.WaterHeight
-                    IPOSNF.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (N5.getAttribute("value") == item.StationNo) {
-                    TNFI.innerText = Time
-                    WHNFI.innerText = item.WaterHeight
-                    IPOSNFI.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (N6.getAttribute("value") == item.StationNo) {
-                    TNS.innerText = Time
-                    WHNS.innerText = item.WaterHeight
-                    IPOSNS.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (M1.getAttribute("value") == item.StationNo) {
-                    TMO.innerText = Time
-                    WHMO.innerText = item.WaterHeight
-                    IPOSMO.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (M2.getAttribute("value") == item.StationNo) {
-                    TMT.innerText = Time
-                    WHMT.innerText = item.WaterHeight
-                    IPOSMT.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (M3.getAttribute("value") == item.StationNo) {
-                    TMTH.innerText = Time
-                    WHMTH.innerText = item.WaterHeight
-                    IPOSMTH.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (M4.getAttribute("value") == item.StationNo) {
-                    TMF.innerText = Time
-                    WHMF.innerText = item.WaterHeight
-                    IPOSMF.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (M5.getAttribute("value") == item.StationNo) {
-                    TMFI.innerText = Time
-                    WHMFI.innerText = item.WaterHeight
-                    IPOSMFI.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (M6.getAttribute("value") == item.StationNo) {
-                    TMS.innerText = Time
-                    WHMS.innerText = item.WaterHeight
-                    IPOSMS.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (M7.getAttribute("value") == item.StationNo) {
-                    TMSE.innerText = Time
-                    WHMSE.innerText = item.WaterHeight
-                    IPOSMSE.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (M9.getAttribute("value") == item.StationNo) {
-                    TMN.innerText = Time
-                    WHMN.innerText = item.WaterHeight
-                    IPOSMN.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (S1.getAttribute("value") == item.StationNo) {
-                    TSO.innerText = Time
-                    WHSO.innerText = item.WaterHeight
-                    IPOSSO.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (S2.getAttribute("value") == item.StationNo) {
-                    TST.innerText = Time
-                    WHST.innerText = item.WaterHeight
-                    IPOSST.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (S3.getAttribute("value") == item.StationNo) {
-                    TSTH.innerText = Time
-                    WHSTH.innerText = item.WaterHeight
-                    IPOSSTH.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (S4.getAttribute("value") == item.StationNo) {
-                    TSF.innerText = Time
-                    WHSF.innerText = item.WaterHeight
-                    IPOSSF.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (S5.getAttribute("value") == item.StationNo) {
-                    TSFI.innerText = Time
-                    WHSFI.innerText = item.WaterHeight
-                    IPOSSFI.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (S6.getAttribute("value") == item.StationNo) {
-                    TSS.innerText = Time
-                    WHSS.innerText = item.WaterHeight
-                    IPOSSS.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
-                if (S7.getAttribute("value") == item.StationNo) {
-                    TSSE.innerText = Time
-                    WHSSE.innerText = item.WaterHeight
-                    IPOSSSE.innerText = Math.floor(item.PercentageOfStorage) + "%"
-                }
+                    const S7 = document.getElementById("S7")
+                    const TSSE = document.getElementById("TSSE")
+                    const WHSSE = document.getElementById("WHSSE")
+                    const IPOSSSE = document.getElementById("IPOSSSE")
+                    obj1 = data;
+                    obj1.forEach((item) => {
+                        let dayTime = new Date(item.Time)
+                        let Time = dayTime.getFullYear() + "-" + (dayTime.getMonth() + 1) + "-" + dayTime.getDate() + " " + dayTime.getHours() + ":" + "0" + dayTime.getMinutes() + ":" + "0" + dayTime.getSeconds()
+                        if (N1.getAttribute("value") == item.StationNo) {
+                            TNO.innerText = Time
+                            WHNO.innerText = item.WaterHeight
+                            IPOSNO.innerText = Math.floor(item.PercentageOfStorage) + "%"
+
+                        }
+                        if (N2.getAttribute("value") == item.StationNo) {
+                            TNT.innerText = Time
+                            WHNT.innerText = item.WaterHeight
+                            IPOSNT.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (N3.getAttribute("value") == item.StationNo) {
+                            TNTH.innerText = Time
+                            WHNTH.innerText = item.WaterHeight
+                            IPOSTH.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (N4.getAttribute("value") == item.StationNo) {
+                            TNF.innerText = Time
+                            WHNF.innerText = item.WaterHeight
+                            IPOSNF.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (N5.getAttribute("value") == item.StationNo) {
+                            TNFI.innerText = Time
+                            WHNFI.innerText = item.WaterHeight
+                            IPOSNFI.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (N6.getAttribute("value") == item.StationNo) {
+                            TNS.innerText = Time
+                            WHNS.innerText = item.WaterHeight
+                            IPOSNS.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (M1.getAttribute("value") == item.StationNo) {
+                            TMO.innerText = Time
+                            WHMO.innerText = item.WaterHeight
+                            IPOSMO.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (M2.getAttribute("value") == item.StationNo) {
+                            TMT.innerText = Time
+                            WHMT.innerText = item.WaterHeight
+                            IPOSMT.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (M3.getAttribute("value") == item.StationNo) {
+                            TMTH.innerText = Time
+                            WHMTH.innerText = item.WaterHeight
+                            IPOSMTH.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (M4.getAttribute("value") == item.StationNo) {
+                            TMF.innerText = Time
+                            WHMF.innerText = item.WaterHeight
+                            IPOSMF.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (M5.getAttribute("value") == item.StationNo) {
+                            TMFI.innerText = Time
+                            WHMFI.innerText = item.WaterHeight
+                            IPOSMFI.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (M6.getAttribute("value") == item.StationNo) {
+                            TMS.innerText = Time
+                            WHMS.innerText = item.WaterHeight
+                            IPOSMS.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (M7.getAttribute("value") == item.StationNo) {
+                            TMSE.innerText = Time
+                            WHMSE.innerText = item.WaterHeight
+                            IPOSMSE.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (M9.getAttribute("value") == item.StationNo) {
+                            TMN.innerText = Time
+                            WHMN.innerText = item.WaterHeight
+                            IPOSMN.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (S1.getAttribute("value") == item.StationNo) {
+                            TSO.innerText = Time
+                            WHSO.innerText = item.WaterHeight
+                            IPOSSO.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (S2.getAttribute("value") == item.StationNo) {
+                            TST.innerText = Time
+                            WHST.innerText = item.WaterHeight
+                            IPOSST.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (S3.getAttribute("value") == item.StationNo) {
+                            TSTH.innerText = Time
+                            WHSTH.innerText = item.WaterHeight
+                            IPOSSTH.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (S4.getAttribute("value") == item.StationNo) {
+                            TSF.innerText = Time
+                            WHSF.innerText = item.WaterHeight
+                            IPOSSF.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (S5.getAttribute("value") == item.StationNo) {
+                            TSFI.innerText = Time
+                            WHSFI.innerText = item.WaterHeight
+                            IPOSSFI.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (S6.getAttribute("value") == item.StationNo) {
+                            TSS.innerText = Time
+                            WHSS.innerText = item.WaterHeight
+                            IPOSSS.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                        if (S7.getAttribute("value") == item.StationNo) {
+                            TSSE.innerText = Time
+                            WHSSE.innerText = item.WaterHeight
+                            IPOSSSE.innerText = Math.floor(item.PercentageOfStorage) + "%"
+                        }
+                    })
+                }, 100)
+
+            });
+        // 水庫統計資料
+        fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                setInterval(function () {
+
+                    //北部
+                    const N1 = document.getElementById("N1")
+                    const FWHNO = document.getElementById("FWHNO")
+                    const IESNO = document.getElementById("IESNO")
+                    const ARFNO = document.getElementById("ARFNO")
+                    const INNO = document.getElementById("INNO")
+
+                    const N2 = document.getElementById("N2")
+                    const FWHNT = document.getElementById("FWHNT")
+                    const IESNT = document.getElementById("IESNT")
+                    const ARFNT = document.getElementById("ARFNT")
+                    const INNT = document.getElementById("INNT")
+
+                    const N3 = document.getElementById("N3")
+                    const FWHNTH = document.getElementById("FWHNTH")
+                    const IESNTH = document.getElementById("IESNTH")
+                    const ARFNOTH = document.getElementById("ARFNOTH")
+                    const INNTH = document.getElementById("INNTH")
+
+                    const N4 = document.getElementById("N4")
+                    const FWHNF = document.getElementById("FWHNF")
+                    const IESNF = document.getElementById("IESNF")
+                    const ARFNF = document.getElementById("ARFNF")
+                    const INNF = document.getElementById("INNF")
+
+                    const N5 = document.getElementById("N5")
+                    const FWHNFI = document.getElementById("FWHNFI")
+                    const IESNFI = document.getElementById("IESNFI")
+                    const ARFNFI = document.getElementById("ARFNFI")
+                    const INNFI = document.getElementById("INNFI")
+
+                    const N6 = document.getElementById("N6")
+                    const FWHNS = document.getElementById("FWHNS")
+                    const IESNS = document.getElementById("IESNS")
+                    const ARFNS = document.getElementById("ARFNS")
+                    const INNS = document.getElementById("INNS")
+
+                    //中部
+                    const M1 = document.getElementById("M1")
+                    const FWHMO = document.getElementById("FWHMO")
+                    const IESMO = document.getElementById("IESMO")
+                    const ARFMO = document.getElementById("ARFMO")
+                    const INMO = document.getElementById("INMO")
+
+                    const M2 = document.getElementById("M2")
+                    const FWHMT = document.getElementById("FWHMT")
+                    const IESMT = document.getElementById("IESMT")
+                    const ARFMT = document.getElementById("ARFMT")
+                    const INMT = document.getElementById("INMT")
+
+                    const M3 = document.getElementById("M3")
+                    const FWHMTH = document.getElementById("FWHMTH")
+                    const IESMTH = document.getElementById("IESMTH")
+                    const ARFMTH = document.getElementById("ARFMTH")
+                    const INMTH = document.getElementById("INMTH")
+
+                    const M4 = document.getElementById("M4")
+                    const FWHMF = document.getElementById("FWHMF")
+                    const IESMF = document.getElementById("IESMF")
+                    const ARFMF = document.getElementById("ARFMF")
+                    const INMF = document.getElementById("INMF")
+
+                    const M5 = document.getElementById("M5")
+                    const FWHMFI = document.getElementById("FWHMFI")
+                    const IESMFI = document.getElementById("IESMFI")
+                    const ARFMFI = document.getElementById("ARFMFI")
+                    const INMFI = document.getElementById("INMFI")
+
+                    const M6 = document.getElementById("M6")
+                    const FWHMS = document.getElementById("FWHMS")
+                    const IESMS = document.getElementById("IESMS")
+                    const ARFMS = document.getElementById("ARFMS")
+                    const INMS = document.getElementById("INMS")
+
+                    const M7 = document.getElementById("M7")
+                    const FWHMSE = document.getElementById("FWHMSE")
+                    const IESMSE = document.getElementById("IESMSE")
+                    const ARFMSE = document.getElementById("ARFMSE")
+                    const INMSE = document.getElementById("INMSE")
+
+                    const M9 = document.getElementById("M9")
+                    const FWHMN = document.getElementById("FWHMN")
+                    const IESMN = document.getElementById("IESMN")
+                    const ARFMN = document.getElementById("ARFMN")
+                    const INMN = document.getElementById("INMN")
+
+                    //南部
+                    const S1 = document.getElementById("S1")
+                    const FWHSO = document.getElementById("FWHSO")
+                    const IESSO = document.getElementById("IESSO")
+                    const ARFSO = document.getElementById("ARFSO")
+                    const INSO = document.getElementById("INSO")
+
+                    const S2 = document.getElementById("S2")
+                    const FWHST = document.getElementById("FWHST")
+                    const IESST = document.getElementById("IESST")
+                    const ARFST = document.getElementById("ARFST")
+                    const INST = document.getElementById("INST")
+
+                    const S3 = document.getElementById("S3")
+                    const FWHSTH = document.getElementById("FWHSTH")
+                    const IESSTH = document.getElementById("IESSTH")
+                    const ARFSTH = document.getElementById("ARFSTH")
+                    const INSTH = document.getElementById("INSTH")
+
+                    const S4 = document.getElementById("S4")
+                    const FWHSF = document.getElementById("FWHSF")
+                    const IESSF = document.getElementById("IESSF")
+                    const ARFSF = document.getElementById("ARFSF")
+                    const INSF = document.getElementById("INSF")
+
+                    const S5 = document.getElementById("S5")
+                    const FWHSFI = document.getElementById("FWHSFI")
+                    const IESSFI = document.getElementById("IESSFI")
+                    const ARFSFI = document.getElementById("ARFSFI")
+                    const INSFI = document.getElementById("INSFI")
+
+                    const S6 = document.getElementById("S6")
+                    const FWHSS = document.getElementById("FWHSS")
+                    const IESSS = document.getElementById("IESSS")
+                    const ARFSS = document.getElementById("ARFSS")
+                    const INSS = document.getElementById("INSS")
+
+                    const S7 = document.getElementById("S7")
+                    const FWHSSE = document.getElementById("FWHSSE")
+                    const IESSSE = document.getElementById("IESSSE")
+                    const ARFSSE = document.getElementById("ARFSSE")
+                    const INSSE = document.getElementById("INSSE")
+                    obj2 = data;
+                    obj2.forEach((item) => {
+                        if (N1.getAttribute("value") == item.StationNo) {
+                            FWHNO.innerText = item.FullWaterHeight
+                            IESNO.innerText = item.EffectiveCapacity
+                            ARFNO.innerText = item.AccumulatedRainfall
+                            INNO.innerText = item.InflowTotal
+                        }
+                        if (N2.getAttribute("value") == item.StationNo) {
+                            FWHNT.innerText = item.FullWaterHeight
+                            IESNT.innerText = item.EffectiveCapacity
+                            ARFNT.innerText = item.AccumulatedRainfall
+                            INNT.innerText = item.InflowTotal
+                        }
+                        if (N3.getAttribute("value") == item.StationNo) {
+                            FWHNTH.innerText = item.FullWaterHeight
+                            IESNTH.innerText = item.EffectiveCapacity
+                            ARFNOTH.innerText = item.AccumulatedRainfall
+                            INNTH.innerText = item.InflowTotal
+                        }
+                        if (N4.getAttribute("value") == item.StationNo) {
+                            FWHNF.innerText = item.FullWaterHeight
+                            IESNF.innerText = item.EffectiveCapacity
+                            ARFNF.innerText = item.AccumulatedRainfall
+                            INNF.innerText = item.InflowTotal
+                        }
+                        if (N5.getAttribute("value") == item.StationNo) {
+                            FWHNFI.innerText = item.FullWaterHeight
+                            IESNFI.innerText = item.EffectiveCapacity
+                            ARFNFI.innerText = item.AccumulatedRainfall
+                            INNFI.innerText = item.InflowTotal
+                        }
+                        if (N6.getAttribute("value") == item.StationNo) {
+                            FWHNS.innerText = item.FullWaterHeight
+                            IESNS.innerText = item.EffectiveCapacity
+                            ARFNS.innerText = item.AccumulatedRainfall
+                            INNS.innerText = item.InflowTotal
+                        }
+                        if (M1.getAttribute("value") == item.StationNo) {
+                            FWHMO.innerText = item.FullWaterHeight
+                            IESMO.innerText = item.EffectiveCapacity
+                            ARFMO.innerText = item.AccumulatedRainfall
+                            INMO.innerText = item.InflowTotal
+                        }
+                        if (M2.getAttribute("value") == item.StationNo) {
+                            FWHMT.innerText = item.FullWaterHeight
+                            IESMT.innerText = item.EffectiveCapacity
+                            ARFMT.innerText = item.AccumulatedRainfall
+                            INMT.innerText = item.InflowTotal
+                        }
+                        if (M3.getAttribute("value") == item.StationNo) {
+                            FWHMTH.innerText = item.FullWaterHeight
+                            IESMTH.innerText = item.EffectiveCapacity
+                            ARFMTH.innerText = item.AccumulatedRainfall
+                            INMTH.innerText = item.InflowTotal
+                        }
+                        if (M4.getAttribute("value") == item.StationNo) {
+                            FWHMF.innerText = item.FullWaterHeight
+                            IESMF.innerText = item.EffectiveCapacity
+                            ARFMF.innerText = item.AccumulatedRainfall
+                            INMF.innerText = item.InflowTotal
+                        }
+                        if (M5.getAttribute("value") == item.StationNo) {
+                            FWHMFI.innerText = item.FullWaterHeight
+                            IESMFI.innerText = item.EffectiveCapacity
+                            ARFMFI.innerText = item.AccumulatedRainfall
+                            INMFI.innerText = item.InflowTotal
+                        }
+                        if (M6.getAttribute("value") == item.StationNo) {
+                            FWHMS.innerText = item.FullWaterHeight
+                            IESMS.innerText = item.EffectiveCapacity
+                            ARFMS.innerText = item.AccumulatedRainfall
+                            INMS.innerText = item.InflowTotal
+                        }
+                        if (M7.getAttribute("value") == item.StationNo) {
+                            FWHMSE.innerText = item.FullWaterHeight
+                            IESMSE.innerText = item.EffectiveCapacity
+                            ARFMSE.innerText = item.AccumulatedRainfall
+                            INMSE.innerText = item.InflowTotal
+                        }
+                        if (M9.getAttribute("value") == item.StationNo) {
+                            FWHMN.innerText = item.FullWaterHeight
+                            IESMN.innerText = item.EffectiveCapacity
+                            ARFMN.innerText = item.AccumulatedRainfall
+                            INMN.innerText = item.InflowTotal
+                        }
+                        if (S1.getAttribute("value") == item.StationNo) {
+                            FWHSO.innerText = item.FullWaterHeight
+                            IESSO.innerText = item.EffectiveCapacity
+                            ARFSO.innerText = item.AccumulatedRainfall
+                            INSO.innerText = item.InflowTotal
+                        }
+                        if (S2.getAttribute("value") == item.StationNo) {
+                            FWHST.innerText = item.FullWaterHeight
+                            IESST.innerText = item.EffectiveCapacity
+                            ARFST.innerText = item.AccumulatedRainfall
+                            INST.innerText = item.InflowTotal
+                        }
+                        if (S3.getAttribute("value") == item.StationNo) {
+                            FWHSTH.innerText = item.FullWaterHeight
+                            IESSTH.innerText = item.EffectiveCapacity
+                            ARFSTH.innerText = item.AccumulatedRainfall
+                            INSTH.innerText = item.InflowTotal
+                        }
+                        if (S4.getAttribute("value") == item.StationNo) {
+                            FWHSF.innerText = item.FullWaterHeight
+                            IESSF.innerText = item.EffectiveCapacity
+                            ARFSF.innerText = item.AccumulatedRainfall
+                            INSF.innerText = item.InflowTotal
+                        }
+                        if (S5.getAttribute("value") == item.StationNo) {
+                            FWHSFI.innerText = item.FullWaterHeight
+                            IESSFI.innerText = item.EffectiveCapacity
+                            ARFSFI.innerText = item.AccumulatedRainfall
+                            INSFI.innerText = item.InflowTotal
+                        }
+                        if (S6.getAttribute("value") == item.StationNo) {
+                            FWHSS.innerText = item.FullWaterHeight
+                            IESSS.innerText = item.EffectiveCapacity
+                            ARFSS.innerText = item.AccumulatedRainfall
+                            INSS.innerText = item.InflowTotal
+                        }
+                        if (S7.getAttribute("value") == item.StationNo) {
+                            FWHSSE.innerText = item.FullWaterHeight
+                            IESSSE.innerText = item.EffectiveCapacity
+                            ARFSSE.innerText = item.AccumulatedRainfall
+                            INSSE.innerText = item.InflowTotal
+                        }
+                    })
+                }, 100)
             })
-        }, 100)
-
-    });
-// 水庫統計資料
-fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
-    .then(response => response.json())
-    .then(data => {
-        console.log(data)
-        setInterval(function () {
-
-            //北部
-            const N1= document.getElementById("N1")
-            const FWHNO = document.getElementById("FWHNO")
-            const IESNO = document.getElementById("IESNO")
-            const ARFNO = document.getElementById("ARFNO")
-            const INNO = document.getElementById("INNO")
-
-            const N2= document.getElementById("N2")
-            const FWHNT = document.getElementById("FWHNT")
-            const IESNT = document.getElementById("IESNT")
-            const ARFNT = document.getElementById("ARFNT")
-            const INNT = document.getElementById("INNT")
-
-            const N3= document.getElementById("N3")
-            const FWHNTH = document.getElementById("FWHNTH")
-            const IESNTH = document.getElementById("IESNTH")
-            const ARFNOTH = document.getElementById("ARFNOTH")
-            const INNTH = document.getElementById("INNTH")
-
-            const N4= document.getElementById("N4")
-            const FWHNF = document.getElementById("FWHNF")
-            const IESNF = document.getElementById("IESNF")
-            const ARFNF = document.getElementById("ARFNF")
-            const INNF = document.getElementById("INNF")
-
-            const N5= document.getElementById("N5")
-            const FWHNFI = document.getElementById("FWHNFI")
-            const IESNFI = document.getElementById("IESNFI")
-            const ARFNFI = document.getElementById("ARFNFI")
-            const INNFI = document.getElementById("INNFI")
-
-            const N6= document.getElementById("N6")
-            const FWHNS = document.getElementById("FWHNS")
-            const IESNS = document.getElementById("IESNS")
-            const ARFNS = document.getElementById("ARFNS")
-            const INNS = document.getElementById("INNS")
-
-            //中部
-            const M1= document.getElementById("M1")
-            const FWHMO = document.getElementById("FWHMO")
-            const IESMO = document.getElementById("IESMO")
-            const ARFMO = document.getElementById("ARFMO")
-            const INMO = document.getElementById("INMO")
-
-            const M2= document.getElementById("M2")
-            const FWHMT = document.getElementById("FWHMT")
-            const IESMT = document.getElementById("IESMT")
-            const ARFMT = document.getElementById("ARFMT")
-            const INMT = document.getElementById("INMT")
-
-            const M3= document.getElementById("M3")
-            const FWHMTH = document.getElementById("FWHMTH")
-            const IESMTH = document.getElementById("IESMTH")
-            const ARFMTH = document.getElementById("ARFMTH")
-            const INMTH = document.getElementById("INMTH")
-
-            const M4= document.getElementById("M4")
-            const FWHMF = document.getElementById("FWHMF")
-            const IESMF = document.getElementById("IESMF")
-            const ARFMF = document.getElementById("ARFMF")
-            const INMF = document.getElementById("INMF")
-
-            const M5= document.getElementById("M5")
-            const FWHMFI = document.getElementById("FWHMFI")
-            const IESMFI = document.getElementById("IESMFI")
-            const ARFMFI = document.getElementById("ARFMFI")
-            const INMFI = document.getElementById("INMFI")
-
-            const M6= document.getElementById("M6")
-            const FWHMS = document.getElementById("FWHMS")
-            const IESMS = document.getElementById("IESMS")
-            const ARFMS = document.getElementById("ARFMS")
-            const INMS = document.getElementById("INMS")
-
-            const M7= document.getElementById("M7")
-            const FWHMSE = document.getElementById("FWHMSE")
-            const IESMSE = document.getElementById("IESMSE")
-            const ARFMSE = document.getElementById("ARFMSE")
-            const INMSE = document.getElementById("INMSE")
-
-            const M9 = document.getElementById("M9")
-            const FWHMN = document.getElementById("FWHMN")
-            const IESMN = document.getElementById("IESMN")
-            const ARFMN = document.getElementById("ARFMN")
-            const INMN = document.getElementById("INMN")
-             
-            //南部
-            const S1= document.getElementById("S1")
-            const FWHSO = document.getElementById("FWHSO")
-            const IESSO = document.getElementById("IESSO")
-            const ARFSO = document.getElementById("ARFSO")
-            const INSO = document.getElementById("INSO")
-
-            const S2= document.getElementById("S2")
-            const FWHST = document.getElementById("FWHST")
-            const IESST = document.getElementById("IESST")
-            const ARFST = document.getElementById("ARFST")
-            const INST = document.getElementById("INST")
-
-            const S3= document.getElementById("S3")
-            const FWHSTH = document.getElementById("FWHSTH")
-            const IESSTH = document.getElementById("IESSTH")
-            const ARFSTH = document.getElementById("ARFSTH")
-            const INSTH = document.getElementById("INSTH")
-
-            const S4= document.getElementById("S4")
-            const FWHSF = document.getElementById("FWHSF")
-            const IESSF = document.getElementById("IESSF")
-            const ARFSF = document.getElementById("ARFSF")
-            const INSF = document.getElementById("INSF")
-
-            const S5= document.getElementById("S5")
-            const FWHSFI = document.getElementById("FWHSFI")
-            const IESSFI = document.getElementById("IESSFI")
-            const ARFSFI = document.getElementById("ARFSFI")
-            const INSFI = document.getElementById("INSFI")
-
-            const S6= document.getElementById("S6")
-            const FWHSS = document.getElementById("FWHSS")
-            const IESSS = document.getElementById("IESSS")
-            const ARFSS = document.getElementById("ARFSS")
-            const INSS = document.getElementById("INSS")
-
-            const S7= document.getElementById("S7")
-            const FWHSSE = document.getElementById("FWHSSE")
-            const IESSSE = document.getElementById("IESSSE")
-            const ARFSSE = document.getElementById("ARFSSE")
-            const INSSE = document.getElementById("INSSE")
-            obj2 = data;
-            obj2.forEach((item) => {
-                if (N1.getAttribute("value") == item.StationNo) {
-                    FWHNO.innerText = item.FullWaterHeight
-                    IESNO.innerText = item.EffectiveCapacity
-                    ARFNO.innerText = item.AccumulatedRainfall
-                    INNO.innerText = item.InflowTotal
-                }
-                if (N2.getAttribute("value") == item.StationNo) {
-                    FWHNT.innerText = item.FullWaterHeight
-                    IESNT.innerText = item.EffectiveCapacity
-                    ARFNT.innerText = item.AccumulatedRainfall
-                    INNT.innerText = item.InflowTotal
-                }
-                if (N3.getAttribute("value") == item.StationNo) {
-                    FWHNTH.innerText = item.FullWaterHeight
-                    IESNTH.innerText = item.EffectiveCapacity
-                    ARFNOTH.innerText = item.AccumulatedRainfall
-                    INNTH.innerText = item.InflowTotal
-                }
-                if (N4.getAttribute("value") == item.StationNo) {
-                    FWHNF.innerText = item.FullWaterHeight
-                    IESNF.innerText = item.EffectiveCapacity
-                    ARFNF.innerText = item.AccumulatedRainfall
-                    INNF.innerText = item.InflowTotal
-                }
-                if (N5.getAttribute("value") == item.StationNo) {
-                    FWHNFI.innerText = item.FullWaterHeight
-                    IESNFI.innerText = item.EffectiveCapacity
-                    ARFNFI.innerText = item.AccumulatedRainfall
-                    INNFI.innerText = item.InflowTotal
-                }
-                if (N6.getAttribute("value") == item.StationNo) {
-                    FWHNS.innerText = item.FullWaterHeight
-                    IESNS.innerText = item.EffectiveCapacity
-                    ARFNS.innerText = item.AccumulatedRainfall
-                    INNS.innerText = item.InflowTotal
-                }
-                if (M1.getAttribute("value") == item.StationNo) {
-                    FWHMO.innerText = item.FullWaterHeight
-                    IESMO.innerText = item.EffectiveCapacity
-                    ARFMO.innerText = item.AccumulatedRainfall
-                    INMO.innerText = item.InflowTotal
-                }
-                if (M2.getAttribute("value")== item.StationNo) {
-                    FWHMT.innerText = item.FullWaterHeight
-                    IESMT.innerText = item.EffectiveCapacity
-                    ARFMT.innerText = item.AccumulatedRainfall
-                    INMT.innerText = item.InflowTotal
-                }
-                if (M3.getAttribute("value") == item.StationNo) {
-                    FWHMTH.innerText = item.FullWaterHeight
-                    IESMTH.innerText = item.EffectiveCapacity
-                    ARFMTH.innerText = item.AccumulatedRainfall
-                    INMTH.innerText = item.InflowTotal
-                }
-                if (M4.getAttribute("value") == item.StationNo) {
-                    FWHMF.innerText = item.FullWaterHeight
-                    IESMF.innerText = item.EffectiveCapacity
-                    ARFMF.innerText = item.AccumulatedRainfall
-                    INMF.innerText = item.InflowTotal
-                }
-                if (M5.getAttribute("value") == item.StationNo) {
-                    FWHMFI.innerText = item.FullWaterHeight
-                    IESMFI.innerText = item.EffectiveCapacity
-                    ARFMFI.innerText = item.AccumulatedRainfall
-                    INMFI.innerText = item.InflowTotal
-                }
-                if (M6.getAttribute("value") == item.StationNo) {
-                    FWHMS.innerText = item.FullWaterHeight
-                    IESMS.innerText = item.EffectiveCapacity
-                    ARFMS.innerText = item.AccumulatedRainfall
-                    INMS.innerText = item.InflowTotal
-                }
-                if (M7.getAttribute("value") == item.StationNo) {
-                    FWHMSE.innerText = item.FullWaterHeight
-                    IESMSE.innerText = item.EffectiveCapacity
-                    ARFMSE.innerText = item.AccumulatedRainfall
-                    INMSE.innerText = item.InflowTotal
-                }
-                if (M9.getAttribute("value") == item.StationNo) {
-                    FWHMN.innerText = item.FullWaterHeight
-                    IESMN.innerText = item.EffectiveCapacity
-                    ARFMN.innerText = item.AccumulatedRainfall
-                    INMN.innerText = item.InflowTotal
-                }
-                if (S1.getAttribute("value") == item.StationNo) {
-                    FWHSO.innerText = item.FullWaterHeight
-                    IESSO.innerText = item.EffectiveCapacity
-                    ARFSO.innerText = item.AccumulatedRainfall
-                    INSO.innerText = item.InflowTotal
-                }
-                if (S2.getAttribute("value") == item.StationNo) {
-                    FWHST.innerText = item.FullWaterHeight
-                    IESST.innerText = item.EffectiveCapacity
-                    ARFST.innerText = item.AccumulatedRainfall
-                    INST.innerText = item.InflowTotal
-                }
-                if (S3.getAttribute("value") == item.StationNo) {
-                    FWHSTH.innerText = item.FullWaterHeight
-                    IESSTH.innerText = item.EffectiveCapacity
-                    ARFSTH.innerText = item.AccumulatedRainfall
-                    INSTH.innerText = item.InflowTotal
-                }
-                if (S4.getAttribute("value") == item.StationNo) {
-                    FWHSF.innerText = item.FullWaterHeight
-                    IESSF.innerText = item.EffectiveCapacity
-                    ARFSF.innerText = item.AccumulatedRainfall
-                    INSF.innerText = item.InflowTotal
-                }
-                if (S5.getAttribute("value") == item.StationNo) {
-                    FWHSFI.innerText = item.FullWaterHeight
-                    IESSFI.innerText = item.EffectiveCapacity
-                    ARFSFI.innerText = item.AccumulatedRainfall
-                    INSFI.innerText = item.InflowTotal
-                }
-                if (S6.getAttribute("value") == item.StationNo) {
-                    FWHSS.innerText = item.FullWaterHeight
-                    IESSS.innerText = item.EffectiveCapacity
-                    ARFSS.innerText = item.AccumulatedRainfall
-                    INSS.innerText = item.InflowTotal
-                }
-                if (S7.getAttribute("value") == item.StationNo) {
-                    FWHSSE.innerText = item.FullWaterHeight
-                    IESSSE.innerText = item.EffectiveCapacity
-                    ARFSSE.innerText = item.AccumulatedRainfall
-                    INSSE.innerText = item.InflowTotal
-                }
-            })
-        }, 100)
-    })
+    }
+}
 
 
 </script>
