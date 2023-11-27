@@ -330,7 +330,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
     width: 100vw;
     height: 110vh;
     
-    label{
+        label{
             font-size: 28pt;
             margin-left: 16vmin;
             color: #146C94;
@@ -340,7 +340,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
         }
         
 //北部區域
-    .north{
+        .north{
         width: 90vw;
         height: 110vh;
         margin: auto;
@@ -368,18 +368,18 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgb(23, 106, 201);
+        background-color: lightskyblue;
         border-radius: 50%;
         overflow: hidden;
 
-        p{
-            color: black;
-            font-size: 20pt;
-            position: absolute;
-            top: 12%;
-            left: 11%;
-            z-index: 1;
-        }
+            p{
+                color: black;
+                font-size: 20pt;
+                position: absolute;
+                top: 12%;
+                left: 11%;
+                z-index: 1;
+            }
         }   
 
         .shui::after {
@@ -571,6 +571,418 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
             }
         }
+        }
     }
+
+    @media(max-width:992px){
+        .selectArea{
+            height: 5vh;
+            margin-top: 4vmin;
+            .select{
+                height: 7vh;
+                button{
+                    width: 14vmin;
+                    height: 5vmin;
+                    font-size: 23pt;
+                }
+            }
+        }
+
+        .content{
+            height: 80vh;
+
+            label{
+                margin-left: 5vmin;
+                font-size: 23pt;
+            }
+
+            .north{
+            height: 75vh;
+            padding-left: 2vmin;
+
+            .quan{
+                width: 12vmin;
+                height: 12vmin;
+                margin-left: 3vmin;
+                margin-top: 2vmin;
+            }
+
+                .northOne{
+                    width: 20vw;
+                    height: 37vh;
+
+                    p{
+                        margin-left: 1vmin;
+                        margin-bottom: 0;
+                    }
+
+                    .nameOne{
+                        height: 4vh;
+                        font-size: 12pt;
+                    }
+                }
+
+                .northTwo{
+                    width: 20vw;
+                    height: 36vh;
+
+                    p{
+                        margin-left: 1vmin;
+                        margin-bottom: 0;
+                    }
+
+                    .nameTwo{
+                        height: 4vh;
+                        font-size: 12pt;
+                    }
+                }
+
+                .northThree{
+                    width: 20vw;
+                    height: 36vh;
+
+                    p{
+                        margin-left: 1vmin;
+                        margin-bottom: 0;
+                    }
+
+                    .nameThree{
+                        height: 4vh;
+                        font-size: 12pt;
+                    }
+                }
+
+                .northFour{
+                    width: 20vw;
+                    height: 36vh;
+
+                    p{
+                        margin-left: 1vmin;
+                        margin-bottom: 0;
+                    }
+
+                    .nameFour{
+                        height: 4vh;
+                        font-size: 12pt;
+                    }
+                }
+
+                .northFive{
+                    width: 20vw;
+                    height: 36vh;
+
+                    p{
+                        margin-left: 1vmin;
+                        margin-bottom: 0;
+                    }
+
+                    .nameFive{
+                        height: 4vh;
+                        font-size: 12pt;
+                    }
+                }
+
+                .northSix{
+                    width: 20vw;
+                    height: 36vh;
+
+                    p{
+                        margin-left: 1vmin;
+                        margin-bottom: 0;
+                    }
+
+                    .nameSix{
+                        height: 4vh;
+                        font-size: 12pt;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width:768px){
+        .selectArea{
+            .select{
+                button{
+                    font-size: 18pt;
+                }
+            }
+        }
+
+        .content{
+            height: 40vh;
+            .north{
+                height: 35vh;
+                .quan{
+                    width: 9vmin;
+                    height: 9vmin;
+                    margin-left: 4vmin;
+                    margin-top: 3vmin;
+                }
+
+                .shui{
+                    p{
+                        font-size: 13pt;
+                    }
+                }
+
+                .northOne{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 9pt;
+                    }
+                    .nameOne{
+                        font-size: 10pt;
+                    }
+                }
+
+                .northTwo{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 9pt;
+                    }
+                    .nameTwo{
+                        font-size: 10pt;
+                    }
+                }
+
+                .northThree{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 9pt;
+                    }
+                    .nameThree{
+                        font-size: 10pt;
+                    }
+                }
+
+                .northFour{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 9pt;
+                    }
+                    .nameFour{
+                        font-size: 10pt;
+                    }
+                }
+
+                .northFive{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 9pt;
+                    }
+                    .nameFive{
+                        font-size: 10pt;
+                    }
+                }
+
+                .northSix{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 9pt;
+                    }
+                    .nameSix{
+                        font-size: 10pt;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width:576px){
+        .selectArea{
+            .select{
+                height: 5vh;
+                button{
+                    width: 16vmin;
+                    height: 6vmin;
+                    font-size: 13pt;
+                }
+            }
+        }
+
+        .content{
+            label{
+                font-size: 16pt;
+            }
+
+            .north{
+                .quan{
+                    width: 11vmin;
+                    height: 11vmin;
+                    margin-top: 1vmin;
+                }
+                .northOne{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 8pt;
+                    }
+                    .nameOne{
+                        height: 3.5vh;
+                        font-size: 8pt;
+                    }
+                }
+
+                .northTwo{
+                    height: 27vh;
+
+                    p{
+                        font-size: 8pt;
+                        margin-bottom: 2.5vmin;
+                    }
+                    .nameTwo{
+                        height: 3.5vh;
+                        font-size: 8pt;
+                    }
+                }
+                .northThree{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 8pt;
+                    }
+                    .nameThree{
+                        height: 3.5vh;
+                        font-size: 8pt;
+                    }
+                }
+
+                .northFour{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 8pt;
+                    }
+                    .nameFour{
+                        height: 3.5vh;
+                        font-size: 8pt;
+                    }
+                }
+
+                .northFive{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 8pt;
+                    }
+                    .nameFive{
+                        height: 3.5vh;
+                        font-size: 8pt;
+                    }
+                }
+
+                .northSix{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 8pt;
+                    }
+                    .nameSix{
+                        height: 3.5vh;
+                        font-size: 8pt;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width:414px){
+
+        .content{
+            label{
+                font-size: 13pt;
+            }
+
+            .north{
+                .northOne{
+                    height: 33vh;
+                    p{
+                        font-size: 7pt;
+                    }
+                    .nameOne{
+                        height: 3.5vh;
+                        font-size: 7pt
+                    }
+                }
+
+                .northTwo{
+                    height: 33vh;
+                    p{
+                        font-size: 7pt;
+                        margin-bottom: 1vmin;
+                    }
+                    .nameTwo{
+                        height: 3.5vh;
+                        font-size: 7pt
+                    }
+                }
+
+                .northThree{
+                    height: 33vh;
+                    p{
+                        font-size: 7pt;
+                        margin-bottom: 1vmin;
+                    }
+                    .nameThree{
+                        height: 3.5vh;
+                        font-size: 7pt
+                    }
+                }
+
+                .north{
+                    height: 33vh;
+                    p{
+                        font-size: 7pt;
+                        margin-bottom: 1vmin;
+                    }
+                    .nameFour{
+                        height: 3.5vh;
+                        font-size: 7pt
+                    }
+                }
+
+                .northFive{
+                    height: 33vh;
+                    p{
+                        font-size: 7pt;
+                        margin-bottom: 1vmin;
+                    }
+                    .nameFive{
+                        height: 3.5vh;
+                        font-size: 7pt
+                    }
+                }
+
+                .northSix{
+                    height: 33vh;
+                    p{
+                        font-size: 7pt;
+                        margin-bottom: 1vmin;
+                    }
+                    .nameSix{
+                        height: 3.5vh;
+                        font-size: 7pt
+                    }
+                }
+            }
+        }
     }
 </style>

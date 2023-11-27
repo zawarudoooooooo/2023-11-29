@@ -971,8 +971,8 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
         tr {
             th {
                 border: 1px solid black;
-                background-color: #AFD3E2;
-                opacity: 0.8;
+                background-color: lightblue;
+                opacity: 0.7;
             }
 
             td {

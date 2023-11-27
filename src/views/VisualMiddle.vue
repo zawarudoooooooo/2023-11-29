@@ -362,7 +362,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
 <style lang="scss" scoped>
 //選擇區域
-.selectArea{
+    .selectArea{
         width: 100vw;
         margin-top: 5vmin;
         opacity: 0.7;
@@ -441,7 +441,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgb(23, 106, 201);
+        background-color: lightskyblue;
         border-radius: 50%;
         overflow: hidden;
         p{
@@ -690,6 +690,510 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                     text-align: center;
                     margin: 0;
                     padding-top: 1vmin;
+                }
+            }
+        }
+    }
+
+    @media(max-width:992px){
+        .selectArea{
+            height: 5vh;
+            margin-top: 4vmin;
+            .select{
+                height: 7vh;
+                button{
+                    width: 14vmin;
+                    height: 5vmin;
+                    font-size: 23pt;
+                }
+            }
+        }
+
+        .content{
+            height: 80vh;
+
+            label{
+                margin-left: 5vmin;
+                font-size: 23pt;
+            }
+
+            .middle{
+            height: 75vh;
+            padding-left: 2vmin;
+            .quan{
+                width: 12vmin;
+                height: 12vmin;
+                margin-left: 3vmin;
+                margin-top: 3vmin;
+            }
+            .middleOne{
+                    width: 20vw;
+                    height: 35vh;
+
+                    p{
+                        margin-left: 1vmin;
+                        margin-bottom: 0;
+                    }
+
+                    .nameOneM{
+                        height: 4vh;
+                        font-size: 12pt;
+                    }
+            }
+            .middleTwo{
+                    width: 20vw;
+                    height: 35vh;
+
+                    p{
+                        margin-left: 1vmin;
+                        margin-bottom: 0;
+                    }
+
+                    .nameTwoM{
+                        height: 4vh;
+                        font-size: 12pt;
+                    }
+            }
+            .middleThree{
+                    width: 20vw;
+                    height: 35vh;
+
+                    p{
+                        margin-left: 1vmin;
+                        margin-bottom: 0;
+                    }
+
+                    .nameThreeM{
+                        height: 4vh;
+                        font-size: 12pt;
+                    }
+            }
+            .middleFour{
+                    width: 20vw;
+                    height: 35vh;
+
+                    p{
+                        margin-left: 1vmin;
+                        margin-bottom: 0;
+                    }
+
+                    .nameFourM{
+                        height: 4vh;
+                        font-size: 12pt;
+                    }
+            }
+            .middleFive{
+                    width: 20vw;
+                    height: 35vh;
+
+                    p{
+                        margin-left: 1vmin;
+                        margin-bottom: 0;
+                    }
+
+                    .nameFiveM{
+                        height: 4vh;
+                        font-size: 12pt;
+                    }
+            }
+            .middleSix{
+                    width: 20vw;
+                    height: 35vh;
+
+                    p{
+                        margin-left: 1vmin;
+                        margin-bottom: 0;
+                    }
+
+                    .nameSixM{
+                        height: 4vh;
+                        font-size: 12pt;
+                    }
+            }
+            .middleSeven{
+                    width: 20vw;
+                    height: 35vh;
+
+                    p{
+                        margin-left: 1vmin;
+                        margin-bottom: 0;
+                    }
+
+                    .nameSevenM{
+                        height: 4vh;
+                        font-size: 12pt;
+                    }
+            }
+            .middleNine{
+                    width: 20vw;
+                    height: 35vh;
+
+                    p{
+                        margin-left: 1vmin;
+                        margin-bottom: 0;
+                    }
+
+                    .nameNineM{
+                        height: 4vh;
+                        font-size: 12pt;
+                    }
+            }
+            }
+        }
+    }
+
+    @media(max-width:768px){
+        .selectArea{
+            .select{
+                button{
+                    font-size: 18pt;
+                }
+            }
+        }
+
+        .content{
+            height: 40vh;
+            .middle{
+                height: 35vh;
+
+                .quan{
+                    width: 9vmin;
+                    height: 9vmin;
+                    margin-left: 4vmin;
+                    margin-top: 2vmin;
+                }
+
+                .shui{
+                    p{
+                        font-size: 13pt;
+                    }
+                }
+
+                .middleOne{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 9pt;
+                    }
+                    .nameOneM{
+                        font-size: 10pt;
+                    }
+                }
+
+                .middleTwo{
+                    height: 27vh;
+                    
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 9pt;
+                    }
+                    .nameTwoM{
+                        font-size: 10pt;
+                    }
+                }
+
+                .middleThree{
+                    height: 27vh;
+                    
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 9pt;
+                    }
+                    .nameThreeM{
+                        font-size: 10pt;
+                    }
+                }
+
+                .middleFour{
+                    height: 27vh;
+                    
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 9pt;
+                    }
+                    .nameFourM{
+                        font-size: 10pt;
+                    }
+                }
+
+                .middleFive{
+                    height: 27vh;
+                    
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 9pt;
+                    }
+                    .nameFiveM{
+                        font-size: 10pt;
+                    }
+                }
+
+                .middleSix{
+                    height: 27vh;
+                    
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 9pt;
+                    }
+                    .nameSixM{
+                        font-size: 10pt;
+                    }
+                }
+
+                .middleSeven{
+                    height: 27vh;
+                    
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 9pt;
+                    }
+                    .nameSevenM{
+                        font-size: 10pt;
+                    }
+                }
+
+                .middleNine{
+                    height: 27vh;
+                    
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 9pt;
+                    }
+                    .nameNineM{
+                        font-size: 10pt;
+                    }
+                }
+
+            }
+        }
+
+
+    }
+
+    @media(max-width:576px){
+        .selectArea{
+            .select{
+                height: 5vh;
+                button{
+                    width: 16vmin;
+                    height: 6vmin;
+                    font-size: 13pt;
+                }
+            }
+        }
+
+        .content{
+            label{
+                font-size: 16pt;
+            }
+
+            .middle{
+                .quan{
+                    width: 11vmin;
+                    height: 11vmin;
+                    margin-top: 1vmin;
+                }
+                .middleOne{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 8pt;
+                    }
+                    .nameOneM{
+                        height: 3.5vh;
+                        font-size: 8pt;
+                    }
+                }
+                .middleTwo{
+                    height: 27vh;
+
+                    p{
+                        font-size: 8pt;
+                        margin-bottom: 2vmin;
+                    }
+                    .nameTwoM{
+                        height: 3.5vh;
+                        font-size: 8pt;
+                    }
+                }
+                .middleThree{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 8pt;
+                    }
+                    .nameThreeM{
+                        height: 3.5vh;
+                        font-size: 8pt;
+                    }
+                }
+                .middleFour{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 8pt;
+                    }
+                    .nameFourM{
+                        height: 3.5vh;
+                        font-size: 8pt;
+                    }
+                }
+                .middleFive{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 8pt;
+                    }
+                    .nameFiveM{
+                        height: 3.5vh;
+                        font-size: 8pt;
+                    }
+                }
+                .middleSix{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 8pt;
+                    }
+                    .nameSixM{
+                        height: 3.5vh;
+                        font-size: 8pt;
+                    }
+                }
+                .middleSeven{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 8pt;
+                    }
+                    .nameSevenM{
+                        height: 3.5vh;
+                        font-size: 8pt;
+                    }
+                }
+                .middleNine{
+                    height: 27vh;
+
+                    p{
+                        margin-top: 1vmin;
+                        font-size: 8pt;
+                    }
+                    .nameNineM{
+                        height: 3.5vh;
+                        font-size: 8pt;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width:414px){
+        .content{
+            label{
+                font-size: 13pt;
+            }
+
+            .middle{
+                .middleOne{
+                    height: 33vh;
+                    p{
+                        font-size: 7pt;
+                    }
+                    .nameOneM{
+                        height: 3.5vh;
+                        font-size: 7pt
+                    }
+                }
+
+                .middleTwo{
+                    height: 33vh;
+                    p{
+                        font-size: 7pt;
+                        margin-bottom: 1vmin;
+                    }
+                    .nameTwoM{
+                        height: 3.5vh;
+                        font-size: 7pt
+                    }
+                }
+
+                .middleThree{
+                    height: 33vh;
+                    p{
+                        font-size: 7pt;
+                        margin-bottom: 1vmin;
+                    }
+                    .nameThreeM{
+                        height: 3.5vh;
+                        font-size: 7pt
+                    }
+                }
+
+                .middleFour{
+                    height: 33vh;
+                    p{
+                        font-size: 7pt;
+                        margin-bottom: 1vmin;
+                    }
+                    .nameFourM{
+                        height: 3.5vh;
+                        font-size: 7pt
+                    }
+                }
+
+                .middleFive{
+                    height: 33vh;
+                    p{
+                        font-size: 7pt;
+                        margin-bottom: 1vmin;
+                    }
+                    .nameFiveM{
+                        height: 3.5vh;
+                        font-size: 7pt
+                    }
+                }
+
+                .middleSix{
+                    height: 33vh;
+                    p{
+                        font-size: 7pt;
+                        margin-bottom: 1vmin;
+                    }
+                    .nameSixM{
+                        height: 3.5vh;
+                        font-size: 7pt
+                    }
+                }
+
+                .middleSeven{
+                    height: 33vh;
+                    p{
+                        font-size: 7pt;
+                        margin-bottom: 1vmin;
+                    }
+                    .nameSevenM{
+                        height: 3.5vh;
+                        font-size: 7pt
+                    }
+                }
+
+                .middleNine{
+                    height: 33vh;
+                    p{
+                        font-size: 7pt;
+                        margin-bottom: 1vmin;
+                    }
+                    .nameNineM{
+                        height: 3.5vh;
+                        font-size: 7pt
+                    }
                 }
             }
         }
