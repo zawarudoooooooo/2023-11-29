@@ -176,83 +176,83 @@ export default{
                         CARFNO.innerText=item.AccumulatedRainfall
                 }
 // 2
-                if(n1.getAttribute("id")==item.StationNo){
+                if(n2.getAttribute("id")==item.StationNo){
                         CARFNT.innerText=item.AccumulatedRainfall
                 }
 // 3
-                if(n1.getAttribute("id")==item.StationNo){
+                if(n3.getAttribute("id")==item.StationNo){
                         CARFNTH.innerText=item.AccumulatedRainfall
                 }
 // 4
-                if(n1.getAttribute("id")==item.StationNo){
+                if(n4.getAttribute("id")==item.StationNo){
                         CARFNF.innerText=item.AccumulatedRainfall
                 }
 // 5
-                if(n1.getAttribute("id")==item.StationNo){
+                if(n5.getAttribute("id")==item.StationNo){
                         CARFNFI.innerText=item.AccumulatedRainfall
                 }
 // 6
-                if(n1.getAttribute("id")==item.StationNo){
+                if(n6.getAttribute("id")==item.StationNo){
                         CARFNS.innerText=item.AccumulatedRainfall
                 }
 // 7
-                if(n1.getAttribute("id")==item.StationNo){
+                if(m1.getAttribute("id")==item.StationNo){
                         CARFMO.innerText=item.AccumulatedRainfall
                 }
 // 8
-                if(n1.getAttribute("id")==item.StationNo){
+                if(m2.getAttribute("id")==item.StationNo){
                         CARFMT.innerText=item.AccumulatedRainfall
                 }
 // 9
-                if(n1.getAttribute("id")==item.StationNo){
+                if(m3.getAttribute("id")==item.StationNo){
                         CARFMTH.innerText=item.AccumulatedRainfall
                 }
 // 10
-                if(n1.getAttribute("id")==item.StationNo){
+                if(m4.getAttribute("id")==item.StationNo){
                         CARFMF.innerText=item.AccumulatedRainfall
                 }
 // 11
-                if(n1.getAttribute("id")==item.StationNo){
+                if(m5.getAttribute("id")==item.StationNo){
                         CARFMFI.innerText=item.AccumulatedRainfall
                 }
 // 12
-                if(n1.getAttribute("id")==item.StationNo){
+                if(m6.getAttribute("id")==item.StationNo){
                         CARFMS.innerText=item.AccumulatedRainfall
                 }
 // 13
-                if(n1.getAttribute("id")==item.StationNo){
+                if(m7.getAttribute("id")==item.StationNo){
                         CARFMSE.innerText=item.AccumulatedRainfall
                 }
 // 14
-                if(n1.getAttribute("id")==item.StationNo){
+                if(m8.getAttribute("id")==item.StationNo){
                         CARFMN.innerText=item.AccumulatedRainfall
                 }
 // 15
-                if(n1.getAttribute("id")==item.StationNo){
+                if(s1.getAttribute("id")==item.StationNo){
                         CARFSO.innerText=item.AccumulatedRainfall
                 }
 // 16
-                if(n1.getAttribute("id")==item.StationNo){
+                if(s2.getAttribute("id")==item.StationNo){
                         CARFST.innerText=item.AccumulatedRainfall
                 }
 // 17
-                if(n1.getAttribute("id")==item.StationNo){
+                if(s3.getAttribute("id")==item.StationNo){
                         CARFSTH.innerText=item.AccumulatedRainfall
                 }
 // 18
-                if(n1.getAttribute("id")==item.StationNo){
+                if(s4.getAttribute("id")==item.StationNo){
                         CARFSF.innerText=item.AccumulatedRainfall
                 }
 // 19
-                if(n1.getAttribute("id")==item.StationNo){
+                if(s5.getAttribute("id")==item.StationNo){
                         CARFSFI.innerText=item.AccumulatedRainfall
                 }
 // 20
-                if(n1.getAttribute("id")==item.StationNo){
+                if(s6.getAttribute("id")==item.StationNo){
                         CARFSS.innerText=item.AccumulatedRainfall
                 }
 // 21
-                if(n1.getAttribute("id")==item.StationNo){
+                if(s7.getAttribute("id")==item.StationNo){
                         CARFSSE.innerText=item.AccumulatedRainfall
                 }
         })
@@ -261,68 +261,68 @@ export default{
         watch(()=>this.OperatingInfo,()=>{
                 const r1=document.querySelectorAll(".r1")
 // 1
-        const CIFNO=document.getElementById("CIFNO")
-        const COFTNO=document.getElementById("COFTNO")
+                const CIFNO=document.getElementById("CIFNO")
+                const COFTNO=document.getElementById("COFTNO")
 // 2    
-        const CIFNT=document.getElementById("CIFNT")
-        const COFTNT=document.getElementById("COFTNT")
-// 3    
-        const CIFNTH=document.getElementById("CIFNTH")
-        const COFTNTH=document.getElementById("COFTNTH")
-// 4    
-        const CIFNF=document.getElementById("CIFNF")
-        const COFTNF=document.getElementById("COFTNF")
-// 5    
-        const CIFNFI=document.getElementById("CIFNFI")
-        const COFTNFI=document.getElementById("COFTNFI")
-// 6    
-        const CIFNS=document.getElementById("CIFNS")
-        const COFTNS=document.getElementById("COFTNS")
-// 7    
-        const CIFMO=document.getElementById("CIFMO")
-        const COFTMO=document.getElementById("COFTMO")
-// 8    
-        const CIFMT=document.getElementById("CIFMT")
-        const COFTMT=document.getElementById("COFTMT")
-// 9    
-        const CIFMTH=document.getElementById("CIFMTH")
-        const COFTMTH=document.getElementById("COFTMTH")
-// 10
-        const CIFMF=document.getElementById("CIFMF")
-        const COFTMF=document.getElementById("COFTMF")
-// 11
-        const CIFMFI=document.getElementById("CIFMFI")
-        const COFTMFI=document.getElementById("COFTMFI")
-// 12
-        const CIFMS=document.getElementById("CIFMS")
-        const COFTMS=document.getElementById("COFTMS")
-// 13
-        const CIFMSE=document.getElementById("CIFMSE")
-        const COFTMSE=document.getElementById("COFTMSE")
-// 14
-        const CIFMN=document.getElementById("CIFMN")
-        const COFTMN=document.getElementById("COFTMN")
-// 15
-        const CIFSO=document.getElementById("CIFSO")
-        const COFTSO=document.getElementById("COFTSO")
-// 16
-        const CIFST=document.getElementById("CIFST")
-        const COFTST=document.getElementById("COFTST")
-// 17
-        const CIFSTH=document.getElementById("CIFSTH")
-        const COFTSTH=document.getElementById("COFTSTH")
-// 18
-        const CIFSF=document.getElementById("CIFSF")
-        const COFTSF=document.getElementById("COFTSF")
-// 19
-        const CIFSFI=document.getElementById("CIFSFI")
-        const COFTSFI=document.getElementById("COFTSFI")
-// 20
-        const CIFSS=document.getElementById("CIFSS")
-        const COFTSS=document.getElementById("COFTSS")
-// 21
-        const CIFSSE=document.getElementById("CIFSSE")
-        const COFTSSE=document.getElementById("COFTSSE")
+                const CIFNT=document.getElementById("CIFNT")
+                const COFTNT=document.getElementById("COFTNT")
+// 3            
+                const CIFNTH=document.getElementById("CIFNTH")
+                const COFTNTH=document.getElementById("COFTNTH")
+// 4            
+                const CIFNF=document.getElementById("CIFNF")
+                const COFTNF=document.getElementById("COFTNF")
+// 5            
+                const CIFNFI=document.getElementById("CIFNFI")
+                const COFTNFI=document.getElementById("COFTNFI")
+// 6            
+                const CIFNS=document.getElementById("CIFNS")
+                const COFTNS=document.getElementById("COFTNS")
+// 7            
+                const CIFMO=document.getElementById("CIFMO")
+                const COFTMO=document.getElementById("COFTMO")
+// 8            
+                const CIFMT=document.getElementById("CIFMT")
+                const COFTMT=document.getElementById("COFTMT")
+// 9            
+                const CIFMTH=document.getElementById("CIFMTH")
+                const COFTMTH=document.getElementById("COFTMTH")
+// 10   
+                const CIFMF=document.getElementById("CIFMF")
+                const COFTMF=document.getElementById("COFTMF")
+// 11   
+                const CIFMFI=document.getElementById("CIFMFI")
+                const COFTMFI=document.getElementById("COFTMFI")
+// 12   
+                const CIFMS=document.getElementById("CIFMS")
+                const COFTMS=document.getElementById("COFTMS")
+// 13   
+                const CIFMSE=document.getElementById("CIFMSE")
+                const COFTMSE=document.getElementById("COFTMSE")
+// 14   
+                const CIFMN=document.getElementById("CIFMN")
+                const COFTMN=document.getElementById("COFTMN")
+// 15   
+                const CIFSO=document.getElementById("CIFSO")
+                const COFTSO=document.getElementById("COFTSO")
+// 16   
+                const CIFST=document.getElementById("CIFST")
+                const COFTST=document.getElementById("COFTST")
+// 17   
+                const CIFSTH=document.getElementById("CIFSTH")
+                const COFTSTH=document.getElementById("COFTSTH")
+// 18   
+                const CIFSF=document.getElementById("CIFSF")
+                const COFTSF=document.getElementById("COFTSF")
+// 19   
+                const CIFSFI=document.getElementById("CIFSFI")
+                const COFTSFI=document.getElementById("COFTSFI")
+// 20   
+                const CIFSS=document.getElementById("CIFSS")
+                const COFTSS=document.getElementById("COFTSS")
+// 21   
+                const CIFSSE=document.getElementById("CIFSSE")
+                const COFTSSE=document.getElementById("COFTSSE")
 
 
         r1.forEach(item=>{
@@ -1224,7 +1224,6 @@ export default{
 </template>
 
 <style lang="scss" scoped>
-
         .content{
         width: 100vw;
         height: 45vw;
@@ -1250,6 +1249,19 @@ export default{
                 }
         }
 
+        @media(max-width:576px){
+                .content{
+                        table{
+                                font-size: 10pt;
+                        }
+                }
+        }
 
-
+        @media(max-width:414px){
+                .content{
+                        table{
+                                font-size: 8pt;
+                        }
+                }
+        }
 </style>

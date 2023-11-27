@@ -8,7 +8,113 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
     .then((data) => {
         console.log(data);
         setInterval(function () {
+            //北部
+            const N1 = document.getElementById("N1")
             const TNO = document.getElementById("TNO")
+            const WHNO = document.getElementById("WHNO")
+            const IPOSNO = document.getElementById("IPOSNO")
+
+            const N2 = document.getElementById("N2")
+            const TNT = document.getElementById("TNT")
+            const WHNT = document.getElementById("WHNT")
+            const IPOSNT = document.getElementById("IPOSNT")
+
+            const N3 = document.getElementById("N3")
+            const TNTH = document.getElementById("TNTH")
+            const WHNTH = document.getElementById("WHNTH")
+            const IPOSTH = document.getElementById("IPOSTH")
+            
+            const N4 = document.getElementById("N4")
+            const TNF = document.getElementById("TNF")
+            const WHNF = document.getElementById("WHNF")
+            const IPOSNF = document.getElementById("IPOSNF")
+
+            const N5 = document.getElementById("N5")
+            const TNFI = document.getElementById("TNFI")
+            const WHNFI = document.getElementById("WHNFI")
+            const IPOSNFI = document.getElementById("IPOSNFI")
+
+            const N6 = document.getElementById("N6")
+            const TNS = document.getElementById("TNS")
+            const WHNS = document.getElementById("WHNS")
+            const IPOSNS = document.getElementById("IPOSNS")
+
+            // 中部
+            const M1 = document.getElementById("M1")
+            const TMO = document.getElementById("TMO")
+            const WHMO = document.getElementById("WHMO")
+            const IPOSMO = document.getElementById("IPOSMO")
+
+            const M2 = document.getElementById("M2")
+            const TMT = document.getElementById("TMT")
+            const WHMT = document.getElementById("WHMT")
+            const IPOSMT = document.getElementById("IPOSMT")
+
+            const M3 = document.getElementById("M3")
+            const TMTH = document.getElementById("TMTH")
+            const WHMTH = document.getElementById("WHMTH")
+            const IPOSMTH = document.getElementById("IPOSMTH")
+            
+            const M4 = document.getElementById("M4")
+            const TMF = document.getElementById("TMF")
+            const WHMF = document.getElementById("WHMF")
+            const IPOSMF = document.getElementById("IPOSMF")
+
+            const M5 = document.getElementById("M5")
+            const TMFI = document.getElementById("TMFI")
+            const WHMFI = document.getElementById("WHMFI")
+            const IPOSMFI = document.getElementById("IPOSMFI")
+
+            const M6 = document.getElementById("M6")
+            const TMS = document.getElementById("TMS")
+            const WHMS = document.getElementById("WHMS")
+            const IPOSMS = document.getElementById("IPOSMS")
+
+            const M7 = document.getElementById("M7")
+            const TMSE = document.getElementById("TMSE")
+            const WHMSE = document.getElementById("WHMSE")
+            const IPOSMSE = document.getElementById("IPOSMSE")
+
+            const M9 = document.getElementById("M9")
+            const TMN = document.getElementById("TMN")
+            const WHMN = document.getElementById("WHMN")
+            const IPOSMN = document.getElementById("IPOSMN")
+
+            //南部
+            const S1 = document.getElementById("S1")
+            const TSO = document.getElementById("TSO")
+            const WHSO = document.getElementById("WHSO")
+            const IPOSSO = document.getElementById("IPOSSO")
+
+            const S2 = document.getElementById("S2")
+            const TST = document.getElementById("TST")
+            const WHST = document.getElementById("WHST")
+            const IPOSST = document.getElementById("IPOSST")
+
+            const S3 = document.getElementById("S3")
+            const TSTH = document.getElementById("TSTH")
+            const WHSTH = document.getElementById("WHSTH")
+            const IPOSSTH = document.getElementById("IPOSSTH")
+
+            const S4 = document.getElementById("S4")
+            const TSF = document.getElementById("TSF")
+            const WHSF = document.getElementById("WHSF")
+            const IPOSSF = document.getElementById("IPOSSF")
+
+            const S5 = document.getElementById("S5")
+            const TSFI = document.getElementById("TSFI")
+            const WHSFI = document.getElementById("WHSFI")
+            const IPOSSFI = document.getElementById("IPOSSFI")
+
+            const S6 = document.getElementById("S6")
+            const TSS = document.getElementById("TSS")
+            const WHSS = document.getElementById("WHSS")
+            const IPOSSS = document.getElementById("IPOSSS")
+
+            const S7 = document.getElementById("S7")
+            const TSSE = document.getElementById("TSSE")
+            const WHSSE = document.getElementById("WHSSE")
+            const IPOSSSE = document.getElementById("IPOSSSE")
             obj1 = data;
             obj1.forEach((item) => {
                 let dayTime = new Date(item.Time)
@@ -129,7 +235,135 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
     .then(data => {
         console.log(data)
         setInterval(function () {
+
+            //北部
+            const N1= document.getElementById("N1")
             const FWHNO = document.getElementById("FWHNO")
+            const IESNO = document.getElementById("IESNO")
+            const ARFNO = document.getElementById("ARFNO")
+            const INNO = document.getElementById("INNO")
+
+            const N2= document.getElementById("N2")
+            const FWHNT = document.getElementById("FWHNT")
+            const IESNT = document.getElementById("IESNT")
+            const ARFNT = document.getElementById("ARFNT")
+            const INNT = document.getElementById("INNT")
+
+            const N3= document.getElementById("N3")
+            const FWHNTH = document.getElementById("FWHNTH")
+            const IESNTH = document.getElementById("IESNTH")
+            const ARFNOTH = document.getElementById("ARFNOTH")
+            const INNTH = document.getElementById("INNTH")
+
+            const N4= document.getElementById("N4")
+            const FWHNF = document.getElementById("FWHNF")
+            const IESNF = document.getElementById("IESNF")
+            const ARFNF = document.getElementById("ARFNF")
+            const INNF = document.getElementById("INNF")
+
+            const N5= document.getElementById("N5")
+            const FWHNFI = document.getElementById("FWHNFI")
+            const IESNFI = document.getElementById("IESNFI")
+            const ARFNFI = document.getElementById("ARFNFI")
+            const INNFI = document.getElementById("INNFI")
+
+            const N6= document.getElementById("N6")
+            const FWHNS = document.getElementById("FWHNS")
+            const IESNS = document.getElementById("IESNS")
+            const ARFNS = document.getElementById("ARFNS")
+            const INNS = document.getElementById("INNS")
+
+            //中部
+            const M1= document.getElementById("M1")
+            const FWHMO = document.getElementById("FWHMO")
+            const IESMO = document.getElementById("IESMO")
+            const ARFMO = document.getElementById("ARFMO")
+            const INMO = document.getElementById("INMO")
+
+            const M2= document.getElementById("M2")
+            const FWHMT = document.getElementById("FWHMT")
+            const IESMT = document.getElementById("IESMT")
+            const ARFMT = document.getElementById("ARFMT")
+            const INMT = document.getElementById("INMT")
+
+            const M3= document.getElementById("M3")
+            const FWHMTH = document.getElementById("FWHMTH")
+            const IESMTH = document.getElementById("IESMTH")
+            const ARFMTH = document.getElementById("ARFMTH")
+            const INMTH = document.getElementById("INMTH")
+
+            const M4= document.getElementById("M4")
+            const FWHMF = document.getElementById("FWHMF")
+            const IESMF = document.getElementById("IESMF")
+            const ARFMF = document.getElementById("ARFMF")
+            const INMF = document.getElementById("INMF")
+
+            const M5= document.getElementById("M5")
+            const FWHMFI = document.getElementById("FWHMFI")
+            const IESMFI = document.getElementById("IESMFI")
+            const ARFMFI = document.getElementById("ARFMFI")
+            const INMFI = document.getElementById("INMFI")
+
+            const M6= document.getElementById("M6")
+            const FWHMS = document.getElementById("FWHMS")
+            const IESMS = document.getElementById("IESMS")
+            const ARFMS = document.getElementById("ARFMS")
+            const INMS = document.getElementById("INMS")
+
+            const M7= document.getElementById("M7")
+            const FWHMSE = document.getElementById("FWHMSE")
+            const IESMSE = document.getElementById("IESMSE")
+            const ARFMSE = document.getElementById("ARFMSE")
+            const INMSE = document.getElementById("INMSE")
+
+            const M9 = document.getElementById("M9")
+            const FWHMN = document.getElementById("FWHMN")
+            const IESMN = document.getElementById("IESMN")
+            const ARFMN = document.getElementById("ARFMN")
+            const INMN = document.getElementById("INMN")
+             
+            //南部
+            const S1= document.getElementById("S1")
+            const FWHSO = document.getElementById("FWHSO")
+            const IESSO = document.getElementById("IESSO")
+            const ARFSO = document.getElementById("ARFSO")
+            const INSO = document.getElementById("INSO")
+
+            const S2= document.getElementById("S2")
+            const FWHST = document.getElementById("FWHST")
+            const IESST = document.getElementById("IESST")
+            const ARFST = document.getElementById("ARFST")
+            const INST = document.getElementById("INST")
+
+            const S3= document.getElementById("S3")
+            const FWHSTH = document.getElementById("FWHSTH")
+            const IESSTH = document.getElementById("IESSTH")
+            const ARFSTH = document.getElementById("ARFSTH")
+            const INSTH = document.getElementById("INSTH")
+
+            const S4= document.getElementById("S4")
+            const FWHSF = document.getElementById("FWHSF")
+            const IESSF = document.getElementById("IESSF")
+            const ARFSF = document.getElementById("ARFSF")
+            const INSF = document.getElementById("INSF")
+
+            const S5= document.getElementById("S5")
+            const FWHSFI = document.getElementById("FWHSFI")
+            const IESSFI = document.getElementById("IESSFI")
+            const ARFSFI = document.getElementById("ARFSFI")
+            const INSFI = document.getElementById("INSFI")
+
+            const S6= document.getElementById("S6")
+            const FWHSS = document.getElementById("FWHSS")
+            const IESSS = document.getElementById("IESSS")
+            const ARFSS = document.getElementById("ARFSS")
+            const INSS = document.getElementById("INSS")
+
+            const S7= document.getElementById("S7")
+            const FWHSSE = document.getElementById("FWHSSE")
+            const IESSSE = document.getElementById("IESSSE")
+            const ARFSSE = document.getElementById("ARFSSE")
+            const INSSE = document.getElementById("INSSE")
             obj2 = data;
             obj2.forEach((item) => {
                 if (N1.innerText == item.StationNo) {
@@ -250,7 +484,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
                     FWHSS.innerText = item.FullWaterHeight
                     IESSS.innerText = item.EffectiveCapacity
                     ARFSS.innerText = item.AccumulatedRainfall
-                    INSS.innerText = item.AccumulatedRainfall
+                    INSS.innerText = item.InflowTotal
                 }
                 if (S7.innerText == item.StationNo) {
                     FWHSSE.innerText = item.FullWaterHeight
