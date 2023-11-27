@@ -484,7 +484,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/Daily")
                     FWHSS.innerText = item.FullWaterHeight
                     IESSS.innerText = item.EffectiveCapacity
                     ARFSS.innerText = item.AccumulatedRainfall
-                    INSS.innerText = item.AccumulatedRainfall
+                    INSS.innerText = item.InflowTotal
                 }
                 if (S7.innerText == item.StationNo) {
                     FWHSSE.innerText = item.FullWaterHeight
