@@ -105,7 +105,6 @@ let arr2 = []
             .then(data=>{
                 arr = data
                 arr.responseData.forEach(item => {
-                    setInterval(function () {
 
                     //北部
                     if(N1.getAttribute("value") == item.ReservoirName){
@@ -138,52 +137,17 @@ let arr2 = []
                         BRFNS.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
                         ECNS.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
-
-                    //南部
-                    if(S1.getAttribute("value") == item.ReservoirName){
-                        IFTSO.innerText = "本日總進水量 : " + item.Inflow + " mm"
-                        BRFSO.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
-                        ECSO.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
-                    }
-                    if(S2.getAttribute("value") == item.ReservoirName){
-                        IFTST.innerText = "本日總進水量 : " + item.Inflow + " mm"
-                        BRFST.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
-                        ECST.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
-                    }
-                    if(S3.getAttribute("value") == item.ReservoirName){
-                        IFTSTH.innerText = "本日總進水量 : " + item.Inflow + " mm"
-                        BRFSTH.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
-                        ECSTH.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
-                    }
-                    if(S4.getAttribute("value") == item.ReservoirName){
-                        IFTSF.innerText = "本日總進水量 : " + item.Inflow + " mm"
-                        BRFSF.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
-                        ECSF.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
-                    }
-                    if(S5.getAttribute("value") == item.ReservoirName){
-                        IFTSFI.innerText = "本日總進水量 : " + item.Inflow + " mm"
-                        BRFSFI.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
-                        ECSFI.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
-                    }
-                    if(S6.getAttribute("value") == item.ReservoirName){
-                        IFTSS.innerText = "本日總進水量 : " + item.Inflow + " mm"
-                        BRFSS.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
-                        ECSS.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
-                    }
-                    if(S7.getAttribute("value") == item.ReservoirName){
-                        IFTSSE.innerText = "本日總進水量 : " + item.Inflow + " mm"
-                        BRFSSE.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
-                        ECSSE.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
-                    }
-                },100);
             })
 })
 fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
   .then((response) => response.json())
   .then((data) => {
+    console.log(data);
+    console.log(N1.getAttribute("id"));
+    console.log(data[0].StationNo);
     arr2 = data
     arr2.forEach(item => {
-        setInterval(function () {
+        
 
         //北部 toFixed(N)取小點後第N位(會對N+1位作四捨五入)
        if(N1.getAttribute("id") == item.StationNo){
@@ -212,37 +176,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
        }
 
       
-       //南部
-       if(S1.getAttribute("id") == item.StationNo){
-        ESSO.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
-        POSSO.innerText = (item.PercentageOfStorage).toFixed(1) + " %"
-       }
-       if(S2.getAttribute("id") == item.StationNo){
-        ESST.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
-        POSST.innerText = (item.PercentageOfStorage).toFixed(1) + " %"
-       }
-       if(S3.getAttribute("id") == item.StationNo){
-        ESSTH.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
-        POSSTH.innerText = (item.PercentageOfStorage).toFixed(1) + " %"
-       }
-       if(S4.getAttribute("id") == item.StationNo){
-        ESSF.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
-        POSSF.innerText = (item.PercentageOfStorage).toFixed(1) + " %"
-       }
-       if(S5.getAttribute("id") == item.StationNo){
-        ESSFI.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
-        POSSFI.innerText = (item.PercentageOfStorage).toFixed(1) + " %"
-       }
-       if(S6.getAttribute("id") == item.StationNo){
-        ESSS.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
-        POSSS.innerText = (item.PercentageOfStorage).toFixed(1) + " %"
-       }
-       if(S7.getAttribute("id") == item.StationNo){
-        ESSSE.innerText = "有效蓄水量 : " + item.EffectiveStorage + " 萬立方公尺"
-        POSSSE.innerText = (item.PercentageOfStorage).toFixed(1) + " %"
-       }
     });
-    },100)
   });
     },
     methods:{
@@ -416,6 +350,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 display: flex;
                 justify-content: space-around;
                 margin: auto;
+                
                 button{
                     width: 30vmin;
                     height: 7vmin;
@@ -427,6 +362,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                     font-weight: bold;
                     color: #0766AD;
                     font-size: 26pt;
+                    cursor: pointer;
 
                     &:hover{
                         background-color: #0766AD;
