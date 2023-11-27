@@ -7,7 +7,8 @@ export default defineStore('counter',{
             basicInfo:{},
             immediateInfo:{},
             OperatingInfo:{},
-            StatisticsInfo:{}
+            StatisticsInfo:{},
+            weatherInfo:{}
         }
     },
     getters:{
@@ -45,8 +46,16 @@ export default defineStore('counter',{
                 .then((response) => response.json())
                 .then((data) => {
                     this.StatisticsInfo=data
-                    console.log(this.StatisticsInfo[0].StationNo);
+                    // console.log(this.StatisticsInfo[0].StationNo);
                 });
+        },
+        getweather(){
+            fetch("https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWA-33D89F4E-6F24-4977-A02D-2792BD4124FE")
+                .then(response=>response.json())
+                .then(data=>{
+                    this.weatherInfo=data
+                    console.log(this.weatherInfo);
+                })
         }
     }
 })

@@ -61,7 +61,6 @@ let arr2 = []
             .then(data=>{
                 arr = data
                 arr.responseData.forEach(item => {
-                    setInterval(function () {
 
                     //南部
                     if(S1.getAttribute("value") == item.ReservoirName){
@@ -99,7 +98,6 @@ let arr2 = []
                         BRFSSE.innerText = "昨日累積雨量 : " + item.BasinRainfall + " mm"
                         ECSSE.innerText = "有效庫容量 : " + item.Capacity + " 萬立方公尺"
                     }
-                },100);
             })
 })
 fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
@@ -107,7 +105,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
   .then((data) => {
     arr2 = data
     arr2.forEach(item => {
-        setInterval(function () {
 
        //南部
        if(S1.getAttribute("id") == item.StationNo){
@@ -139,7 +136,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
         POSSSE.innerText = (item.PercentageOfStorage).toFixed(1) + " %"
        }
     });
-    },100)
   });
     },
     methods:{

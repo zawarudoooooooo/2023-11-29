@@ -1224,7 +1224,6 @@ export default{
 </template>
 
 <style lang="scss" scoped>
-
         .content{
         width: 100vw;
         height: 45vw;
@@ -1250,6 +1249,19 @@ export default{
                 }
         }
 
+        @media(max-width:576px){
+                .content{
+                        table{
+                                font-size: 10pt;
+                        }
+                }
+        }
 
-
+        @media(max-width:414px){
+                .content{
+                        table{
+                                font-size: 8pt;
+                        }
+                }
+        }
 </style>
