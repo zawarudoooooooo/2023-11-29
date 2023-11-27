@@ -189,7 +189,7 @@ export default{
         }
 
     }
-
+    
     @media(max-width:414px){
         .title{
             margin-bottom: 0;
