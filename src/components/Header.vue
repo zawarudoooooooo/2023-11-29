@@ -45,6 +45,7 @@ export default{
         justify-content: center;
         align-items: center;
         margin-bottom: 2vmin;
+        cursor: pointer;
 
         .routerItem{
             width: 20vw;
@@ -58,6 +59,7 @@ export default{
             font-weight: bold;
             border-style: none;
             text-align: center;
+            cursor: pointer;
 
             &:hover{
                     background-color: #0766AD;
