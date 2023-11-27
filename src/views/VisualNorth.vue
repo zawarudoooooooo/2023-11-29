@@ -38,49 +38,6 @@ const ESNS = document.getElementById("ESNS")
 const ECNS = document.getElementById("ECNS")
 const POSNS = document.getElementById("POSNS")
 
-// 南部
-const IFTSO = document.getElementById("IFTSO")
-const BRFSO = document.getElementById("BRFSO")
-const ESSO = document.getElementById("ESSO")
-const ECSO = document.getElementById("ECSO")
-const POSSO = document.getElementById("POSSO")
-
-const IFTST = document.getElementById("IFTST")
-const BRFST = document.getElementById("BRFST")
-const ESST = document.getElementById("ESST")
-const ECST = document.getElementById("ECST")
-const POSST = document.getElementById("POSST")
-
-const IFTSTH = document.getElementById("IFTSTH")
-const BRFSTH = document.getElementById("BRFSTH")
-const ESSTH = document.getElementById("ESSTH")
-const ECSTH = document.getElementById("ECSTH")
-const POSSTH = document.getElementById("POSSTH")
-
-const IFTSF = document.getElementById("IFTSF")
-const BRFSF = document.getElementById("BRFSF")
-const ESSF = document.getElementById("ESSF")
-const ECSF = document.getElementById("ECSF")
-const POSSF = document.getElementById("POSSF")
-
-const IFTSFI = document.getElementById("IFTSFI")
-const BRFSFI = document.getElementById("BRFSFI")
-const ESSFI = document.getElementById("ESSFI")
-const ECSFI = document.getElementById("ECSFI")
-const POSSFI = document.getElementById("POSSFI")
-
-const IFTSS = document.getElementById("IFTSS")
-const BRFSS = document.getElementById("BRFSS")
-const ESSS = document.getElementById("ESSS")
-const ECSS = document.getElementById("ECSS")
-const POSSS = document.getElementById("POSSS")
-
-const IFTSSE = document.getElementById("IFTSSE")
-const BRFSSE = document.getElementById("BRFSSE")
-const ESSSE = document.getElementById("ESSSE")
-const ECSSE = document.getElementById("ECSSE")
-const POSSSE = document.getElementById("POSSSE")
-
 // 北部
 const N1 = document.getElementById("10201")
 const N2 = document.getElementById("10203")
@@ -88,15 +45,6 @@ const N3 = document.getElementById("10204")
 const N4 = document.getElementById("10205")
 const N5 = document.getElementById("10401")
 const N6 = document.getElementById("10405")
-
-// 南部
-const S1 = document.getElementById("30302")
-const S2 = document.getElementById("30401")
-const S3 = document.getElementById("30502")
-const S4 = document.getElementById("30501")
-const S5 = document.getElementById("30503")
-const S6 = document.getElementById("30802")
-const S7 = document.getElementById("31201")
 
 let arr = []
 let arr2 = []
