@@ -1,4 +1,5 @@
 <script>
+import VisualSelect from '../components/VisualSelect.vue'
 export default{
     mounted(){   
 
@@ -138,16 +139,8 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
     });
   });
     },
-    methods:{
-        goNorthPage(){
-            this.$router.push('VisualNorth')
-        },
-        goMiddlePage(){
-            this.$router.push('/VisualMiddle')
-        },
-        goSouthPage(){
-            this.$router.push('/VisualSouth')
-        }
+    components:{
+        VisualSelect
     }
 }
 </script>
@@ -155,11 +148,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 <template>
     <!-- 選擇區域 -->
     <div class="selectArea">
-        <div class="select">
-            <button type="button" @click="goNorthPage()">北區</button>
-            <button type="button" @click="goMiddlePage()">中區</button>
-            <button type="button" @click="goSouthPage()">南區</button>
-        </div>
+        <VisualSelect />
     </div>
     <div class="content">
 <!-- 南區-->
@@ -317,44 +306,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 </template>
 
 <style lang="scss" scoped>
-
-//選擇區域
-    .selectArea{
-        width: 100vw;
-        margin-top: 5vmin;
-        opacity: 0.7;
-
-            .select{
-                width: 60vw;
-                height: 13vh;
-                display: flex;
-                justify-content: space-around;
-                margin: auto;
-                button{
-                    width: 30vmin;
-                    height: 7vmin;
-                    border-radius: 5px;
-                    border-style: none;
-                    text-align: center;
-                    background-color: white;
-                    box-shadow: 4px 5px 1px black;
-                    font-weight: bold;
-                    color: #0766AD;
-                    font-size: 26pt;
-
-                    &:hover{
-                        background-color: #0766AD;
-                        color: white;
-                    }
-                
-                    &:active{
-                        background-color: white;
-                        color: #0766AD;
-                    }
-                }
-            }
-    }
-
     .content{
     width: 100vw;
     height: 110vh;
@@ -628,19 +579,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
     }
 
     @media(max-width:992px){
-        .selectArea{
-            height: 5vh;
-            margin-top: 4vmin;
-            .select{
-                height: 7vh;
-                button{
-                    width: 14vmin;
-                    height: 5vmin;
-                    font-size: 23pt;
-                }
-            }
-        }
-
         .content{
             height: 80vh;
 
@@ -767,14 +705,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
     } 
 
     @media(max-width:768px){
-        .selectArea{
-            .select{
-                button{
-                    font-size: 18pt;
-                }
-            }
-        }
-
         .content{
             height: 40vh;
             .south{
@@ -880,17 +810,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
     }
 
     @media(max-width:576px){
-        .selectArea{
-            .select{
-                height: 5vh;
-                button{
-                    width: 16vmin;
-                    height: 6vmin;
-                    font-size: 13pt;
-                }
-            }
-        }
-
         .content{
             label{
                 font-size: 16pt;
