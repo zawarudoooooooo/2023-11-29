@@ -24,8 +24,8 @@ export default{
     <nav>
         <div class="item">
             <RouterLink to="/VisualNorth" class="routerItem">水位視覺化</RouterLink>
-            <RouterLink to="/Information" class="routerItem">即時資訊</RouterLink>
-            <RouterLink to="/Caculate" class="routerItem">蓄水統計表</RouterLink>
+            <RouterLink to="/InformationNorth" class="routerItem">即時資訊</RouterLink>
+            <RouterLink to="/CaculateNorth" class="routerItem">蓄水統計表</RouterLink>
         </div>
     </nav>
 </template>

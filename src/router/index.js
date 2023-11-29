@@ -25,14 +25,34 @@ const router = createRouter({
       component: () => import('../views/VisualSouth.vue')
     },
     {
-      path: '/Information',
-      name: 'Information',
-      component: () => import('../views/Information.vue')
+      path: '/InformationNorth',
+      name: 'InformationNorth',
+      component: () => import('../views/InformationNorth.vue')
     },
     {
-      path: '/Caculate',
-      name: 'Caculate',
-      component: () => import('../views/Caculate.vue')
+      path: '/InformationMiddle',
+      name: 'InformationMiddle',
+      component: () => import('../views/InformationMiddle.vue')
+    },
+    {
+      path: '/InformationSouth',
+      name: 'InformationSouth',
+      component: () => import('../views/InformationSouth.vue')
+    },
+    {
+      path: '/CaculateNorth',
+      name: 'CaculateNorth',
+      component: () => import('../views/CaculateNorth.vue')
+    },
+    {
+      path: '/CaculateMiddle',
+      name: 'CaculateMiddle',
+      component: () => import('../views/CaculateMiddle.vue')
+    },
+    {
+      path: '/CaculateSouth',
+      name: 'CaculateSouth',
+      component: () => import('../views/CaculateSouth.vue')
     },
   ]
 })
