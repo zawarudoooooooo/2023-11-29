@@ -105,4 +105,10 @@
             }
         }
     }
+
+    @media(max-width:414px){
+        .selectArea{
+            margin-top: 8vmin;
+        }
+    }
 </style>

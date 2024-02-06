@@ -1021,7 +1021,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
             .middle{
                 .middleOne{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                     }
@@ -1032,7 +1032,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
 
                 .middleTwo{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                         margin-bottom: 1vmin;
@@ -1044,7 +1044,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
 
                 .middleThree{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                         margin-bottom: 1vmin;
@@ -1056,7 +1056,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
 
                 .middleFour{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                         margin-bottom: 1vmin;
@@ -1068,7 +1068,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
 
                 .middleFive{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                         margin-bottom: 1vmin;
@@ -1080,7 +1080,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
 
                 .middleSix{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                         margin-bottom: 1vmin;
@@ -1092,7 +1092,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
 
                 .middleSeven{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                         margin-bottom: 1vmin;
@@ -1104,7 +1104,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
 
                 .middleNine{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                         margin-bottom: 1vmin;

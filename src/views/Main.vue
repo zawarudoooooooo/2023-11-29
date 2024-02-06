@@ -2,17 +2,14 @@
 import { mapState,mapActions } from 'pinia';
 import counter from '../stores/counter';
 import { watch } from 'vue';
-
 export default{
   data(){
     return{
       classReservoir:"reservoirOfS",
     }
-    
   },
   methods:{
     ...mapActions(counter,["getweather"]),
-
     goVisual(){
       let go=this
       go.$router.push('/VisualNorth')
@@ -27,7 +24,6 @@ export default{
             // console.log(data);
             obj1 = data;
           });
-        
         //水庫每日營運狀況
         fetch("https://data.wra.gov.tw/OpenAPI/api/OpenData/50C8256D-30C5-4B8D-9B84-2E14D5C6DF71/Data?size=1000&page=100")
           .then((response) => response.json())
@@ -36,14 +32,11 @@ export default{
             obj2 = data;
             const content = document.getElementById("content");
               const reservoirOfS = document.querySelectorAll(".reservoirOfS");
-              
               // console.dir(reservoirOfS);
             const rname = document.getElementById("rname");
             const Percentage = document.getElementById("Percentage");
             const PercentageTiele = document.getElementById("PercentageTiele");
             const btn = document.getElementById("btn");
-
-
             reservoirOfS.forEach((reservoir) => {
                 reservoir.addEventListener("mouseover", function () {
                     obj2.responseData.forEach((item1) => {
@@ -61,7 +54,6 @@ export default{
                 });
             });
     });
-
   });
     },
     weatherData(){
@@ -69,8 +61,6 @@ export default{
       const cityName=document.getElementById("cityName")
       const rainPercentage=document.getElementById("rainPercentage")
       const rainPercentageTitle=document.getElementById("rainPercentageTitle")
-
-
       city.forEach(cityall=>{
         // console.log(cityall.getAttribute("value"));
         cityall.addEventListener("mouseover",()=>{
@@ -82,7 +72,6 @@ export default{
             }
           })
         })
-        
       })
     },
   },
@@ -119,7 +108,6 @@ export default{
         <path class="city" value="臺中市" d="m333.7 249.5.8-.6 10.6-1 2.8.8 3.6 1-.6 5.5 1.4 3.8 4.9 1 4.4 2.6 3.7 2.5 4-.6 4.7-2.3h4.9l5.9 4.7-4.7 4.9-.4 4.2-2.4 6.2-7.5 4.7-3 5-1.3 5.1-3.1 3.8-3.4 1.7-1.2 2.1-2.8 2-13.4-1.3-4.7-1-4.6.3-11.1 4.4-6.3 1-6.2.2-8.8 4.7-4.4.8-5.1 2.9-7.9 7.6-5 1.9-6.6-.1-4.7 3.9-2.6 5.5-3.5.9-8.9-6.7-3 1.9-5.8 7.7-6 .2-10.1-1.4-6.4 3-3.7 8.5-7.6 14.4-5 4.8-4.2.6-17.9-2.5-4.3-.2v-1.4l-5.4-3.5-4.3-.8-1.2-3.3-.1-4-2-4-3.2-5-4.3-3.6-11.9-3.5-4.5-5.4-1-7.6-2.7-6.3-4-3.5-5.8-1.9.6-.8.8-3.3 3.3-2.7 2.2-6.5 2.7-12.3 9.3-16.1 2.8-9.9 3.4-5.5 13.3-14.8 9.2 14.3 4.7 5 6.3 5.5 15.1 11.1 7.3 3.6 6.6 1.2 11.6 6.7 12.1-.7 5.2-2.8.9-7.4 5.5-3.3 9.9.8 6 2.4 5 5.6 5.4 2.1 8.9-4.7 6.8-2.9 11.6-9.2 5.9-3.2 4.6-4.4 4.2-3 5.3.1 4.9-2 1.8-5.6z"/>
         <path class="city" value="雲林縣" d="m172 439.2 1.9 7.2-2 4.7-1 7.2 1 7.7-1.9 5.2-.9 5.7 4 4.7 5.8 2.5 6.8-2 8.2-.9 2.6 3.5h-.5l-.3 5v3.4l-4 1.3-11.7 2.4-6.3.6-2.4-3.9-4.7-3.4-8.3 2.4-3.7.5-12.6-4.6-5-5.9-5.3-4.6-6.9.4-12.6 2.3-7.2 2-16.3 9.4-3.8 3.8-4.4 2.4-7 5.7-5.3.8-2.1 3-1.7 4.9-3.9 3.2-6.1-.1-8.3-4.7-11.6 1.4 4.6-5.2-.2-16.4.7-12.3 2.8-9.8 4.3-7.7 1.3-10 2.3-8.8 1.3-3 6.1-8.1 1.1-2.8.7-1.5 5.6-4.3.8-1.6 7.6 4.4 22-2.6 7.6.4 6.6 1.8 11.6 4.4 19.7 2.3 12.2 6 5.8-.1 12 2.4z"/>
         <path class="city" value="臺東縣" d="m419.2 942-5.5 1.7-7.3-2.9-6.8-4.8-3.9-3.7 1.2-2.7-.1-2.5-1-2.4-1.7-2.1h19.5v1.8l-1.3 3.5-.4 2.9.9 2.5 4.7 3.5 2 2.5zm-24-177.6-.1 1.1-3.4-.4-.4-.6-2.7-1-2.8-4.9-1.4-4.3.6-.6 10-.7 1.1.6.8 2-.8 3.9-.9 1.6-.4 1.7zm-163.1 114.1-4.5.3-10.2-4.7-4.6-4.9-3.2-5.9-.6-6.1.1-5.7-3.1-4.4-3.4-1.7-2.7-3.9.5-4.5 2.1-3.9 5.3-3.2 2.5-3.8-4.6-5.6-2.6-5v-5.4l-1.1-7.1-2-6.1-1.2-6.5.8-14.7 3-7.5 3.7-6.6 2.4-6.6 5.4-4.5 7.6-1.6 4.8-2.7 9.8-4.1 2-5 .1-5.2 2.8-13.8-5.5-3.6-5.4-1.3-.7-4.9-3.5-6.6 3.9-.5-1.2-4.9-6.2-6.4-3-4.6-1.3-8.1 2.3-9.8 8.5-7.2 4.3-5.9.1-11.2 3-13.2-2.1-9.9.8-6.9 7.4-4 2.7-4.9-2.3-6 .9-5.7 7.8-5.1 4-3.9 6.4-4.1 15.6-3.8 1.2 7.4 5 8.1 7.8 2.8 6.1 2.9 5 4.8 6.3.9 5.7 1.5 9.2 16 11.7 9.7 8.2 1.1 6.5-3.7.9-6.2-.1-6.7 3.1-6.1 4.8-13.2 3.7-7.7 2.4-8.4 2.7-6.6 3.4-5.2 3.6-6.9-.6-6.9-1.7-6.9 3.9-5.4 10.8-5.2 3.5 1-4.6 26.4-2.2 4.9-7.1 9.4-2.6 4.9-2.1 6.1-1.5 11.4.2 10.2-1 9.7-4.9 9.9-2.1 2.1-4.7 3.5-2.2 2.2-1 2.3-1.7 5.8-4.8 8.4-2.9 13.1-2.1 5.9-10.3 14.8-1.3 2.7-13.9 11.8-3.3 3.8-.4 2.7.6 6.2-.2 2.8-1.2 3.2-2.2 3.5-4.7 6.1-4.7 4.5-16.1 10.7-10.8 11.9-2.7 1.4-2.1 2.7-5.2 13.5-2.6 5-8 10-3.3 6-1.9 12.3-4.8 16.8-9.5 16.7-1.4 5.7-1.7 16.1.3 14.7z"/>
-        
         <path id="city" value="澎湖縣" d="m20.7 248.5l-1.8 0.9-1.3-1.5-1.5-4.7 1-1.2 3.8-1.3 2.7 0.7 0.1 2.1-0.2 1.6-1.2 1.2-1.6 2.2z m-1.2-12l-1.7 3.1-2.2-0.6-2-2.5-0.3-2.5 1.2-1.1 3.2 0.5 1.8 3.1z m48.8-3.2l-0.4 0.1-1.2-1.5 0.3-0.6 2.5-0.2 0.8 2-2 0.2z m14-4.6l0.3 0.2 2.3 0 0 1.3-1.1 1.5-0.7 1.8-1.1-2.8 0.3-2z m-33.5-29.6l-1.7 0.1-3 1.8-0.4-0.4 0.4-1.3 1.1-1.5 0.7-0.6 1.6-0.3 1.5 0.9-0.2 1.3z m-8.4-6.7l0.1 2.3 0.5 1.6 1.4 1.2-0.6 1.6-1.2 1.2 0.6 1.9-1.5 0.6-3.1-0.3-1.6-0.7 1.4-3.1-0.2-4.2-0.9 0.6-2 0.6-0.6-2.3 2.1-5.1 1.6-0.3 2.7 3.6 1.3 0.8z m-49.5-5.7l2.4 0.6 0 1.6-0.6 0.9-2.1 0.6-1.1-1.1 1.4-2.6z m58.5-24.8l-3.2 2.1-2.1 0.6-2.2 1.1-1.3-0.5-0.3-1.8 0.7-0.6 1.8 0.5 4-2 2.6 0.6z m19.5-28l-0.6 1.3 4-1.3 3.1 0.4 2.3-0.2 1.6-2.7 4.7 8.7 1.2 4-0.5 3-2-2-2.5-1.7-2.8-0.5-4 2.2-2.8 0.3-1.4 0.8-0.7 1.5-1.1 4.1-0.7 1.2-4.7 2.7-4.8 0.7-4.8-1.9-4.9-4.9 1.3-2.5 2.7 3.2 4 0.9 4.3-1.2 3.5-2.9-2.4-0.9-2-1.2-1.5-1.6-1.4-2.2-0.8 1.4-1 0.6-0.3-4 0.3-4 1.8 0 2.1 0.5 7.4-4.6 4.6-1.6-1.2 4.4z m-39.9 9.3l-3.8 0 0.7-2.1 1.2-1.3 1.9-0.5 2.5-0.2 2.2-0.9 0.6-2 0.1-4.8 3.2-10.4 3.1-3 4.2 3.6-2.5 1.5-1.7 3.6-2.8 8.5-0.1 2.2 0.7 2-0.3 1.3-3 0.5-2.2 0.1-1.5 0.3-1.3 0.6-1.2 1z m33.8-17.9l-2.2 0.7-1.1-1.5-0.9-3.5-2-2.9-4.3-4.3 5.5-4.1 3.3 1.7 3.2 2.8 1.4 2.9-2.5 2.4 1 3.5-1.4 2.3z m2.6-30.4l-0.3 0.9-1.3-3-0.2-1.4 1.8-1.5 1.6-3 0.5 1.1 2.5 1.4-0.4 1.8-2.2 1.3-2 2.4z"/>
         <path id="city" value="金門縣" d="m27.2 40.4l-5.2 1.5-3-1.2 5-9.9 1.3-1.4 2.1-0.5 2.1-0.1 2 1.4 1.6 1.8 0 3.1-1.4 2.1-1.6 0.1-1.1 1.2-0.6 1.2-1.2 0.7z m55-26.8l4.7 12.6-1 8.8-3.9 4.6-6.8-4.3-5-1.6-8.1 0.8-7.1 4.5-3.9 6.1-3.4 1.7-3.9-1.9-2.7-0.1-2.4-1.1-1.2-2.1 0.5-0.7 2.1-2.8 0.7-1.2 0.2-2.1-0.1-2.5-0.7-4.3-1.8-4.2-0.2-2.1 1.5-0.9 7.6-3.7 10 6.6 7-0.9 1.1-8.7 2.3-5.5 7.5-1.5 7 6.5z m269.3-137.7l-2.9 1.5-1.3-1.2 0.7-3.2 2.4-1.4 1.7 0.3 0.2 1.9-0.8 2.1z"/>
         <path id="city" value="連江縣" d="m160.2 93.9l-0.2 2.3-1.9 2.1-4.1 2 2.5-5.6 2.5 0.5 0.1-0.9 1.1-0.4z m-11.8-0.8l-2 2.1-2.4-3.4 3.6-1.3 2.7 1.5-1.9 1.1z m-3.2-54.9l1 0.5 4.4-2.6 2.8 0 0 1.8-2.8 3.2-5.5 2.9-1.7 0.3-2.5-1.7-0.8-2.4 0.5-2.8 1.1-2 1-0.2 0.3 2.2 2.2 0.8z m21.3-17.8l-0.6 2.2 0.6 1.2-1.4-0.2-1.5-2.2-1.1-0.7-2.3 1.3-1-0.4-1.3 0.3-1.5 1.7-1.2 5-1.1-0.7-0.5-1.5 0.5-4.3 0.5-1.6 1.1-0.7 2.7-0.9 0.7-0.9 2.2-1.3 2.5 0.4 1.3 1.9 1.4 1.4z m129.8-45.6l-1.2 0.4-1.1-0.4-1.4 1.3-1.1 2.1-0.3-0.5-1.2-0.2-1.8-1 1.1-1.7-0.5-1.4 0.9-0.6 2.2-1.8 2.6 1.5 0.6 1.3 1.2 1z"/>
@@ -159,11 +147,9 @@ export default{
             <circle cx="82" cy="23" r="4.536259232551796" id="田埔水庫" fill="rgba(0,160,255)" :class="classReservoir" value="田埔水庫"/>
             <circle cx="72" cy="17" r="4.507342536856651" id="金沙水庫" fill="rgba(44.231034482758616,159.56206896551726,209.23620689655175)" :class="classReservoir" value="金沙水庫"/>
             <circle  cx="145" cy="37" r="4.49631780236734" id="后沃水庫" fill="rgba(218.23228441028107,115.73480662983424,31.911602209944746)" :class="classReservoir" value="后沃水庫"/>
-
         </g>
     </svg>
     <div class="content">
-
         <div class="reservoirArea">
           <div class="reservoirName">
             <h1 id="rname"></h1>
@@ -173,7 +159,6 @@ export default{
           <div class="btn" id="btn">
           </div>
       </div>
-
         <div class="rainArea">
           <div class="cityname">
             <h1 id="cityName"></h1>
@@ -183,105 +168,90 @@ export default{
         </div>
     </div>
   </div>
-
 </template>
 
 <style lang="scss" scoped>
 //SVG
   .svgArea{
-        margin-top: 10vmin;
-        margin-left: 10vmin;
-        display: flex;
-
-        svg{
-            width: 120vmin;
-            height: 110vmin;
-        }
-
-        circle{
-            transition: all 0.3s;
-            paint-order:stroke;
-            transition: 0.5s;
-            cursor: pointer;
-        }
-
-        circle:hover {
-            transform: translate(-5px, -5px);
-        }
-
-        path{
-            transition: all 0.3s;
-            paint-order:stroke;
-            transition: 0.5s;
-            cursor: pointer;
-        }
-
-        path:hover {
-            fill:#35A29F;
-            transform: translate(-5px, -5px);
-        }
+    margin-top: 10vmin;
+    margin-left: 10vmin;
+    display: flex;
+    svg{
+      width: 120vmin;
+      height: 110vmin;
+    }
+    circle{
+      transition: all 0.3s;
+      paint-order:stroke;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+    circle:hover {
+        transform: translate(-5px, -5px);
+    }
+    path{
+      transition: all 0.3s;
+      paint-order:stroke;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+    path:hover {
+      fill:#35A29F;
+      transform: translate(-5px, -5px);
+    }
   }
-    .content{
-      margin-top: 5vmin;
-        .reservoirArea{
-          width: 45vmin;
-          height: 48vmin;
-          border-radius: 10px;
-          background-color: #fff;
-          text-align: center;
-          box-shadow: 4px 5px 1px black;
-
-          span{
-              font-size: 80pt;
-          }
-
-          .reservoirName{
-            background-color: #AFD3E2;
-            border-top-right-radius: 10px;
-            border-top-left-radius: 10px;
-
-              h1{
-                margin-top: 0px;
-                color: white;
-              }
-          }
-
-          .btn{
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin-top: 2vmin;
-          }
-        }
-
-        .rainArea{
-        width: 45vmin;
-        height: 45vmin;
-        border-radius: 10px;
-        background-color: #fff;
-        text-align: center;
-        box-shadow: 4px 5px 1px black;
-        margin-top: 5vmin;
-
-          .cityname{
-            background-color: #AFD3E2;
-            border-top-right-radius: 10px;
-            border-top-left-radius: 10px;
-
-              h1{
-                color: white;
-              }
-          }
-
-          span{
-              font-size: 80pt;
-          }
+  .content{
+    margin-top: 5vmin;
+    .reservoirArea{
+      width: 45vmin;
+      height: 48vmin;
+      border-radius: 10px;
+      background-color: #fff;
+      text-align: center;
+      box-shadow: 4px 5px 1px black;
+      span{
+        font-size: 80pt;
+      }
+      .reservoirName{
+        background-color: #AFD3E2;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        h1{
+          margin-top: 0px;
+          color: white;
         }
       }
-
+      .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2vmin;
+      }
+    }
+    .rainArea{
+      width: 45vmin;
+      height: 45vmin;
+      border-radius: 10px;
+      background-color: #fff;
+      text-align: center;
+      box-shadow: 4px 5px 1px black;
+      margin-top: 5vmin;
+      .cityname{
+        background-color: #AFD3E2;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+          h1{
+            color: white;
+          }
+      }
+      span{
+        font-size: 80pt;
+      }
+    }
+  }
     @media(max-width:992px){
       .svgArea{
-        margin-top: 5vmin;
+        margin-top: 15vmin;
         margin-left: 0;
 
         svg{
@@ -295,16 +265,13 @@ export default{
         .reservoirArea{
           width: 28vmin;
           height: 33vmin;
-          
           span{
             font-size: 42pt;
           }
         }
-
         .btn{
           margin-top: 0;
         }
-
         .rainArea{
           width: 28vmin;
           height: 28vmin;
@@ -315,26 +282,21 @@ export default{
         }
       }
     }
-
     @media(max-width:768px){
       .content{
         .reservoirArea{
           .reservoirName{
-
               h1{
                 font-size: 22pt;
               }
           }
-
           h1{
               font-size: 20pt;
             }
-            
           }
           span{
             font-size: 36pt;
           }
-
         .rainArea{
           .cityname{
             h1{
@@ -351,20 +313,17 @@ export default{
           }
         }
     }
-
     @media(max-width:576px){
       .content{
         margin-right: 18vmin;
         .reservoirArea{
           height: 35vmin;
           .reservoirName{
-
               h1{
                 font-size: 16pt;
                 margin-bottom: 0;
               }
           }
-
           h1{
               font-size: 12pt;
             }
@@ -372,14 +331,10 @@ export default{
           span{
             font-size: 25pt;
           }
-
           .btn{
             font-size: 8pt;
           }
-
         }
-
-
         .rainArea{
           height: 30vmin;
           .cityname{
@@ -388,20 +343,16 @@ export default{
               margin-bottom: 0;
             }
           }
-
           h1{
               font-size: 12pt;
             }
-
           span{
             font-size: 25pt;
           }
         }
     }
     }
-
     @media(max-width:414px){
-
       .svgArea{
         margin-left: 10vmin;
       }
@@ -410,13 +361,11 @@ export default{
           height: 37vmin;
           margin-left: 8vmin;
           .reservoirName{
-
               h1{
                 font-size: 14pt;
                 margin-bottom: 0;
               }
           }
-
           h1{
               font-size: 10pt;
             }
@@ -424,14 +373,10 @@ export default{
           span{
             font-size: 25pt;
           }
-
           .btn{
             font-size: 8pt;
           }
-
         }
-
-
         .rainArea{
           height: 28vmin;
           margin-left: 8vmin;
@@ -441,17 +386,14 @@ export default{
               margin-bottom: 0;
             }
           }
-
           h1{
               font-size: 10pt;
               margin-bottom: 0;
             }
-
           span{
             font-size: 25pt;
           }
         }
     }
-
-    }
+  }
 </style>

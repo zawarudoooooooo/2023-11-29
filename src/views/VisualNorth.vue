@@ -277,7 +277,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
     .content{
     width: 100vw;
     height: 110vh;
-    
         label{
             font-size: 28pt;
             margin-left: 16vmin;
@@ -286,7 +285,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
             line-height: 1.1em;
             padding-left: 2vmin;
         }
-        
 //北部區域
         .north{
         width: 90vw;
@@ -309,7 +307,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
         box-shadow: 0 0 0 3px gray;
         margin-left: 12vmin;
         }
-
         .shui {
         position: absolute;
         top: 0;
@@ -319,7 +316,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
         background-color: lightskyblue;
         border-radius: 50%;
         overflow: hidden;
-
             p{
                 color: black;
                 font-size: 20pt;
@@ -329,7 +325,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 z-index: 1;
             }
         }   
-
         .shui::after {
         content: '';
         position: absolute;
@@ -341,7 +336,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
         background-color: aliceblue;
         animation: shi 5s linear infinite;
         }
-
         @keyframes shi {
         0% {
         transform: translate(-50%, -65%) rotate(0deg);
@@ -350,7 +344,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
         transform: translate(-50%, -65%) rotate(360deg);
         }
         }
-
         .shui::before {
         content: '';
         position: absolute;
@@ -362,7 +355,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
         background-color: rgb(240, 228, 228, 0.2);
         animation: xu 7s linear infinite;
         }
-
         @keyframes xu {
         0% {
         transform: translate(-50%, -60%) rotate(0deg);
@@ -371,25 +363,21 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
         transform: translate(-50%, -60%) rotate(360deg);
         }
         }
-
 //石門水庫
         .northOne{
             width: 20vw;
             height: 50vh;
             background-color: white;
             border-radius: 5px;
-
             P{
                 margin-left: 2vmin;
             }
-
             .nameOne{
                 width: 20vw;
                 height: 7vh;
                 border-radius: 5px;
                 background-color: #19A7CE;
-                color: white;
-            
+                color: white; 
                 h2{
                     text-align: center;
                     margin: 0;
@@ -403,7 +391,6 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
             height: 50vh;
             background-color: white;
             border-radius: 5px;
-
             p{
                 margin-left: 2vmin;
             }
@@ -426,11 +413,9 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
             height: 50vh;
             background-color: white;
             border-radius: 5px;
-
             p{
                 margin-left: 2vmin;
             }
-
             .nameThree{
                 width: 20vw;
                 height: 7vh;
@@ -450,11 +435,9 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
             height: 50vh;
             background-color: white;
             border-radius: 5px;
-
             p{
                 margin-left: 2vmin;
             }
-
             .nameFour{
                 width: 20vw;
                 height: 7vh;
@@ -475,18 +458,15 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
             height: 50vh;
             background-color: white;
             border-radius: 5px;
-
             p{
                 margin-left: 2vmin;
             }
-
             .nameFive{
                 width: 20vw;
                 height: 7vh;
                 border-radius: 5px;
                 background-color: #19A7CE;
                 color: white;
-                
                 h2{
                     text-align: center;
                     margin: 0;
@@ -500,18 +480,15 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
             height: 50vh;
             background-color: white;
             border-radius: 5px;
-
             p{
                 margin-left: 2vmin;
             }
-
             .nameSix{
                 width: 20vw;
                 height: 7vh;
                 border-radius: 5px;
                 background-color: #19A7CE;
                 color: white;
-                
                 h2{
                     text-align: center;
                     margin: 0;
@@ -521,31 +498,25 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
         }
         }
     }
-
     @media(max-width:992px){
         .content{
             height: 80vh;
-
             label{
                 margin-left: 5vmin;
                 font-size: 23pt;
             }
-
             .north{
             height: 75vh;
             padding-left: 2vmin;
-
             .quan{
                 width: 12vmin;
                 height: 12vmin;
                 margin-left: 3vmin;
                 margin-top: 2vmin;
             }
-
                 .northOne{
                     width: 20vw;
                     height: 37vh;
-
                     p{
                         margin-left: 1vmin;
                         margin-bottom: 0;
@@ -829,7 +800,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
             .north{
                 .northOne{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                     }
@@ -840,7 +811,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
 
                 .northTwo{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                         margin-bottom: 1vmin;
@@ -852,7 +823,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
 
                 .northThree{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                         margin-bottom: 1vmin;
@@ -864,7 +835,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
 
                 .northFour{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                         margin-bottom: 1vmin;
@@ -876,7 +847,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
 
                 .northFive{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                         margin-bottom: 1vmin;
@@ -888,7 +859,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
 
                 .northSix{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                         margin-bottom: 1vmin;

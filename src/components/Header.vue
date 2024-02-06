@@ -182,7 +182,7 @@ export default{
                 .routerItem{
                 width: 22vw;
                 height: 3vh;
-                font-size: 13pt;
+                font-size: 12pt;
                 border-radius: 5px;
                 }
             }
@@ -197,7 +197,7 @@ export default{
             height: 11vh;
             .routerItem{
                 width: 40vw;
-                height: 4.5vh;
+                height: 4vh;
                 font-size: 17pt;
                 border-radius: 5px;
             }
@@ -211,7 +211,7 @@ export default{
 
                 .routerItem{
                 width: 22vw;
-                height: 3.5vh;
+                height: 3vh;
                 font-size: 11pt;
                 border-radius: 5px;
                 }

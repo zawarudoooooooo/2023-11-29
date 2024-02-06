@@ -923,7 +923,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
 
             .south{
                 .southOne{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                     }
@@ -934,7 +934,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
 
                 .southTwo{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                         margin-bottom: 1.5vmin;
@@ -946,7 +946,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
 
                 .southThree{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                         margin-bottom: 1vmin;
@@ -958,7 +958,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
 
                 .southFour{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                         margin-bottom: 1.5vmin;
@@ -970,7 +970,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
 
                 .southFive{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                         margin-bottom: 1.5vmin;
@@ -982,7 +982,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
 
                 .southSix{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                         margin-bottom: 1.5vmin;
@@ -994,7 +994,7 @@ fetch("https://fhy.wra.gov.tw/WraApi/v1/Reservoir/RealTimeInfo")
                 }
 
                 .southSeven{
-                    height: 33vh;
+                    height: 28vh;
                     p{
                         font-size: 7pt;
                         margin-bottom: 1.5vmin;

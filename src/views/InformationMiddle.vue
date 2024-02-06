@@ -410,9 +410,7 @@ export default {
 <style lang="scss" scoped>
 .content {
     width: 100vw;
-    height: 50vh;
     margin-top: 2vmin;
-
     label{
             font-size: 28pt;
             margin-left: 11vmin;
@@ -421,23 +419,64 @@ export default {
             line-height: 1.1em;
             padding-left: 2vmin;
         }
-
     table {
         width: 90vw;
         margin: auto;
         margin-top: 2vmin;
-
         tr {
             th {
                 border: 1px solid black;
                 background-color: lightblue;
                 opacity: 0.7;
             }
-
             td {
                 text-align: center;
                 border: 1px solid black;
                 background-color: white;
+            }
+        }
+    }
+}
+@media(max-width:992px){
+    .content{
+        label{
+            margin-left: 6vmin;
+            font-size: 24pt;
+        }
+        table{
+            tr{
+                font-size: 10pt;
+            }
+        }
+    }
+}
+@media(max-width:768px){
+    .content{
+        label{
+            font-size: 22pt;
+        }
+    }
+}
+@media(max-width:576px){
+    .content{
+        label{
+            font-size: 14pt;
+        }
+        table{
+            tr{
+                font-size: 5pt;
+            }
+        }
+    }
+}
+@media(max-width:414px){
+    .content{
+        label{
+            font-size: 12pt;
+        }
+        table{
+            tr{
+                font-size: 4pt;
             }
         }
     }

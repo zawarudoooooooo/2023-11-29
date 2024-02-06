@@ -419,9 +419,7 @@ export default{
 <style lang="scss" scoped>
         .content{
         width: 100vw;
-        height: 50vh;
         margin-top: 2vmin;
-
                 label{
                 font-size: 28pt;
                 margin-left: 11vmin;
@@ -430,7 +428,6 @@ export default{
                 line-height: 1.1em;
                 padding-left: 2vmin;
                 }
-
                 table{
                         width: 90vw;
                         margin: auto;
@@ -450,19 +447,63 @@ export default{
                         }
                 }
         }
-
-        @media(max-width:576px){
+        @media(max-width:992px){
                 .content{
+                        label{
+                                margin-left: 6vmin;
+                                font-size: 24pt;
+                        }
                         table{
-                                font-size: 10pt;
+                                tr{
+                                        th{
+                                                font-size: 10pt;
+                                        }
+                                }
                         }
                 }
         }
-
+        @media(max-width:768px){
+                .content{
+                        label{
+                                font-size: 22pt;
+                        }
+                        table{
+                                tr{
+                                        th{
+                                                font-size: 8pt;
+                                        }
+                                }
+                        }
+                }
+        }
+        @media(max-width:576px){
+                .content{
+                        label{
+                                font-size: 16pt;
+                        }
+                        table{
+                                tr{
+                                        th{
+                                                font-size: 5pt;
+                                        }
+                                        td{
+                                                font-size: 5pt;
+                                        }
+                                }
+                        }
+                }
+        }
         @media(max-width:414px){
                 .content{
+                        label{
+                                font-size: 12pt;
+                        }
                         table{
-                                font-size: 8pt;
+                                tr{
+                                        th{
+                                                font-size: 4pt;
+                                        }
+                                }
                         }
                 }
         }
